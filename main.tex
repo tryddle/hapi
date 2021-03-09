@@ -142,7 +142,7 @@
 \newleipzig{next}{next.to}{'next to' case}
 \newleipzig{tsf}{3sf}{third person singular female}
 \newleipzig{tsm}{3sm}{third person singular male}
-\newleipzig{tsn}{3sn}{third person singular neuter}
+\newleipzig{tsn}{3sinan}{third person singular inanimate}
 \newleipzig{tp}{3p}{third person plural}
 \newleipzig{tsposs}{3spos}{third person singular possessive}
 \newleipzig{ff}{1}{first person}
@@ -173,7 +173,7 @@
 \glsfindwidesttoplevelname[\leipzigtype]
 
 \title{A Grammar of lang5}
-\author{redacted}
+\author{u/tryddle}
 \date{May 2020}
 
 
@@ -216,8 +216,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1
-        Date: 8 March, 2021
+        Version: 0.1a
+        Date: 9 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -417,7 +417,7 @@ Firstly I will consider minimal pairs of vowel quality, then I will move onto vo
 \begin{columns}
     \cols \emh{hoi} & \textsc{cop:loc} & \emh{hói} & `to give' 
     \cols \emh{hóika} & `to build' & \emh{hóíka} & `big tree'
-    \cols  \emh{ii} & `when' & \emh{íí} & 3\textsc{sn}
+    \cols  \emh{ò} & `and' & \emh{ó} & \textsc{seq}
 \end{columns}
 
 \subsection{Allophonic Variations}\label{sall}
@@ -1178,7 +1178,7 @@ The perlative case expresses that something is moved `through' or `along' the re
 \ex \label{ex:perl2}
 \words hoó asááhàòkóapò\MC5 xáohaóhtah\MC3
 \bits hoó a- sáá -hàò =kóa \cl pò xáoh -aóh -tah
-\gloss {\Tsf}:{\Patient} {\Pass} eat {\Dpasto} {\Decl} {\Infer}:{\Dpast} crab {\Auga} {\Prl}
+\gloss {\Tsf}:{\Patient} {\Pass} eat {\Dpasto} {\Decl} {\Infer} crab {\Auga} {\Prl}
 \tr She was eaten by a huge crab (they told me)
 \end{examples}
 \paragraph{Privative Case \emh{-sáahi} \textsc{pvt}}
@@ -1212,7 +1212,7 @@ The `on top of' case primarily\footnote{Another usage is sketched out in section
 \ex \label{ex:ontop1}
 \words haípi haahakóa\MC3 píihàxa\MC2
 \bits haípi haah -a =kóa píihà -xa
-\gloss soup cook -{\St} {\Decl} fire.place {\Ont}
+\gloss soup cook {\St} {\Decl} fire.place {\Ont}
 \tr The soup is cooking above the fire place
 \ex \label{ex:ontop2}
 \words kihaòhxa\MC2 póxihoo
@@ -1224,9 +1224,9 @@ The `on top of' case primarily\footnote{Another usage is sketched out in section
 The `below' case marks a noun's position to be roughly `below' another noun, as can be seen in example (\ref{ex:below1}).
 \begin{examples}
 \ex \label{ex:below1}
-\words tàhtíh hoí xasíítaó\MC2
-\bits tàhtíh hoí xasíí -taó
-\gloss poison.frog {\Cop} leaf {\Bel}
+\words tàhòhì tísooh hoí xasíítaó\MC2
+\bits tàhòhì tísooh hoí xasíí -taó
+\gloss poison frog {\Cop} leaf {\Bel}
 \tr The poison dart frog sits under the leaf
 \end{examples}
 \paragraph{`next to' \emh{-(h)aí} \textsc{next.to}}
@@ -1261,7 +1261,7 @@ The relational-locational combinations that are shown in the table are 'focal' v
 \gloss no rock {\Cop} rock {\Loc} {\Ont}
 \tr No, the rock must be (exactly) on top of the (other) rock
 \end{examples}
-Maybe: examples for every cell in the table? Perhappu a bit too much :pensive: 
+%Maybe: examples for every cell in the table? Perhappu a bit too much :pensive: 
 \subsection{Conclusion}
 In the preceding section, I have discussed the structure of the nominal root in section \ref{snomroot}, the ways of encoding gender, number, diminutives and augmentatives in the sections \ref{sgender}, \ref{snumber}, \ref{sdim} and \ref{saug} respectively, have considered possession in its comprehensive aspects in section \ref{spossession} and have presented the Hapi case system in section \ref{scase}.
 \section{Noun phrase structure}\label{snounphrase}
@@ -1329,7 +1329,7 @@ The ergative pronouns, as can be inferred from their name, have merged the forms
 \begin{examples}
 \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
 \ex \label{ex:ergpron1}
-\words tà hóíkatah\MC2 háahoò\MC4 xóatiho\MC3 haíhosoaho\MC3 há
+\words tà hóíkatah\MC2 háahoò\MC4 xóatiho\MC3 haíhosoahò\MC3 há
 \bits tà hóíka -tah háa -h -o \cl ò xóati -h -o haího -soa \cl ò há 
 \gloss {\Fs}:{\Subject} big.tree {\Prl} go {\Ff} {\Fut} {\Seq} search.for {\Ff} {\Fut} berry {\Pl} {\Seq} {\Cngr}
 \tr I'll be going via the big tree, and then (I) will search for berries (there)
@@ -1435,7 +1435,7 @@ Some cases for the usage of these pronouns are exemplified in (\ref{ex:dempron1}
 \words hih xàa óxííhò\MC2
 \bits hih xàa óxíí -ò 
 \gloss  {\Dem}:{\Nvis} {\Cop} child {\Cl}:anim:sg
-\tr That (pointing at approximate direction) was a child [not an animal]
+\tr That (pointing at approximate direction) was a child [not a rock]
 \end{examples}
 \subsubsection{Emphatic pronouns}
 Besides the set of independent, possessive and demonstrative pronouns, there is also a system of emphatic pronouns which are used in certain contexts. The set of those pronouns is depicted in table \ref{t:emphpron}. Note how there is neither a clusivity nor a number nor a honorific distinction within the pronouns of this set.
@@ -1565,7 +1565,7 @@ Some examples for the usage of these are given in (\ref{ex:demdet1}) and (\ref{e
 \gloss {\Demdist} sloth {\Cop} there
 \tr There is that sloth [which we saw earlier]
 \ex \label{ex:demdet2}
-\words híi tukáh hihahíaka\MC3
+\words híi tukáh háhihahíaka\MC3
 \bits híi tukáh háhihahí -a =ka 
 \gloss {\Det}:{\Nvis} toucan sing {\St} {\Decl}
 \tr That toucan is singing
@@ -1623,7 +1623,7 @@ The main strategy for possessives in the Hapi language is depicted in the exampl
 \gloss gun {\Link} stranger
 \tr the stranger's gun
 \end{examples}
-Another strategy to mark possession on nouns is the so-called copular strategy. There, the possessor is put in the dative case and is connected to the possessee by the copula \emh{xàa}. This strategy can be seen in the examples (\ref{ex:nposs3}) and \ref{ex:nposs4}).
+Another strategy to mark possession on nouns is the so-called copular strategy. There, the possessor is put in the dative case and is connected to the possessee by the copula \emh{xàa}. This process can be seen in the examples (\ref{ex:nposs3}) and (\ref{ex:nposs4}).
 \begin{examples}
 \ex \label{ex:nposs3}
 This section is work-in-progress
@@ -1688,7 +1688,7 @@ Intransitive verbs are verbs which take one S argument, as can be seen in exampl
     \ex \label{ex:intr2}
     \words pói sóíhikóa\MC3
     \bits pói sóí -hi =kóa
-    \gloss SS:ABS sleep RPASTT DECL 
+    \gloss SS:SUBJECT sleep RPASTT DECL 
     \tr You slept
 \end{examples}
 \paragraph{Extended Intransitive Verbs}
@@ -1705,7 +1705,7 @@ Extended intransitive verbs are verbs which take two arguments, an S argument an
     \gloss mother LINK TT apply.color ST DECL TSM:DAT
     \tr His mother was painting his [face]
     \ex \label{ex:exitr3}
-    \words hao háahaka\MC3 paatihóo\MC2
+    \words hao háahaka\MC3 paátihóo\MC2
     \bits  hao háa -a =ka paáti -hóo 
     \gloss DEM:PROX go ST DECL type.of.bird LOC
     \tr This one is following a macaw
@@ -1749,9 +1749,9 @@ The R of a ditansitive verb might also be marked by the `on top of' relational c
 Auxiliary verbs are verbs which mark aspect, negation and modality. there are two types of auxiliaries, non-affixing auxiliary verbs and affixing auxiliary verbs. I will first discuss the former, and subsequently move onto the latter. Non-affixing auxiliaries, despite their name, absorb all inflection from the lexical head. They encode negation and aspect. The lexical head then takes the dependent form, marked by the suffix \emh{-i}. There are \textit{3} non-affixing auxiliaries in the analyzed corpus of \textit{5} auxiliaries. (\ref{ex:aux1}) exemplifies the usage of non-affixing auxiliaries.
 \begin{examples}
     \ex \label{ex:aux1}
-    \words hóh\MC2 kìkahoó\MC2 hóikai\MC2 toóxíkóa\MC4 ii tàah kòà ákiihi\MC2 kiixíi\MC4 há
-    \bits hó -h kì- kahoó hóika -i tóó -xí -∅ =kóa ii tàah kòà ákiih -i kii -xí -∅ -i há
-    \gloss man's.name ERG TSPOSS boat build DEP AUX:PROG RPASTO ST DECL when FS:AGENT TS:PATIENT see DEP AUX:PERF RPASTO ST DEP CNGR
+    \words hóh\MC2 kìkahoó\MC2 hóikai\MC2 tóóxíkóa\MC4 hákiihahóo\MC4
+    \bits hó -h kì- kahoó hóika -i tóó -xí -∅ =kóa h- ákiih -a -hóo
+    \gloss man's.name ERG TSPOSS boat build DEP AUX:PROG RPASTO ST DECL FSPOSS see NMZ LOC
     \tr Joe was constructing his boat, when I had seen him.
 \end{examples}
 Affixing auxiliary verbs use an affixing process, in which the lexical head is attached to the auxiliary. The inflection of the verb is absorbed by the general auxiliary \emh{tàa}. There are \textit{1} affixing auxiliaries in the analyzed corpus of \textit{5} auxiliaries. An example of their usage can be seen in example (\ref{ex:aux2}).
@@ -1788,7 +1788,7 @@ While the complementizers mark indirect speech, there is a quotative marker \emh
     \tr [My] grandmother said: ``One shouldn't go into the forest alone''
 \end{examples}
 \paragraph{Positional Compound Verbs}
-Positional compound verbs are verbs with a bipartite stem. The first part (called V1) is from a relatively open class of ca. 100 members, while the second part (called DTR) is from a closed class of 10 members. They inflect like normal intransitive or transitive verbs. The DTRs depict explicit or implied motion in a certain \textbf{D}irection, into a \textbf{T}opological \textbf{R}elation. There are four subclasses of V1s, classificatory (type of figure or ground), dispositional (posture or position of the figure), means (manner or means of change), and trajectory (shape of path of change). While the first of these constitutes an open class, the rest of them are closed class. A full list of all V1s and DTRs can be found in appendix C. Examples (\ref{ex:vposit1}) and (\ref{ex:vposit2}) showcase the usage of transitive and intransitive positional compound verbs. 
+Positional compound verbs are verbs with a bipartite stem. The first part (called V1) is from a relatively open class of ca. 100 members, while the second part (called DTR) is from a closed class of 10 members. They inflect like normal intransitive or transitive verbs. The DTRs depict explicit or implied motion in a certain \textbf{D}irection, into a \textbf{T}opological \textbf{R}elation. There are four subclasses of V1s, classificatory (type of figure or ground), dispositional (posture or position of the figure), means (manner or means of change), and trajectory (shape of path of change). While the first of these constitutes an open class, the rest of them are closed class. A full list of all V1s and DTRs can be found in appendix C. Examples (\ref{ex:vposit1}) and (\ref{ex:vposit2}) showcase the usage of transitive and intransitive positional compound verbs.
 \begin{examples}
 \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
     \ex \label{ex:vposit1}
@@ -1802,7 +1802,7 @@ Positional compound verbs are verbs with a bipartite stem. The first part (calle
     \gloss TSN:SUBJECT fall away RPASTT DECL
     \tr It (the leaf) fell away from me, i.e. it was blown away by the wind
 \end{examples}
-\newline
+
 \subsection{Mode}\label{svmode}
 \subsubsection{Indicative}
 \subsubsection{Interrogative}
