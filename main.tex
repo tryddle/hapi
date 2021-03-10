@@ -1,12 +1,11 @@
 \documentclass[a4paper, 12pt, oneside]{memoir}
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{geometry}
-\usepackage{booktabs}
 \usepackage[canonical, leipzig]{baarux}
 \usepackage{vowel}
 \usepackage{phonrule}
@@ -31,6 +30,7 @@
 \usepackage{tabularx, ragged2e}
 \usepackage{makecell}
 \usepackage[hidelinks]{hyperref}
+\usepackage{comment}
 
 \DoubleSpacing
 
@@ -216,8 +216,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1a-alpha
-        Date: 9 March, 2021
+        Version: 0.1b-alpha
+        Date: 10 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -465,7 +465,7 @@ The following section discusses all phonological processes that alter the phonet
 \end{examples}
 \textbf{9)} /h/ is elided between two distinct vowels.
 \begin{examples}
-\ex \phonb{h}{∅}{V}{V}
+\ex \phonb{h}{∅}{V₁}{V₂}
 \end{examples}
 \textbf{10)} /h/ is realized as [ʔ] at the end of a word.
 \begin{examples}
@@ -677,8 +677,7 @@ Examples (\ref{tone1} - \ref{tone3}) present instances of each tone.
     \cols /tàhòhì/ & [tʰa˩ho˩çi˩] & \emh{tàhòhì} & `poison (for a dart)'
 \end{columns}
 
-
-Tones may also come as floating tone on certain morphemes, such as the adessive suffix \emh{-(V̀)xa}. In these cases, the preceding vowel may take the floating tone, or the preceding tone gets overwritten, as can be seen in example (\ref{tone4}).
+Tones may also be realized as floating tones on certain morphemes, e.g. the 'on top' suffix \emh{-(V̀)xa}. In these cases, the preceding vowel may take the floating tone, or the preceding tone is overwritten, as can be seen in example (\ref{tone4})
 
 
 \begin{columns}\label{tone4}
@@ -782,7 +781,7 @@ In each context of the form |VV-V|, /h/ is inserted on the morpheme boundary. Th
 This section is work-in-progress
 \end{examples}
 \subsection{Morpheme-specific Processes}\label{morphophonomorphemespecific}
-\subsubsection{Debuccalization of the marker \textsc{pl}}\label{morphophonoplural}
+\subsubsection{Debuccalization of the marker \texorpdfstring{\Pl}{PL}}\label{morphophonoplural}
 The debuccalization of the abbreviated version of the plural marker \Pl, namely the morpheme \emh{-s} is one of the most widely appearing processes in the Hapi language. The rule can be formalized as presented in (\ref{ph:plurals}). An instance of this process is exemplified in (\ref{ex:ph:plurals}).
 \begin{examples}
 \ex \label{ph:plurals} \phonr{s}{h}{C}
@@ -792,7 +791,7 @@ The debuccalization of the abbreviated version of the plural marker \Pl, namely 
 \gloss {\Ssposs} hut {\Pl} {\Prl}
 \tr (we shall go) via your huts
 \end{examples}
-\subsubsection{The Diminutive marker \Dim}\label{morphophonodim}
+\subsubsection{The Diminutive marker \texorpdfstring{\Dim}{DIM}}\label{morphophonodim}
 The diminutive marker \textsc{dim} undergoes two major processes: firstly, the deletion of the morpheme's onset, secondly, the dissimilation of the morpheme's nucleus. The deletion of the morpheme's onset, namely, of |ʂ|, appears in the context of a preceding /h/; this rule is formalized in (\ref{ph:dim}), an example is given in (\ref{ex:dim1}), but shall be reiterated here. 
 \begin{examples}
 \ex \label{ph:dim} \phonl{ʂ}{∅}{h}
@@ -811,8 +810,8 @@ The dissimilation of the morpheme's nucleus happens in the context of an /i/ in 
 \gloss son {\Dim} 
 \tr the/a grandson
 \end{examples}
-\subsubsection{Assimilation of the declarative affix \textsc{decl}}\label{sdeclassim}
-The declarative disjunct affix \textsc{decl}, \emh{=kóa}, is often reduced to \emh{=ká} or \emh{=ka} after a syllable containing /a/. This context is formalized in (\ref{ph:decl}) and an example is given in (\ref{ex:ph:decl}).
+\subsubsection{Assimilation of the declarative affix \texorpdfstring{\Decl}{DECL}}\label{sdeclassim}
+The declarative disjunct affix \Decl, \emh{=kóa}, is often reduced to \emh{=ká} or \emh{=ka} after a syllable containing /a/. This context is formalized in (\ref{ph:decl}) and an example is given in (\ref{ex:ph:decl}).
 \begin{examples}
 \ex \label{ph:decl} \phonl{kóa}{ka,ká}{a}
 \ex \label{ex:ph:decl}
@@ -830,9 +829,11 @@ The internal structure of Hapi nouns is examined in this section, focussing on t
 \subsection{Nominal Root}\label{snomroot}
 The structural properties of the nominal root include a set of suffixes responsible for the expression of number, diminutives, augmentatives, and case, while a set of prefixes is used to express possession on possessable nouns. Nominal roots can be divided into two morphophonological subtypes, which take different prefixes depending on the first segment in the root. If \textbf{(i)} the root starts with a vowel, then a certain set of prefixes is used, and if \textbf{(ii)} the root starts with a consonantal sound, another set is employed. 
 \subsubsection{Internal structure of nominal roots}
+% 17 mono, 67 disyllabic, 26 trisyllabic, 3 polysyllabic → 113 roots
+
 In the following section I will consider the internal phonological structure of nominal roots, starting with the rare monosyllabic roots, then moving onward to the comparatively often found disyllabic, trisyllabic and polysyllabic, i.e. roots with more than four syllables, roots.
 \paragraph{Monosyllabic roots}
-There is a set of \textit{4} monosyllabic roots in the Hapi language, which are all considered to be very basic roots. There have been no reports of roots of the structure V or CV. Some examples for monosyllabic roots of the shape CVh, CVV and CVVh are given in example (\ref{nomroot1ex}), (\ref{nomroot2ex}) and (\ref{nomroot3ex}).
+There is a set of \textit{17} monosyllabic roots in the Hapi language, which are all considered to be very basic roots. There have been no reports of roots of the structure V and CV. Some examples for monosyllabic roots of the shape CV, CVh, CVV and CVVh are given in example (\ref{nomroot1ex}), (\ref{nomroot2ex}) and (\ref{nomroot3ex}).
 
 \begin{columns}\label{nomroot1ex}
     \cols  /ʂòih/ & [ʂoi̯ʔ˩˧] & \emh{xòih} & `(my) brother'
@@ -846,12 +847,18 @@ There is a set of \textit{4} monosyllabic roots in the Hapi language, which are 
 
 
 \paragraph{Disyllabic roots}
-The majority of nominal roots in the Hapi language are disyllabic. In the analyzed corpus of \textit{54} nominal roots, there were \textit{27} disyllabic roots. 
+The majority of nominal roots in the Hapi language are disyllabic. In the analyzed corpus of \textit{113} nominal roots, there were \textit{67} disyllabic roots. 
 \paragraph{Trisyllabic and polysyllabic roots}
-There is a decent amount of tri- and polsyllabic nominal roots in the Hapi language. Trisyllabic roots are mostly of the shape CVV.CVV.CV, CV.CV.CVV, V.CV.CV(V) or CV.CV.CV. CV.CVV.CV and other roots rarely occur, presupposing there are any. Some examples for tri- and polysyllabic nominal roots are given in example (\ref{nomroot4ex}).
+There is a decent amount of tri- and polsyllabic nominal roots in the Hapi language. Trisyllabic roots are mostly of the shape CV.CV.CV, CV.CV.CVV, CV.CV.VV and CV.CVV.CV. Some examples for tri- and polysyllabic nominal roots are given in example (\ref{nomroot4ex}) - (\ref{nomroot6ex}).
 
 \begin{columns}\label{nomroot4ex}
     \cols /hòkaapa/ & [ho˩kxaː˧pa˧] & \emh{hòkaapa} & `hunter'
+\end{columns}
+\begin{columns}\label{nomroot5ex}
+    \cols /papáʂi/ & [pʰa˧pa˥hi˧] & \emh{papáxi} & `door'
+\end{columns}
+\begin{columns}\label{nomroot6ex}
+    \cols /háhopìi/ & [ha˥oçiː˩˧] & \emh{hahópìi} & `sloth'
 \end{columns}
 
 \subsubsection{Overview}
@@ -1481,7 +1488,9 @@ PL & haí     &                     &                                     \\ \bo
 \label{t:clmaterial}
 \end{centering}
 \end{table}
-The next features are SHAPE (saliently one-dimensional (long), saliently two-dimensional (flat), saliently three-dimensional (round)), SIZE (big, small), QUANTA (singular, plural, bunch of, basketful), RIGIDITY (flexible, rigid, brittle, non-discrete) and LOCATION (extended vertically, extended horizontally, parallel objects, objects in a row). The next N tables give an overview of some classifiers in the Hapi language. A full list of classifiers can be found in appendix A.
+
+The other features include SHAPE (long, flat and round\footnote{Also referred to as saliently one/two/three-dimensional.}), SIZE (big, small), QUANTA (singular, plural, bunch of, basketful), RIGIDITY (flexible, rigid, brittle, non-discrete) and LOCATION (extended vertically, ext. horizontally, parallel objects, objects in a row). Table \ref{tab:longclass} gives an overview of the some saliently one-dimensional classifiers in Hapi. A full list of classifiers can be found in Appendix A.
+
 \begin{table}[H]
     \begin{tabular}{lll>{\bfseries}l>{\itshape}p{5cm}}
         \toprule
@@ -1585,8 +1594,8 @@ This section is work-in-progress
 Numeral quantifiers also precede the modified noun, together with the adequate classifier. More information on numerals is given in chapter \ref{c:numerals}.  The position of numerals within the noun phrase is exemplified in (\ref{ex:numeral1}), (\ref{ex:numeral2}), and (\ref{ex:numeral3}).
 \begin{examples}
 \ex \label{ex:numeral1} 
-\words hao akahííopa ahóikahàòkóa\MC5 hikoíípahahì\MC2 \\ {apíhaiha koa}\MC2 hakó
-\bits hao akahííopa a- hóika -hàò -∅ =kóa  hikoíípaha -hì {apíhaiha ko} -a hakó
+\words hao akahííopa ahóikahàòkóa\MC5 hikoíípahahì\MC2 \\ {apíhaiha koha}\MC2 hakó
+\bits hao akahííopa a- hóika -hàò -∅ =kóa  hikoíípaha -hì {apíhaiha koh} -a hakó
 \gloss {\Dem} bridge {\Pass} build {\Dpasto} {\St} {\Decl} ten {\Cl}:time year {\Pl} ago
 \tr That bridge was built ten years ago
 \ex \label{ex:numeral2}
@@ -1797,12 +1806,13 @@ Positional compound verbs are verbs with a bipartite stem. The first part (calle
     \gloss TSF:AGENT honey liquid in RPASTO DECL VIS bowl LOC
     \tr She poured the honey into the bowl (I saw it)
     \ex \label{ex:vposit2}
-    \words íí saháxìhikóa\MC4
-    \bits íí sahá- xì -hi =kóa 
-    \gloss TSN:SUBJECT fall away RPASTT DECL
+    \words (íí) saháxìhikóa\MC4
+    \bits (íí) sahá- xì -hi =kóa 
+    \gloss (TSN:SUBJECT) fall away RPASTT DECL
     \tr It (the leaf) fell away from me, i.e. it was blown away by the wind
 \end{examples}
 
+\begin{comment}
 \subsection{Mode}\label{svmode}
 \subsubsection{Indicative}
 \subsubsection{Interrogative}
@@ -1889,6 +1899,6 @@ Positional compound verbs are verbs with a bipartite stem. The first part (calle
 \chapter{List of closed class verbs}
 \chapter{List of V1s and DTRs}
 \end{appendices}
-
+\end{comment}
 \end{document}
 

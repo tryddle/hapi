@@ -271,3 +271,6 @@ TSWLatexianTemp*
 
 # notes file excluded
 SketchesForTheHapiGrammar.md
+
+# output pdf
+main.pdf
