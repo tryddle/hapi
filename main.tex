@@ -118,7 +118,7 @@
 \newleipzig{fourth}{4}{fourth person}
 \newleipzig{nmz}{nmz}{nominalizer}
 \newleipzig{c}{c}{complementizer}
-\newleipzig{qu}{Q}{interrogative mode}
+\newleipzig{intrg}{intrg}{interrogative mode}
 \newleipzig{cngr}{cngr}{congruent}
 \newleipzig{dep}{dep}{dependent}
 \newleipzig{vis}{vis}{visual}
@@ -165,10 +165,14 @@
 \newleipzig{tpposs}{3ppos}{third person plural possessive}
 \newleipzig{cl}{cl}{classifier}
 \newleipzig{link}{link}{linking particle}
-\newleipzig{demprox}{dem:prox}{proximal demonstrative}
-\newleipzig{demdist}{dem:dist}{distal demonstrative}
+\newleipzig{proximal}{prox}{proximal deixis}
+\newleipzig{distal}{dist}{distal deixis}
 \newleipzig{hort}{hort}{hortative}
-\newleipzig{nec}{nec}{necessity modal}
+\newleipzig{obligative}{obl}{obligative modal}
+\newleipzig{qu}{q}{question marker}
+\newleipzig{posit}{posit}{positive}
+\newleipzig{negat}{negat}{negative}
+\newleipzig{impv}{impv}{imperative}
 
 \glsfindwidesttoplevelname[\leipzigtype]
 
@@ -216,8 +220,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1b-alpha
-        Date: 10 March, 2021
+        Version: 0.1.1-alpha
+        Date: 11 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -409,7 +413,7 @@ Firstly I will consider minimal pairs of vowel quality, then I will move onto vo
 \end{columns}
 
 \begin{columns}
-    \cols \emh{hakó} & `ago' & \emh{hákoo} & `\textsc{nec}' 
+    \cols \emh{hakó} & `ago' & \emh{hákoo} & `\textsc{obl}' 
     \cols \emh{hása} & `loincloth' & \emh{hasáa} & `to be the first'
     \cols  \emh{káhí} & `turtle' & \emh{kahíí} & `boat'
 \end{columns}
@@ -730,7 +734,7 @@ The main process that plays a significant role in this is the so-called ʔ-Inser
     \ans S Adv V Disj Adv [[V Aff]ₚ Disj]ₛ [Aff N Aff]ₚ N ∅ [[Aff V Aff]ₚ Disj]ₛ [Disj [V]ₚ]ₛ 
     \ipa tʰa.ˈo.poi̯ ˈtʰo.ti χaː hao̯ kxai̯.ˈa.toː pʰoː.i ʔ hao̯ pʰai̯ koi̯ ʔ kxoh.sa {∅} ʔi taː ha ka çi.o.çi ˈso.to
     \bits tàhopoí tóti xàa =haó kaihatoo póói -h =haó pái- kòi -h kóhsa -∅ í- tàa -a =ká hìhohi= hákoo
-    \gloss {\Fas}:{\Agent} ready {\Cop} \textsc{s/a>a(se)} now arrive {\Ff} \textsc{s/a>a(se)} {\Sshposs} house {\Dat} matter {\Abs} {\Qu} {\Aux} {\Ff} {\Decl} delay should
+    \gloss {\Fas}:{\Agent} ready {\Cop} \textsc{s/a>a(se)} now arrive {\Ff} \textsc{s/a>a(se)} {\Sshposs} house {\Dat} matter {\Abs} {\Intrg} {\Aux} {\Ff} {\Decl} delay should
     \tr Being ready, arriving at your house, should we (still) delay the affair?\footnote{In this example []ₚ indicates a phonological word, while []ₛ denotes the disjunct-word unit.}
 \end{examples}
 Processes like k→kx, t→tʰ and p→pʰ, which are widely spread throughout the phonological realm, appear only near word-boundaries (namely, on the beginning of a word), and not on disjunct boundaries. An example is given in (\ref{ex:morphodistinc1}) and (\ref{ex:morphodistinc2}).
@@ -1093,17 +1097,17 @@ Example (\ref{ex:poss9}), (\ref{ex:poss10}) and (\ref{ex:poss11}) showcase the u
 \ex
 \label{ex:poss9}
 \bits tài xàa haóxí -ò
-\gloss {\Demprox} {\Cop} son {\Cl}:anim:sg
+\gloss {\Dem}:{\Prox} {\Cop} son {\Cl}:anim:sg
 \tr This is my son
 \ex
 \label{ex:poss10}
 \bits:* tài xàa ó- haóxí -ò
-\gloss {\Demprox} {\Cop} {\Ssposs} son {\Cl}:anim:sg
+\gloss {\Dem}:{\Prox} {\Cop} {\Ssposs} son {\Cl}:anim:sg
 \intended This is your son
 \ex
 \label{ex:poss11}
 \bits tài xàa ó- hósii -ò
-\gloss {\Demprox} {\Cop} {\Ssposs} son {\Cl}:anim:sg
+\gloss {\Dem}:{\Prox} {\Cop} {\Ssposs} son {\Cl}:anim:sg
 \tr This is your son
 \end{examples}
 \subsection{Case}\label{scase}
@@ -1178,9 +1182,9 @@ The perlative case expresses that something is moved `through' or `along' the re
 \begin{examples}
 \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
 \ex \label{ex:perl1}
-\words tàahopí há hááháahká\MC4 ókoíhtah\MC4
-\bits tàahopí há háá- háa -h =kóa  \\ ó- koí -s -tah 
-\gloss {\Fas}:{\Subject} {\Cngr} {\Hort} go {\Ff} {\Decl} {\Ssposs} hut {\Pl} {\Prl}
+\words tàahopí há hááháah\MC3 ókoíhtah\MC4
+\bits tàahopí há háá- háa -h  \\ ó- koí -s -tah 
+\gloss {\Fas}:{\Subject} {\Cngr} {\Hort} go {\Ff} {\Ssposs} hut {\Pl} {\Prl}
 \tr We shall go via your huts
 \ex \label{ex:perl2}
 \words hoó asááhàòkóapò\MC5 xáohaóhtah\MC3
@@ -1287,7 +1291,7 @@ Thus, quantifiers with the respective classifiers (\ref{ex:orderquant}), demonst
 \tr six fingers
 \ex \label{ex:orderdem}
 \bits hao kahíí
-\gloss {\Demdist} pig
+\gloss {\Dem}:{\Dist} pig
 \tr that pig
 \ex \label{ex:ordernoun}
 \bits xòxíi haíka
@@ -1406,7 +1410,7 @@ Some examples for the usage of these are presented in (\ref{ex:posspron1}) and (
 \ex \label{ex:posspron1}
 \words tài hati íxàa\MC2 há óóhò?\MC2
 \bits tài hati í- xàa há óó -ò
-\gloss {\Demprox} servant {\Qu} {\Cop} {\Cngr} {\Ssposs} {\Cl}:anim:sg
+\gloss {\Dem}:{\Prox} servant {\Intrg} {\Cop} {\Cngr} {\Ssposs} {\Cl}:anim:sg
 \tr Is that servant yours?
 \ex \label{ex:posspron2}
 \words ò kahaóó xàa kìhiò[...]\MC2
@@ -1431,7 +1435,7 @@ Some cases for the usage of these pronouns are exemplified in (\ref{ex:dempron1}
 \ex \label{ex:dempron1}
 \words tài xàa áaxíhao\MC4 há kóhii kó xàa kaai hóhò\MC2
 \bits tài xàa áa -xí -∅ -hao há kóhii kó xàa kaai hóh -ò  
-\gloss {\Demprox} {\Cop} say {\Rpasto} {\St} {\Dem} {\Cngr} {\C} {\Tsm}:{\Subject} {\Cop} sick man {\Cl}:anim:sg
+\gloss {\Dem}:{\Prox} {\Cop} say {\Rpasto} {\St} {\Dem} {\Cngr} {\C} {\Tsm}:{\Subject} {\Cop} sick man {\Cl}:anim:sg
 \tr This (pointing at man) is the man who said [of himself] that he was sick
 \ex \label{ex:dempron2}
 \words hákapióó áahaokóa\MC4 ho
@@ -1541,7 +1545,7 @@ Predicate nominals also agree with their copular subject by means of being suffi
 \ex \label{ex:clsyndistr4}
 \words tài kohi xàa toohóósaxá\MC2
 \bits tài kohi xàa toohóó -saxá
-\gloss {\Demprox} trunk {\Cop} type.of.palm {\Cl}:trunks
+\gloss {\Dem}:{\Prox} trunk {\Cop} type.of.palm {\Cl}:trunks
 \tr This trunk is of a peach palm
 \ex \label{ex:clsyndistr5}
 \words xóah xàa hòkaapaò\MC2
@@ -1571,7 +1575,7 @@ Some examples for the usage of these are given in (\ref{ex:demdet1}) and (\ref{e
 \ex \label{ex:demdet1}
 \words hao hahópìi xàa tàiha
 \bits hao hahópìi xàa tàiha
-\gloss {\Demdist} sloth {\Cop} there
+\gloss {\Dem}:{\Dist} sloth {\Cop} there
 \tr There is that sloth [which we saw earlier]
 \ex \label{ex:demdet2}
 \words híi tukáh háhihahíaka\MC3
@@ -1768,7 +1772,7 @@ Affixing auxiliary verbs use an affixing process, in which the lexical head is a
     \ex \label{ex:aux2}
     \words páó híí kaxáhákoo\MC2 tàahaka\MC3
     \bits páó híí kaxá= hákoo tàa -a =ka 
-    \gloss SS:AGENT meal eat NEC AUX ST DECL
+    \gloss SS:AGENT meal eat OBLIGATIVE AUX ST DECL
     \tr You should eat your meal (or else you will be hungry later)
 \end{examples}
 To negate an auxiliary verb, instead of using the negation auxiliary, the disjunct prefix \emh{kaí=}, which is derived from the past negative auxiliary \emh{kaíhao}, is used. Example (\ref{ex:aux3}) showcases this negation strategy.
@@ -1776,24 +1780,24 @@ To negate an auxiliary verb, instead of using the negation auxiliary, the disjun
     \ex \label{ex:aux3}
     \words kóíhihóo\MC2 ahá háakaíhákoo\MC3 atàa\MC2
     \bits kóíhi -hóo ahá háa= kaí= hákoo a- tàa 
-    \gloss forest LOC alone go NEG NEC PASS AUX
+    \gloss forest LOC alone go NEG OBLIGATIVE PASS AUX
     \tr One shouldn't go into the forest alone.
 \end{examples}
 \paragraph{Complementizer Verbs}
 Complementizer verbs are verbs which take an entire clause as their object, such as e.g. \emh{áa} `to say (that)' or \emh{óa} `to think'. They may take all normal inflectional affixes. To mark the end of a complement clause, the complementizers \emh{kóó-} or \emh{kóhii} are used.\footnote{More on the usage of complementizers  in section \ref{s:complclaus}}. The usage of complementizer verbs is exemplified in (\ref{ex:complv1}).
 \begin{examples}
     \ex \label{ex:complv1}
-    \words kóíhihóo\MC2 ahá háahákoo\MC2 atàa\MC2 kóhii káixoáh\MC2 áatóhikóa\MC3
-    \bits kóíhi -hóo ahá háa= hákoo a- tàa kóhii káixo -áh áa -tóhi =kóa
-    \gloss forest LOC alone go NEC PASS AUX C mother AUG say DPASTO DECL
+    \words kóíhihóo\MC2 ahá háakaíhákoo\MC3 atàa\MC2 kóhii káixoáh\MC2 áatóhikóa\MC3
+    \bits kóíhi -hóo ahá háa= kaí= hákoo a- tàa kóhii káixo -áh áa -tóhi =kóa
+    \gloss forest LOC alone go NEG OBLIGATIVE PASS AUX C mother AUG say DPASTO DECL
     \tr [My] grandmother said that one shouldn't go into the forest alone
 \end{examples}
 While the complementizers mark indirect speech, there is a quotative marker \emh{ko} to mark direct speech. An example of this technique can be found in (\ref{ex:complv2}).
 \begin{examples}
     \ex \label{ex:complv2}
-    \words `kóíhihóo\MC2 ahá háahákoo\MC2 atàa'\MC2 ko káixoáh\MC2 áatóhikóa\MC3
-    \bits kóíhi -hóo ahá háa= hákoo a- tàa ko  káixo -áh áa -tóhi =kóa
-    \gloss forest LOC alone go NEC PASS AUX QUOTATIVE mother AUG say DPASTO DECL
+    \words `kóíhihóo\MC2 ahá háakaíhákoo\MC3 atàa'\MC2 ko káixoáh\MC2 áatóhikóa\MC3
+    \bits kóíhi -hóo ahá háa= kaí= hákoo a- tàa ko  káixo -áh áa -tóhi =kóa
+    \gloss forest LOC alone go NEG OBLIGATIVE PASS AUX QUOTATIVE mother AUG say DPASTO DECL
     \tr [My] grandmother said: ``One shouldn't go into the forest alone''
 \end{examples}
 \paragraph{Positional Compound Verbs}
@@ -1812,12 +1816,60 @@ Positional compound verbs are verbs with a bipartite stem. The first part (calle
     \tr It (the leaf) fell away from me, i.e. it was blown away by the wind
 \end{examples}
 
-\begin{comment}
 \subsection{Mode}\label{svmode}
-\subsubsection{Indicative}
+In the following section I will present the mode slot within the verbal stem. Mode is one of many verbal grammatical categories, and it marks some modal expression, most importantly, imperatives, optatives and hortatives. Interrogative semantics are also covered by the mode prefixes. 
 \subsubsection{Interrogative}
+The interrogative mode is used to mark questions, whether it be polar or content questions. It is marked by the prefix \emh{í-}. If the verb is in the interrogative mode, a special set of person markers are used (see section \ref{svperson}). Some examples of the interrogative mode's employment can be seen in (\ref{ex:intrg1}) and (\ref{ex:intrg2}). More information about interrogative clauses, especially in a syntactic context, is given in chapter \ref{c:interrogative}.
+\begin{examples}
+    \ex \label{ex:intrg1}
+    \words {kóha haípi} tááhi\MC2 ítóóhah\MC3
+    \bits {kóha haípi} tááh -i í- tóó -ah
+    \gloss tea drink DEP INTRG AUX ST 
+    \tr Are you drinking tea?
+    \ex \label{ex:intrg2}
+    \words páhisòì\MC2 íxóatiah\MC3 
+    \bits páhi -sòì í- xóati -ah
+    \gloss what QU INTRG search.for ST
+    \tr What are you searching for?
+\end{examples}
+\subsubsection{Imperative}
+There are three imperative prefixes in the Hapi language, all of which occupy the mode slot. There are two positive markers, distal and proximal, and one deictic neutral negative marker. The distal and proximal prefixes are \emh{tà-} and \emh{hi-}. The distal morphemes are used when the command has a special distance in space — 'do there' —, while the proximal morphemes are used for contexts where the command's execution is imminent. This does not only apply for spatial, but also for temporal deixis; the distinction is exemplified in (\ref{ex:impv1}) and (\ref{ex:impv2}). 
+\begin{examples}
+    \ex \label{ex:impv1}
+    \words tàhopìh hikakía\MC3
+    \bits tàhopìh  hi- kakí -a 
+    \gloss FAS:DAT DIST.POSIT.IMPV wait ST
+    \tr You, wait for us (in some distant time or place)
+    \ex \label{ex:impv2}
+    \words tàhopìh tàkakía\MC3
+    \bits tàhopìh  tà- kakí -a 
+    \gloss FAS:DAT PROX.POSIT.IMPV wait ST
+    \tr You, wait for us (here and now)
+\end{examples}
+To exclude either the spatial or temporal sense from the distal imperative, spatial or temporal adverbs can be employed, as showcased in (\ref{ex:impv3}) and (\ref{ex:impv4}).
+\begin{examples}
+    \ex \label{ex:impv3}
+    \words tàhopìh hih hikakía\MC3
+    \bits tàhopìh hih hi- kakí -a
+    \gloss FAS:DAT there.NVIS DIST.POSIT.IMPV wait ST
+    \tr You, wait for us (in some distant place, but right now)
+    \ex \label{ex:impv4}
+    \words tàhopìh sóso hikakía\MC3
+    \bits tàhopìh sóso hi- kakí -a
+    \gloss FAS:DAT then DIST.POSIT.IMPV wait ST
+    \tr You, wait for us (in some distant time, but here)
+\end{examples}
+The negative imperative \emh{xi-} is used for negated commands. Examples (\ref{ex:impv5}) present this process.
+\begin{examples}
+    \ex \label{ex:impv5}
+    \words tàhopìh xikakía\MC3
+    \bits tàhopìh xi- kakí -a
+    \gloss FAS:DAT NEGAT.IMPV wait ST
+    \tr Do not wait for us!
+\end{examples}
 \subsubsection{Optative}
 \subsubsection{Hortative}
+\begin{comment}
 \subsection{Valency}\label{svvalency}
 \subsubsection{Antipassive}
 \subsubsection{Passive}
@@ -1884,7 +1936,7 @@ Positional compound verbs are verbs with a bipartite stem. The first part (calle
 \subsubsection{Extended Intransitive Clauses}
 \subsubsection{Transitive Clauses}
 \subsubsection{Ditransitive Clauses}
-\subsection{Interrogative}
+\subsection{Interrogative}\label{c:interrogatives}
 \subsubsection{Polar Questions}
 \subsubsection{Question Words}
 \subsection{Imperative}
