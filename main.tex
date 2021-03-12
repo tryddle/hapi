@@ -168,6 +168,7 @@
 \newleipzig{proximal}{prox}{proximal deixis}
 \newleipzig{distal}{dist}{distal deixis}
 \newleipzig{hort}{hort}{hortative}
+\newleipzig{opt}{opt}{optative}
 \newleipzig{obligative}{obl}{obligative modal}
 \newleipzig{qu}{q}{question marker}
 \newleipzig{posit}{posit}{positive}
@@ -220,8 +221,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.1-alpha
-        Date: 11 March, 2021
+        Version: 0.1.2-alpha
+        Date: 12 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -1420,7 +1421,9 @@ Some examples for the usage of these are presented in (\ref{ex:posspron1}) and (
 \end{examples}
 \subsubsection{Demonstrative Pronouns}
 The set of demonstrative pronouns consists of N forms, which are shown in table \ref{t:dempron}. Note the similarity between these and the demonstrative adjectives presented in section \ref{sdemonstrative}.
+
 \begin{table}[H]
+\centering
 \begin{tabular}{@{}llll@{}}
 \toprule
      & VIS        & NVIS                     & INANIM                                      \\ \midrule
@@ -1430,6 +1433,7 @@ DIST & hao 'that' & hih 'that' (not visible) &                                  
 \caption{Demonstrative Pronominal System}
 \label{t:dempron}
 \end{table}
+
 Some cases for the usage of these pronouns are exemplified in (\ref{ex:dempron1}), (\ref{ex:dempron2}) and (\ref{ex:dempron3}).
 \begin{examples}
 \ex \label{ex:dempron1}
@@ -1822,14 +1826,14 @@ In the following section I will present the mode slot within the verbal stem. Mo
 The interrogative mode is used to mark questions, whether it be polar or content questions. It is marked by the prefix \emh{í-}. If the verb is in the interrogative mode, a special set of person markers are used (see section \ref{svperson}). Some examples of the interrogative mode's employment can be seen in (\ref{ex:intrg1}) and (\ref{ex:intrg2}). More information about interrogative clauses, especially in a syntactic context, is given in chapter \ref{c:interrogative}.
 \begin{examples}
     \ex \label{ex:intrg1}
-    \words {kóha haípi} tááhi\MC2 ítóóhah\MC3
-    \bits {kóha haípi} tááh -i í- tóó -ah
-    \gloss tea drink DEP INTRG AUX ST 
+    \words {kóha haípi} há tááhi\MC2 ítóóhah\MC3
+    \bits {kóha haípi} há tááh -i í- tóó -ah
+    \gloss tea CNGR drink DEP INTRG AUX ST 
     \tr Are you drinking tea?
     \ex \label{ex:intrg2}
-    \words páhisòì\MC2 íxóatiah\MC3 
-    \bits páhi -sòì í- xóati -ah
-    \gloss what QU INTRG search.for ST
+    \words páhisòì\MC2 há íxóatiah\MC3 
+    \bits páhi -sòì há í- xóati -ah
+    \gloss what QU CNGR INTRG search.for ST
     \tr What are you searching for?
 \end{examples}
 \subsubsection{Imperative}
@@ -1868,6 +1872,19 @@ The negative imperative \emh{xi-} is used for negated commands. Examples (\ref{e
     \tr Do not wait for us!
 \end{examples}
 \subsubsection{Optative}
+The optative mode, marked by the prefix \emh{hó-}, expresses wishes and hopes, however there is no appeal to the addressee to make the action true. Some examples of the usage of the optative mode are shown in examples (\ref{ex:opt1}) and (\ref{ex:opt2}).
+\begin{examples}
+    \ex \label{ex:opt1}
+    \words pói hóhooxáa\MC3
+    \bits pói hó- hooxá -a
+    \gloss SS:SUBJECT OPT be.glad ST
+    \tr May you live merrily!
+    \ex \label{ex:opt2}
+    \words pípíò\MC2 hóxàa\MC2
+    \bits pípí -ò hó- xàa
+    \gloss rich CL:anim.sg OPT be 
+    \tr If only I were rich!
+\end{examples}
 \subsubsection{Hortative}
 \begin{comment}
 \subsection{Valency}\label{svvalency}
