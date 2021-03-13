@@ -174,6 +174,8 @@
 \newleipzig{posit}{posit}{positive}
 \newleipzig{negat}{negat}{negative}
 \newleipzig{impv}{impv}{imperative}
+\newleipzig{epist}{epist}{epistemic}
+\newleipzig{juss}{juss}{jussive mode}
 
 \glsfindwidesttoplevelname[\leipzigtype]
 
@@ -221,8 +223,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.2-alpha
-        Date: 12 March, 2021
+        Version: 0.1.2b-alpha
+        Date: 13 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -735,7 +737,7 @@ The main process that plays a significant role in this is the so-called ʔ-Inser
     \ans S Adv V Disj Adv [[V Aff]ₚ Disj]ₛ [Aff N Aff]ₚ N ∅ [[Aff V Aff]ₚ Disj]ₛ [Disj [V]ₚ]ₛ 
     \ipa tʰa.ˈo.poi̯ ˈtʰo.ti χaː hao̯ kxai̯.ˈa.toː pʰoː.i ʔ hao̯ pʰai̯ koi̯ ʔ kxoh.sa {∅} ʔi taː ha ka çi.o.çi ˈso.to
     \bits tàhopoí tóti xàa =haó kaihatoo póói -h =haó pái- kòi -h kóhsa -∅ í- tàa -a =ká hìhohi= hákoo
-    \gloss {\Fas}:{\Agent} ready {\Cop} \textsc{s/a>a(se)} now arrive {\Ff} \textsc{s/a>a(se)} {\Sshposs} house {\Dat} matter {\Abs} {\Intrg} {\Aux} {\Ff} {\Decl} delay should
+    \gloss {\Fas}:{\Agent} ready {\Cop} \textsc{s/a>a(se)} now arrive {\Ff} \textsc{s/a>a(se)} {\Sshposs} house {\Dat} matter {\Abs} {\Intrg} {\Aux} {\Ff} {\Decl} delay {\Obligative}
     \tr Being ready, arriving at your house, should we (still) delay the affair?\footnote{In this example []ₚ indicates a phonological word, while []ₛ denotes the disjunct-word unit.}
 \end{examples}
 Processes like k→kx, t→tʰ and p→pʰ, which are widely spread throughout the phonological realm, appear only near word-boundaries (namely, on the beginning of a word), and not on disjunct boundaries. An example is given in (\ref{ex:morphodistinc1}) and (\ref{ex:morphodistinc2}).
@@ -1565,6 +1567,7 @@ Predicate nominals also agree with their copular subject by means of being suffi
 \subsection{Demonstrative Adjectives}\label{sdemonstrative}
 The demonstrative adjectives of the Hapi language are very similar, if not identical to those demonstratives described in \ref{spronouns}. A short overview is given in table \ref{t:demdet}.
 \begin{table}[H]
+\centering
 \begin{tabular}{@{}llll@{}}
 \toprule
      & VIS        & NVIS                     & INANIM                                       \\ \midrule
@@ -1693,7 +1696,25 @@ An overview of the verbal stem structure of the Hapi language can be seen in tab
 \label{t:vstruc}
 \end{table}
 \subsubsection{Verb Classes}\label{s:verbclass}
-There are six classes of verbs in the Hapi language. Firstly, there are the basic intransitive, extended intransitive, transitive and ditransitive verbs, which are categorized by their valency. The remaining three verb classes are auxiliary verbs, complementizing verbs and compound verbs, the latter of which may be also subdivided into positional compound verbs and nominal compound verbs. Intransitive and transitive verbs constitute an open class, while the rest of the verb classes are closed.\footnote{N.b.: there needs to be more research conducted on the nature of the extended intransitive class, as I have not yet found out whether it is closed or open.} A list of all closed class verbs is presented in appendix B.
+There are six classes of verbs in the Hapi language. Firstly, there are the basic intransitive, extended intransitive, transitive and ditransitive verbs, which are categorized by their valency. The remaining three verb classes are auxiliary verbs, complementizing verbs and compound verbs, the latter of which may be also subdivided into positional compound verbs and nominal compound verbs. Intransitive and transitive verbs constitute an open class, while the rest of the verb classes are closed.\footnote{N.b.: there needs to be more research conducted on the nature of the extended intransitive class, as I have not yet found out whether it is closed or open.} A list of all closed class verbs is presented in appendix B. An overview of verb classes is depicted in table \ref{t:verbclass}.
+
+\begin{comment}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{@{}llll@{}}
+    \toprule
+    \multicolumn{2}{c}{Class}                     & \multicolumn{1}{c}{Number of Arguments} & \multicolumn{1}{c}{Argument Marking} \\ \midrule
+    Intransitive        &                         & 1                                       & S-∅ V                                \\
+    Ext. Intransitive   &                         & 2                                       & S-∅ V E-{\Dat}/{\Loc}                      \\
+    Transitive          & a) Core Transitives     & 2                                       & A-{\Erg} V P-∅                          \\
+                        & b) Non-Core Transitives & 2                                       & A-{\Erg} V P-\textsc{ncore}                      \\
+    Pos. Compound Verbs &                         & 1-2                                     & S-∅ V or A-{\Erg} V P-∅                 \\
+    Ditransitive        &                         & 3                                       & D-{\Erg} T-∅ V R-{\Dat}                    \\ \bottomrule
+    \end{tabular}
+    \caption{Verb Classes Overview}
+    \label{t:verbclass}
+    \end{table}
+\end{comment}
 \paragraph{Intransitive Verbs}
 Intransitive verbs are verbs which take one S argument, as can be seen in example (\ref{ex:intr1}). This argument, presupposing it is not a pronoun, is left unmarked, i.e. takes the absolutive null morpheme. If the argument is a pronoun, it must take its S form, as can be seen in example (\ref{ex:intr2}).
 \begin{examples}
@@ -1722,8 +1743,8 @@ Extended intransitive verbs are verbs which take two arguments, an S argument an
     \gloss mother LINK TT apply.color ST DECL TSM:DAT
     \tr His mother was painting his [face]
     \ex \label{ex:exitr3}
-    \words hao háahaka\MC3 paátihóo\MC2
-    \bits  hao háa -a =ka paáti -hóo 
+    \words tài háahaka\MC3 paátihóo\MC2
+    \bits  tài háa -a =ka paáti -hóo 
     \gloss DEM:PROX go ST DECL type.of.bird LOC
     \tr This one is following a macaw
 \end{examples}
@@ -1741,6 +1762,14 @@ Transitive verbs are verbs which take two arguments, an A and an P argument. If 
     \gloss TP:AGENT chew RPASTO DECL TSN:PATIENT
     \tr They chewed it
 \end{examples} 
+However there are exceptions to this rule; some transitive verbs' objects do not take the absolutive case but a non-core or relational case instead. An example for such a verb is \emh{títo} 'to listen, to smell', which takes an additional argument in the 'next to' relational case,marked by the morpheme \emh{-(h)aí}. An example for the usage of those non-core transitive verbs is given in (\ref{ex:tr3}).
+\begin{examples}
+    \ex \label{ex:tr3}
+    \words háá tóópahaí\MC2 títoi\MC2 tóóhaká\MC3
+    \bits háá tóópa -haí títo -i tóó -a =ká 
+    \gloss EPIST song NEXT listen DEP PROG ST DECL
+    \tr Maybe she's listening to the song!
+\end{examples}
 Ditransitive verbs are verbs which take three arguments; those arguments are called D, T and R, and refer to the donor, theme and recipient of the verb. For nouns, the D function is marked by the ergative case, the T function is marked by the absolutive case and the R function is marked by the dative case. For pronouns, D and T correspond to the A and P forms, while the dative forms are used for the R function. There are \textit{2} ditransitive verbs in the analyzed corpus. Examples (\ref{ex:ditr1}) and (\ref{ex:ditr2}) showcase the usage of ditransitive verbs. 
 \begin{examples}
     \ex \label{ex:ditr1}
@@ -1871,21 +1900,54 @@ The negative imperative \emh{xi-} is used for negated commands. Examples (\ref{e
     \gloss FAS:DAT NEGAT.IMPV wait ST
     \tr Do not wait for us!
 \end{examples}
-\subsubsection{Optative}
-The optative mode, marked by the prefix \emh{hó-}, expresses wishes and hopes, however there is no appeal to the addressee to make the action true. Some examples of the usage of the optative mode are shown in examples (\ref{ex:opt1}) and (\ref{ex:opt2}).
+\subsubsection{Jussive}
+The jussive mode, marked by the prefix \emh{háá-} marks a variety of semantics on the verb. Verbs that are in the jussive mode do not take any other markers besides the jussive, neither person nor tense morphemes. Firstly, it may be used as a third-person imperative, having the speaker convey appeal to the adressee to enable an event to occur; this is exemplified in (\ref{ex:juss1}) and (\ref{ex:juss2}). The speaker expresses a desire that the event will take place, but unlike with the imperative, the speaker has limited control over the event's outcome. In this case, the affected third-person participant takes the semantic role of an agent or a subject, depending on the transitivity of the verb. (\ref{ex:juss2}) was uttered in the context of a woman who wanted her husband to come help in the garden, although he has been up all night drinking.
 \begin{examples}
-    \ex \label{ex:opt1}
-    \words pói hóhooxáa\MC3
-    \bits pói hó- hooxá -a
-    \gloss SS:SUBJECT OPT be.glad ST
+    \ex \label{ex:juss1}
+    \words xipásaa\MC3 xixíxí\MC2 kòà kó hááxíxí\MC2
+    \bits xi- pása -a xi- xíxí kòà kó háá- xíxí
+    \gloss NEGAT.IMPV carry ST NEGAT.IMPV go.out TSM:PATIENT TSM:SUBJECT JUSS go.out
+    \tr Don't carry him out (of the house), let him go out by himself
+    \ex \label{ex:juss2}
+    \words tá kó háásóí\MC2
+    \bits tá kó háá- sóí
+    \gloss later TSM:SUBJECT JUSS sleep 
+    \tr Let him sleep later
+\end{examples}
+Another function of the jussive prefix is comparable to an optative in other languages. The speaker again expresses a desire for the event to happen, but in the optative case the speaker has little to no control over its outcome. An example is given in (\ref{ex:juss3}) and (\ref{ex:juss4})
+\begin{examples}
+    \ex \label{ex:juss3}
+    \words pói hááhooxá\MC2
+    \bits pói háá- hooxá 
+    \gloss SS:SUBJECT JUSS be.glad
     \tr May you live merrily!
-    \ex \label{ex:opt2}
-    \words pípíò\MC2 hóxàa\MC2
-    \bits pípí -ò hó- xàa
-    \gloss rich CL:anim.sg OPT be 
+    \ex \label{ex:juss4}
+    \words pípíò\MC2 hááxàa\MC2
+    \bits pípí -ò háá- xàa
+    \gloss rich CL:anim.sg JUSS be 
     \tr If only I were rich!
 \end{examples}
-\subsubsection{Hortative}
+Another usage of the optative function is in complement clauses, when the verb which initializes the clause possesses semantics of wishing and hoping. See (\ref{ex:juss5}) for an example.
+\begin{examples}
+    \ex \label{ex:juss5}
+    \words káakaahikóa\MC3 kóo\MC2 hááháahi\MC3 \\ hááxíihaxi\MC2 háátíto\MC2
+    \bits káakaa -hi =kóa kóó -∅ háá- áa -hi \\ háá- xíihaxi háá- títo
+    \gloss hope RPASTT DECL C FF JUSS say RPASTT JUSS tell.a.story JUSS listen
+    \tr I myself was hoping that you would tell me a story (before dinner)
+\end{examples}
+Lastly, the jussive mode may express a speaker'ss disengagement from a negatively viewed event, in which case the speaker voices a feigned indifference, associated with a lack of control, as exemplified in (\ref{ex:juss6}) and (\ref{ex:juss7}).
+\begin{examples}
+    \ex \label{ex:juss6}
+    \words kó háákatí\MC2
+    \bits kó háá- katí
+    \gloss TSM:SUBJECT JUSS dance
+    \tr Let him dance! (uttered by a jealous wife) 
+    \ex \label{ex:juss7}
+    \words íí háákíío\MC2 tàhopí xàa koítaó\MC2
+    \bits íí háá- kíío tàhopí xàa koí -taó 
+    \gloss TSN:SUBJECT JUSS rain FAS COP hut BEL
+    \tr Let it rain we're in (lit.: below) a house
+\end{examples}
 \begin{comment}
 \subsection{Valency}\label{svvalency}
 \subsubsection{Antipassive}
@@ -1960,9 +2022,17 @@ The optative mode, marked by the prefix \emh{hó-}, expresses wishes and hopes, 
 \subsubsection{Imperative Clauses}
 \subsubsection{Optative Clauses}
 \subsubsection{Hortative Clauses}
+\section{Multiverb Constructions}
+\subsection{Serial Verb Constructions}
+\subsection{Syndetic Verb Coordination}
+\subsection{Switch-Reference Constructions}
 \section{Subordination}
 \subsection{Relative Clauses}
 \subsection{Complement Clauses}\label{s:complclaus}
+\subsection{Adverbal Clauses}
+\subsubsection{Temporal/Conditional Clauses}
+\subsubsection{Cause and Reason Clauses}
+\subsubsection{Purposive Clauses}
 \begin{appendices}
 \chapter{List of classifiers}
 \chapter{List of closed class verbs}
