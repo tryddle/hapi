@@ -32,7 +32,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{comment}
 
-\DoubleSpacing
+%\DoubleSpacing
+\linespread{1.75}
 
 \usepackage{expex}
 \lingset{Everyex={\SingleSpacing}}
@@ -41,6 +42,7 @@
 
 \renewcommand{\arraystretch}{1}
 
+\begin{comment}
 \def\trstyle#1{%
   `\textit{#1}'%
 }
@@ -48,6 +50,7 @@
   gloss.markup={},
   tr.markup=\trstyle
 }
+\end{comment}
 \newbaarulinetype{rightcomment}{manner}{\baaruparens}
 
 
@@ -128,10 +131,10 @@
 \newleipzig{agent}{A}{agent}
 \newleipzig{subject}{S}{subject}
 \newleipzig{patient}{P}{patient}
-\newleipzig{rpasto}{rpast1}{recent past}
-\newleipzig{rpastt}{rpast2}{intermediate past}
-\newleipzig{dpasto}{dpast1}{distant past}
-\newleipzig{dpastt}{dpast2}{remote past}
+\newleipzig{rpasto}{rec.past}{recent past}
+\newleipzig{rpastt}{int.past}{intermediate past}
+\newleipzig{dpasto}{dist.past}{distant past}
+\newleipzig{dpastt}{rem.past}{remote past}
 \newleipzig{rpast}{past1}{primary past}
 \newleipzig{dpast}{past2}{secondary past}
 \newleipzig{prl}{perl}{perlative}
@@ -176,6 +179,10 @@
 \newleipzig{impv}{impv}{imperative}
 \newleipzig{epist}{epist}{epistemic}
 \newleipzig{juss}{juss}{jussive mode}
+\newleipzig{recip}{recip}{reciprocal}
+\newleipzig{cont}{cont}{continuative}
+\newleipzig{itr}{itr}{intransitive}
+\newleipzig{trans}{trans}{transitive}
 
 \glsfindwidesttoplevelname[\leipzigtype]
 
@@ -223,8 +230,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.3-alpha
-        Date: 14 March, 2021
+        Version: 0.1.4-alpha
+        Date: 15 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -706,7 +713,7 @@ In the Hapi language, those affixes are classified as conjunct affixes which do 
 \ex \label{ex:conjunctaffix}
 \script ˈtʰiː˧ʃi˥aʔ˥
 \bits tiisí -áh
-\gloss amulet {\Aug}
+\gloss amulet AUG
 \tr the/a big (i.e. mighty) amulet
 \end{examples}
 \subsubsection{Disjunct Affixes}
@@ -715,7 +722,7 @@ While conjunct affixes attach to the stem and form a tight unit with it, disjunc
 \ex \label{ex:disjunctaffix}
 \script ha˧ˈtaː˧˥çiʔ˧ko̯a˥˧
 \bits ha- taápi -h =kóa
-\gloss {\Antip} paint {\Ff} {\Decl}
+\gloss ANTIP paint FF DECL
 \tr (I) am painting (something)
 \end{examples}
 \subsubsection{Clitics}
@@ -725,7 +732,7 @@ In Hapi grammar, clitics are morphemes which attach at phrase-level, i.e. cannot
 \ex \label{ex:clitic}
 \script ... ˈʃiː˥˧ti˧to˧
 \bits tàhòhí -h kàah -xí =kóa síiti -∅ \cl to
-\gloss poison {\Erg} kill {\Rpasto} {\Decl} uakari {\Abs} {\Vis}
+\gloss poison ERG kill RPASTO DECL uakari ABS VIS
 \tr (Earlier today,) the poison (of a dart) killed an uakari monkey, I saw that
 \end{examples}
 \subsubsection{Distinction from Words and ʔ-Insertion}\label{smorphonodistinc}
@@ -740,7 +747,7 @@ The main process that plays a significant role in this is the so-called ʔ-Inser
     \ans S Adv V Disj Adv [[V Aff]ₚ Disj]ₛ [Aff N Aff]ₚ N ∅ [[Aff V Aff]ₚ Disj]ₛ [Disj [V]ₚ]ₛ 
     \ipa tʰa.ˈo.poi̯ ˈtʰo.ti χaː hao̯ kxai̯.ˈa.toː pʰoː.i ʔ hao̯ pʰai̯ koi̯ ʔ kxoh.sa {∅} ʔi taː ha ka çi.o.çi ˈso.to
     \bits tàhopoí tóti xàa =haó kaihatoo póói -h =haó pái- kòi -h kóhsa -∅ í- tàa -a =ká hìhohi= hákoo
-    \gloss {\Fas}:{\Agent} ready {\Cop} \textsc{s/a>a(se)} now arrive {\Ff} \textsc{s/a>a(se)} {\Sshposs} house {\Dat} matter {\Abs} {\Intrg} {\Aux} {\Ff} {\Decl} delay {\Obligative}
+    \gloss FAS:AGENT ready COP \textsc{\textup{s/a>a(se)}} now arrive FF \textsc{\textup{s/a>a(se)}} SSHPOSS house DAT matter ABS INTRG AUX FF DECL delay OBLIGATIVE
     \tr Being ready, arriving at your house, should we (still) delay the affair?\footnote{In this example []ₚ indicates a phonological word, while []ₛ denotes the disjunct-word unit.}
 \end{examples}
 Processes like k→kx, t→tʰ and p→pʰ, which are widely spread throughout the phonological realm, appear only near word-boundaries (namely, on the beginning of a word), and not on disjunct boundaries. An example is given in (\ref{ex:morphodistinc1}) and (\ref{ex:morphodistinc2}).
@@ -750,13 +757,13 @@ Processes like k→kx, t→tʰ and p→pʰ, which are widely spread throughout t
     \script so.ˈsaː.i kxo
     \ipa so.ˈsaː.i kxo
     \bits sosáai kó
-    \gloss cat {\Tsm}
+    \gloss cat TSM
     \tr tomcat
     \ex \label{ex:morphodistinc2}
     \script çi.ˈki.ʃiʔ.ko̯a
     \ipa çi ˈki.ʃiʔ ∅ ko̯a
     \bits hi- kísih -h =kóa
-    \gloss {\Antip} dislike {\Ff} {\Decl} 
+    \gloss ANTIP dislike FF DECL
     \tr I dislike (it)
 \end{examples}
 \subsection{Allomorphic Variations}\label{sallomorphicvariations}
@@ -770,7 +777,7 @@ Every context |h-h| is degeminated to |h|. This context is formalized in (\ref{p
 \ex\label{ex:ph:allom1}
 \words sááí\MC2 háikia\MC2 kaai tà hóahkóa\MC3
 \bits sáá =í háiki -a kaai tà hóah -h =kóa
-\gloss eat \textsc{s/a>s(se)} type.of.nut {\Pl} foul {\Fs}:{\Subject} vomit {\Ff} {\Decl}
+\gloss eat \textsc{\textup{s/a>s(se)}} type.of.nut PL foul FS:SUBJECT vomit FF DECL
 \tr After having eaten (some) foul nuts, I am (now) vomiting
 \end{examples}
 \subsubsection{Coalescence of morphemes in rapid speech}
@@ -780,7 +787,7 @@ Certain morphemes are fused in rapid speech, however there haven't been made any
 \manner rapid speech
 \words kaóxììhaíh\MC2 kíih hóíaka\MC3 xáháìh\MC2 xíoki
 \bits kaóxììha -íh kíih hóí -a =ka xáháìi -h xíooki
-\gloss teacher {\Erg} old give {\St} {\Decl} student {\Dat} gift
+\gloss teacher ERG old give ST DECL student DAT gift
 \tr The old teacher gives a gift to a student
 \end{examples}
 \subsubsection{/h/-Insertion}
@@ -798,7 +805,7 @@ The debuccalization of the abbreviated version of the plural marker \Pl, namely 
 \ex \label{ex:ph:plurals}
 \words ókoíhtah\MC4
 \bits ó- koí -s -tah
-\gloss {\Ssposs} hut {\Pl} {\Prl}
+\gloss SSPOSS hut PL PRL
 \tr (we shall go) via your huts
 \end{examples}
 \subsubsection{The Diminutive marker \texorpdfstring{\Dim}{DIM}}\label{morphophonodim}
@@ -808,7 +815,7 @@ The diminutive marker \textsc{dim} undergoes two major processes: firstly, the d
 \ex \label{ex:ph:dim}
 \words hápaahii\MC2
 \bits hápaah -xii
-\gloss dog {\Dim}
+\gloss dog DIM
 \tr the little dog
 \end{examples}
 The dissimilation of the morpheme's nucleus happens in the context of an /i/ in the preceding syllable's nucleus. This rule is depicted in (\ref{ph:dim2}) and exemplified in (\ref{ex:ph:dim2}).
@@ -817,7 +824,7 @@ The dissimilation of the morpheme's nucleus happens in the context of an /i/ in 
 \ex \label{ex:ph:dim2} 
 \words hósiixo\MC2
 \bits hósii -xii
-\gloss son {\Dim} 
+\gloss son DIM 
 \tr the/a grandson
 \end{examples}
 \subsubsection{Assimilation of the declarative affix \texorpdfstring{\Decl}{DECL}}\label{sdeclassim}
@@ -827,7 +834,7 @@ The declarative disjunct affix \Decl, \emh{=kóa}, is often reduced to \emh{=ká
 \ex \label{ex:ph:decl}
 \words kó hásaaka\MC3 taahsáahi\MC2
 \bits kó hásaa -a =kóa taah -sáahi
-\gloss {\Tsm}:{\Subject} be.the.first {\St} {\Decl} effort {\Pvt}
+\gloss TSM:SUBJECT be.the.first ST DECL effort PVT
 \tr He won (the race) without any effort
 \end{examples}
 \chapter{The Noun and the Noun Phrase}
@@ -899,13 +906,13 @@ While gender is not explicitly marked on nouns, it can be denoted by using a nou
 \begin{example}
 \label{nomgender1}
 \bits hàòxa hoa
-\gloss capybara {\Tsf}
+\gloss capybara TSF
 \tr female capybara
 \end{example}
 \begin{example}
 \label{nomgender2}
 \bits hàòxa kó 
-\gloss capybara {\Tsm} 
+\gloss capybara TSM 
 \tr male capybara
 \end{example}
 \subsection{Number}\label{snumber}
@@ -914,17 +921,17 @@ The Hapi language distinguishes two types of number marking on nouns, singular a
 \ex
 \label{ex:number1}
 \bits há- sáhpa -soa
-\gloss {\Fsposs} arrow.head {\Pl}
+\gloss FSPOSS arrow.head PL
 \tr my arrowheads; my collection of arrowheads
 \ex
 \label{ex:number2}
 \bits hóh -áh -a -óh
-\gloss man {\Aug} {\Pl} {\Erg}
+\gloss man AUG PL ERG
 \tr (the) big men (had slain a snake...)
 \ex 
 \label{ex:number3}
 \bits ó- koí -s -tah
-\gloss {\Ssposs} hut {\Pl} {\Prl}
+\gloss SSPOSS hut PL PRL
 \tr (we shall go) via your huts
 \end{examples}
 \subsection{Diminutives}\label{sdim}
@@ -933,17 +940,17 @@ To form a noun's diminutive form, the suffix \emh{-xii} is used. It cannot only 
 \ex
 \label{ex:dim1}
 \bits hápaah -xii 
-\gloss dog {\Dim}
+\gloss dog DIM
 \tr the little dog
 \ex
 \label{ex:dim2}
 \bits pái- hósii -xii
-\gloss {\Sshposs} son {\Dim}
+\gloss SSHPOSS son DIM
 \tr your\textsubscript{HON} grandson
 \ex
 \label{ex:dim3}
 \bits páhsóoih -a -xii
-\gloss bug {\Pl} {\Dim}
+\gloss bug PL DIM
 \tr those pesky little bugs!
 \end{examples}
 \subsection{Augmentatives}\label{saug}
@@ -952,17 +959,17 @@ The augmentative form, which is marked by the suffix \emh{-áh} \Aug, encodes au
 \ex
 \label{ex:aug1}
 \bits táhaa -áh 
-\gloss barrel {\Aug}
+\gloss barrel AUG
 \tr a big barrel
 \ex
 \label{ex:aug2}
 \bits kápihoo -áh
-\gloss father {\Aug}
+\gloss father AUG
 \tr (my) grandfather
 \ex
 \label{ex:aug3}
 \bits hahópìi -áh
-\gloss sloth {\Aug}
+\gloss sloth AUG
 \tr (Praise be!) The sloth god!
 \end{examples}
 There is also the augmentative suffix \emh{-aóh}, which may be employed in the same sense as \emh{-áh} \Aug. (\ref{ex:aug4}) gives an example for an augmentative using the second augmentative suffix.
@@ -970,7 +977,7 @@ There is also the augmentative suffix \emh{-aóh}, which may be employed in the 
 \ex 
 \label{ex:aug4} 
 \bits ahitáh -aóh
-\gloss iguana {\Auga}
+\gloss iguana AUGA
 \tr a huge iguana
 \end{examples}
 The two augmentative suffixes may also be stacked to increase the augmentative, praising meaning usually encoded by these morphemes. In this case, the suffix \emh{-áh} comes first, as can be seen in example (\ref{ex:aug5}).
@@ -978,7 +985,7 @@ The two augmentative suffixes may also be stacked to increase the augmentative, 
 \ex
 \label{ex:aug5}
 \bits sósikíí -áh -aóh
-\gloss wooden.beam {\Aug} {\Auga}
+\gloss wooden.beam AUG AUGA
 \tr an immense wooden beam
 \end{examples}
 \subsection{Possession}\label{spossession}
@@ -1010,19 +1017,19 @@ Some examples for the usage of these personal markers can be found below. Exampl
 \label{ex:poss1}
 \words háhoáta\MC2
 \bits h́- ahoáta
-\gloss {\Fsposs} bow
+\gloss FSPOSS bow
 \tr my/our bow
 \ex
 \label{ex:poss2}
 \words tàhoáta\MC2
 \bits t̀- ahoáta
-\gloss {\Tpposs} bow
+\gloss TPPOSS bow
 \tr their bow/hisⱼ bow
 \ex 
 \label{ex:poss3}
 \words páipáaxo\MC2
 \bits pái- páaxo
-\gloss {\Sshposs} tendon
+\gloss SSHPOSS tendon
 \tr your\textsubscript{HON} tendon (the one you extracted from the meat)
 \end{examples}
 \paragraph{Nominal Classifiers and Possession}\label{snomclassifiersandpossession}
@@ -1032,13 +1039,13 @@ The classifier may also be moved to the front within a clause to focus the aspec
 \ex
 \label{ex:poss4}
 \bits káhi kì- hóó
-\gloss chicken.egg {\Tsposs} {\Cl}:egg  
+\gloss chicken.egg TSPOSS CL:egg  
 \tr his chicken egg
 \ex
 \label{ex:poss5}
 \words hóhóikaííxi\MC2 kói\MC2 hò\MC2 póóihi\MC2 xósóóxíkóa\MC4 hápaáh\MC2
 \bits {hó$\sim$ hóika} =ííxi koí -∅ h- ò póói -i xósóó -xí -∅ =kóa hápaáh -h 
-\gloss {\Redup}:build \textsc{s/a/o>o(se)} hut {\Abs} {\Fsposs} {\Cl}:anim:sg come {\Dep} bite {\Rpasto} {\St} {\Decl} dog {\Erg} 
+\gloss REDUP:build \textsc{\textup{s/a/o>o(se)}} hut ABS FSPOSS CL:anim:sg come DEP bite RPASTO ST DECL dog ERG 
 \tr As he was once again building another hut, my dog came and bit (him)
 \end{examples}
 \subsubsection{Unpossessable Nouns}\label{sinalien}
@@ -1067,18 +1074,18 @@ They all may be possessed via certain indirect possession strategies which are s
 \begin{examples}
 \ex 
 \label{ex:poss6}
-\bits hòkaapa hi- táa
-\gloss hunting.person {\Fpposs} {\Cl}:profession
+\bits hòkaapa hi- táah
+\gloss hunting.person FPPOSS CL:profession
 \tr our hunter; the hunter that belongs to our family
 \ex
 \label{ex:poss7}
 \bits xííkoh =à tàahoih
-\gloss hill {\Link} {\Ff}
+\gloss hill LINK FF
 \tr my/our hill; the hill that is located near my/our hut
 \ex
 \label{ex:poss8}
 \bits àkóóih xáa pòih
-\gloss in.law {\Cop} {\Ss}.{\Dat}
+\gloss in.law COP SS.DAT
 \tr your in-law
 \end{examples}
 In example (\ref{ex:poss6}), the construction explained in section \ref{snomclassifiersandpossession} is employed; this construction is not only used in these cases, but also, as explained in the referred section, to focus the possessed noun. In example (\ref{ex:poss7}), another construction is used. The linking disjunct affix \emh{=à} is suffixed to the head, while the respective emphatic pronoun form is inserted right after it.\footnote{Compare section \ref{spronouns} for a comprehensive overview of the Hapi pronoun system.}
@@ -1103,17 +1110,17 @@ Example (\ref{ex:poss9}), (\ref{ex:poss10}) and (\ref{ex:poss11}) showcase the u
 \ex
 \label{ex:poss9}
 \bits tài xàa haóxí -ò
-\gloss {\Dem}:{\Prox} {\Cop} son {\Cl}:anim:sg
+\gloss DEM:PROX COP son CL:anim:sg
 \tr This is my son
 \ex
 \label{ex:poss10}
 \bits:* tài xàa ó- haóxí -ò
-\gloss {\Dem}:{\Prox} {\Cop} {\Ssposs} son {\Cl}:anim:sg
+\gloss DEM:PROX COP SSPOSS son CL:anim:sg
 \intended This is your son
 \ex
 \label{ex:poss11}
 \bits tài xàa ó- hósii -ò
-\gloss {\Dem}:{\Prox} {\Cop} {\Ssposs} son {\Cl}:anim:sg
+\gloss DEM:PROX COP SSPOSS son CL:anim:sg
 \tr This is your son
 \end{examples}
 \subsection{Case}\label{scase}
@@ -1126,7 +1133,7 @@ Employed to encode the S of intransitive clauses, the primary function of the ab
 \ex \label{ex:abs1}
 \words toíhoh\MC2 sáhaaxíkóa\MC4
 \bits toíhoh -∅ sáhaa -xí -∅ =kóa 
-\gloss warrior {\Abs} show.mercy {\Rpasto} {\St}  {\Decl} 
+\gloss warrior ABS show.mercy RPASTO ST  DECL 
 \tr Earlier today, the warrior showed mercy
 \end{examples}
 Besides that, the absolutive case also marks the P of transitive clauses as in (\ref{ex:abs2}) and the T of ditransitive verb, thus making the Hapi language a indirective language. Example (\ref{ex:abs3}) gives an example for this tertiary function of the absolutive case.
@@ -1135,12 +1142,12 @@ In (\ref{ex:abs2}), the speaker talks about a young girl who ate an underripe ma
 \ex \label{ex:abs2}
 \words hoa sááhikóa\MC4 háiikáh\MC2
 \bits hoa sáá -hi -∅ =kóa háiikáh -∅ 
-\gloss {\Tsf}:{\Agent} eat {\Rpastt} {\St} {\Decl} type.of.fruit {\Abs}
+\gloss TSF:AGENT eat RPASTT ST DECL type.of.fruit ABS
 \tr She ate a mangaba fruit (yesterday)
 \ex \label{ex:abs3}
 \words kaósóaíh\MC2 kíih hóíakóa\MC3 xáháìih\MC2 xíooki\MC2
 \bits kaósóa -íh kíih hóí -a =kóa xáháìi -h xíooki -∅
-\gloss teacher {\Erg} old give {\St} {\Decl} student {\Dat} gift {\Abs}
+\gloss teacher ERG old give ST DECL student DAT gift ABS
 \tr The old teacher gives a gift to a student
 \end{examples}
 \paragraph{Ergative Case \emh{-(V́)h} \textsc{erg}}
@@ -1150,7 +1157,7 @@ In (\ref{ex:erg1}), the neighbour of the speaker was taking the raw meat back fr
 \ex \label{ex:erg1}
 \words àkóóihíh\MC2 xáh hóhiaka\MC3
 \bits àkóóih -íh xáh hóhi -a =kóa 
-\gloss  neighbour {\Erg} raw.meat take {\St} {\Decl} 
+\gloss  neighbour ERG raw.meat take ST DECL 
 \tr (My) neighbour is taking the raw meat (with him)
 \end{examples}
 \paragraph{Dative Case \emh{-V̀Vh/-s} \textsc{dat}}
@@ -1159,7 +1166,7 @@ The dative case is used to mark the R of a ditransitive clause, as well as the e
 \ex \label{ex:dat1}
 \words kó sahóóhakóa\MC3 xóahasàxa\MC3
 \bits kó sahóó -a =kóa xóaha -s -àxa
-\gloss {\Tsm}:{\Subject} carve.in {\St} {\Decl} mud {\Dat} {\Ont}
+\gloss TSM:SUBJECT carve.in ST DECL mud DAT ONT
 \tr He is scratching (something) in the mud
 \end{examples}
 \subsubsection{Non-Core Cases}\label{sncorecase}
@@ -1170,18 +1177,18 @@ The locative case marks a noun for a locational meaning, i.e. the position in, f
 \ex \label{ex:loc1}
 \words tàhokó hoihkóa\MC3 há pííháhóo\MC3
 \bits tàhokó hoi -h =kóa há píí -áh -hóo
-\gloss {\Fat}:{\Subject} be.at {\Ff} {\Decl} {\Cngr} river {\Aug} {\Loc}
-\tr We(excl.) are at the river
+\gloss FAT:SUBJECT be.at FF DECL CNGR river AUG LOC
+\tr We are at the river
 \ex \label{ex:loc2}
 \words tàhokó háahkóa\MC3 há pííháhóo\MC3
 \bits tàhokó háa -h =kóa há píí -áh -hóo
-\gloss {\Fat}:{\Subject} go {\Ff} {\Decl} {\Cngr} river {\Aug} {\Loc}
-\tr We(excl.) go to the river
+\gloss FAT:SUBJECT go FF DECL CNGR river AUG LOC
+\tr We go to the river
 \ex \label{ex:loc3}
 \words tàhokó póóihkóa\MC3 há pííháhóo\MC3
 \bits tàhokó póói -h =kóa há píí -áh -hóo
-\gloss {\Fat}:{\Subject} come {\Ff} {\Decl} {\Cngr} river {\Aug} {\Loc}
-\tr We(excl.) come from the river
+\gloss FAT:SUBJECT come FF DECL CNGR river AUG LOC
+\tr We come from the river
 \end{examples}
 \paragraph{Perlative Case \emh{-tah} \textsc{prl}}\label{s:perlative}
 The perlative case expresses that something is moved `through' or `along' the referent of the noun that is marked. It also marks the demoted A of passive constructions. The examples (\ref{ex:perl1}) and (\ref{ex:perl2}) demonstrate the case's usage. While (\ref{ex:perl1}) might not need any further explanation, (\ref{ex:perl2}) does. There, the speaker tells a narrative of a foolish young girl, who, at the end of the story, is eaten by a giant crab. This is a symbol for the punishment for her `unlawful' actions.
@@ -1190,12 +1197,12 @@ The perlative case expresses that something is moved `through' or `along' the re
 \ex \label{ex:perl1}
 \words tàahopí há hááháah\MC3 ókoíhtah\MC4
 \bits tàahopí há háá- háa -h ó- koí -s -tah 
-\gloss {\Fas}:{\Subject} {\Cngr} {\Hort} go {\Ff} {\Ssposs} hut {\Pl} {\Prl}
+\gloss FAS:SUBJECT CNGR JUSS go FF SSPOSS hut PL PRL
 \tr We shall go via your huts
 \ex \label{ex:perl2}
 \words hoó asááhàòkóapò\MC5 xáohaóhtah\MC3
 \bits hoó a- sáá -hàò =kóa \cl pò xáoh -aóh -tah
-\gloss {\Tsf}:{\Patient} {\Pass} eat {\Dpasto} {\Decl} {\Infer} crab {\Auga} {\Prl}
+\gloss TSF:PATIENT PASS eat DPASTO DECL INFER crab AUGA PRL
 \tr She was eaten by a huge crab (they told me)
 \end{examples}
 \paragraph{Privative Case \emh{-sáahi} \textsc{pvt}}
@@ -1204,12 +1211,12 @@ The privative case expresses the acting of a verb `without' a certain noun, more
 \ex \label{ex:pvt1}
 \words kó sahóóhikóa\MC3 tíahsáahi\MC2
 \bits kó sahóó -hi =kóa \\ tíah -sáahi
-\gloss {\Tsm}:{\Subject} separate.meat.from.fat {\Rpastt} {\Decl} care {\Pvt}
+\gloss TSM:SUBJECT separate.meat.from.fat RPASTT DECL care PVT
 \tr He separated meat from fat carelessly
 \ex \label{ex:pvt2}
 \words ahitáhsáahi\MC2 xàa tà
 \bits ahitáh -sáahi xàa tà
-\gloss green.iguana {\Pvt} {\Cop} {\Fs}
+\gloss green.iguana PVT COP FS
 \tr (Unlike you,) I do not have a green iguana
 \end{examples}
 \paragraph{Semblative Case \emh{-haixá} \textsc{smb}}
@@ -1218,7 +1225,7 @@ The semblative case denotes the similarity of the subject to the marked noun. Th
 \ex \label{ex:smb1}
 \words haxápií hóahtóhikóa\MC3 tísoohaixá\MC2
 \bits haxápií hóah -tóhi =kóa tísooh -haixá
-\gloss stranger vomit {\Dpasto} {\Decl} frog {\Smb} 
+\gloss stranger vomit DPASTO DECL frog SMB 
 \tr The stranger vomited like a frog
 \end{examples}
 \subsubsection{Relational Cases}\label{srelcase}
@@ -1229,12 +1236,12 @@ The `on top of' case primarily\footnote{Another usage is sketched out in section
 \ex \label{ex:ontop1}
 \words haípi haahakóa\MC3 píihàxa\MC2
 \bits haípi haah -a =kóa píihà -xa
-\gloss soup cook {\St} {\Decl} fire.place {\Ont}
+\gloss soup cook ST DECL fire.place ONT
 \tr The soup is cooking above the fire place
 \ex \label{ex:ontop2}
 \words kihaòhxa\MC2 póxihoo
 \bits kihaòh -xa póxihoo
-\gloss type.of.fruit {\Ont} {\Ss}
+\gloss type.of.fruit ONT SS
 \tr You/youₚₗ have a tucumã fruit
 \end{examples}
 \paragraph{`below' \emh{-(t)aó} \textsc{below}}
@@ -1243,7 +1250,7 @@ The `below' case marks a noun's position to be roughly `below' another noun, as 
 \ex \label{ex:below1}
 \words tàhòhì tísooh hoí xasíítaó\MC2
 \bits tàhòhì tísooh hoí xasíí -taó
-\gloss poison frog {\Cop} leaf {\Bel}
+\gloss poison frog COP leaf BEL
 \tr The poison dart frog sits under the leaf
 \end{examples}
 \paragraph{`next to' \emh{-(h)aí} \textsc{next.to}}
@@ -1252,7 +1259,7 @@ The `next to' case marks a noun's position to be roughly `next to' another noun,
 \ex \label{ex:nextto1}
 \words pihih tááhtóhikóa\MC3 haípi kìkáotahaí\MC3
 \bits pihih tááh -tóhi =kóa haípi kì- káota -haí
-\gloss girl drink {\Dpasto} {\Decl} soup {\Tsposs} father {\Next}
+\gloss girl drink DPASTO DECL soup TSPOSS father NEXT
 \tr The girl was drinking soup next to her father
 \end{examples}
 \subsubsection{Case
@@ -1275,7 +1282,7 @@ The relational-locational combinations that are shown in the table are 'focal' v
 \ex \label{ex:casestacking1}
 \words kií, haò kaíi hàohóoxa\MC3
 \bits kií haò kaíi haò -hóo -xa
-\gloss no rock {\Cop} rock {\Loc} {\Ont}
+\gloss no rock COP rock LOC ONT
 \tr No, the rock must be (exactly) on top of the (other) rock
 \end{examples}
 %Maybe: examples for every cell in the table? Perhappu a bit too much :pensive: 
@@ -1293,11 +1300,11 @@ Thus, quantifiers with the respective classifiers (\ref{ex:orderquant}), demonst
 \begin{examples}
 \ex \label{ex:orderquant}
 \bits xasó -soo kìah -a
-\gloss six {\Cl}:fingers finger {\Pl}
+\gloss six CL:fingers finger PL
 \tr six fingers
 \ex \label{ex:orderdem}
 \bits hao kahíí
-\gloss {\Dem}:{\Dist} pig
+\gloss DEM:DIST pig
 \tr that pig
 \ex \label{ex:ordernoun}
 \bits xòxíi haíka
@@ -1305,7 +1312,7 @@ Thus, quantifiers with the respective classifiers (\ref{ex:orderquant}), demonst
 \tr maripa palm leaves
 \ex \label{ex:orderpsr}
 \bits sosáai =à kápihoo
-\gloss cat {\Link} father
+\gloss cat LINK father
 \tr my father's cat
 \ex \label{ex:orderadj}
 \bits hati tóhaki
@@ -1348,7 +1355,7 @@ The ergative pronouns, as can be inferred from their name, have merged the forms
 \ex \label{ex:ergpron1}
 \words tà hóíkatah\MC2 háahoò\MC4 xóatiho\MC3 haíhosoahò\MC3 há
 \bits tà hóíka -tah háa -h -o \cl ò xóati -h -o haího -soa \cl ò há 
-\gloss {\Fs}:{\Subject} big.tree {\Prl} go {\Ff} {\Fut} {\Seq} search.for {\Ff} {\Fut} berry {\Pl} {\Seq} {\Cngr}
+\gloss FS:SUBJECT big.tree PRL go FF FUT SEQ search.for FF FUT berry PL SEQ CNGR
 \tr I'll be going via the big tree, and then (I) will search for berries (there)
 \ex \label{ex:ergpron2}
 This section is work-in-progress
@@ -1392,7 +1399,7 @@ When using the first person singular, second person singular and second person h
 \ex \label{ex:instrpron3}
 \words áahíkóa\MC4 `tàah kohaíkoahi\MC2 kiihikóa\MC4 há tàsóo' ko
 \bits áa -hi -∅ =kóa tàah kohaíkoa -i kii -hi -∅ =kóa há tàsóo ko
-\gloss say {\Rpastt} {\St} {\Decl} {\Fs}:{\Agent} dig.a.hole  {\Dep} {\Aux:\Perf} {\Rpastt} {\St} {\Decl}  {\Cngr} {\Fs}:{\Instr} {\Quotative}
+\gloss say RPASTT ST DECL FS:AGENT dig.a.hole  DEP AUX:PERF RPASTT ST DECL  CNGR FS:INSTR QUOTATIVE
 \tr He said: ``I dug a hole all by myself''. 
 \ex This section is work-in-progress. \label{ex:instrpron4}
 \end{examples}
@@ -1416,12 +1423,12 @@ Some examples for the usage of these are presented in (\ref{ex:posspron1}) and (
 \ex \label{ex:posspron1}
 \words tài hati íxàa\MC2 há óóhò?\MC2
 \bits tài hati í- xàa há óó -ò
-\gloss {\Dem}:{\Prox} servant {\Intrg} {\Cop} {\Cngr} {\Ssposs} {\Cl}:anim:sg
+\gloss DEM:PROX servant INTRG COP CNGR SSPOSS CL:anim:sg
 \tr Is that servant yours?
 \ex \label{ex:posspron2}
 \words ò kahaóó xàa kìhiò[...]\MC2
 \bits ò kahaóó xàa kìhi -ò
-\gloss and uncle {\Cop} {\Tsposs} {\Cl}:anim:sg
+\gloss and uncle COP TSPOSS CL:anim:sg
 \tr And it was his uncle [...]
 \end{examples}
 \subsubsection{Demonstrative Pronouns}
@@ -1444,17 +1451,17 @@ Some cases for the usage of these pronouns are exemplified in (\ref{ex:dempron1}
 \ex \label{ex:dempron1}
 \words tài xàa áaxíhao\MC4 há kóhii kó xàa kaai hóhò\MC2
 \bits tài xàa áa -xí -∅ -hao há kóhii kó xàa kaai hóh -ò  
-\gloss {\Dem}:{\Prox} {\Cop} say {\Rpasto} {\St} {\Dem} {\Cngr} {\C} {\Tsm}:{\Subject} {\Cop} sick man {\Cl}:anim:sg
+\gloss DEM:PROX COP say RPASTO ST DEM CNGR C TSM:SUBJECT COP sick man CL:anim:sg
 \tr This (pointing at man) is the man who said [of himself] that he was sick
 \ex \label{ex:dempron2}
 \words hákapióó áahaokóa\MC4 ho
 \bits hákapióó áa -a -o =kóa ho
-\gloss nobody say {\St} {\Fut} {\Decl} that
+\gloss nobody say ST FUT DECL that
 \tr Nobody is going to say that
 \ex \label{ex:dempron3}
 \words hih xàa óxííhò\MC2
 \bits hih xàa óxíí -ò 
-\gloss  {\Dem}:{\Nvis} {\Cop} child {\Cl}:anim:sg
+\gloss  DEM:NVIS COP child CL:anim:sg
 \tr That (pointing at approximate direction) was a child [not a rock]
 \end{examples}
 \subsubsection{Emphatic pronouns}
@@ -1477,12 +1484,12 @@ These pronouns are used in N major contexts: \textbf{a)} in possessive construct
     \ex \label{ex:emphpron1}
     \words xoxííhà\MC2 tàahoih
     \bits xoxíí =à tàahoih
-    \gloss palm.fiber {\Link} {\Ff}
+    \gloss palm.fiber LINK FF
     \tr my/our palm fiber
     \ex \label{ex:emphpron2}
     \words hóaxáko taíí kohaa toihaka\MC3 
     \bits hóaxáko taíí kohaa toih -a =ka 
-    \gloss {\Tt} glass hole open {\St} {\Decl}
+    \gloss TT glass hole open ST DECL
     \tr It is him/her who is opening the window
 \end{examples}
 \subsection{Classifiers}\label{sclassifier}
@@ -1535,17 +1542,17 @@ A prominent usage of classifiers in the Hapi language is classifier possession. 
 \ex \label{ex:clsyndistr1}
 \words haí hápaáh\MC2 ó táosiihó haxápií\MC2 xósóóhió\MC4 xah sóxiihió[...]\MC4 
 \bits haí hápaáh -h ó táosiihó haxápií -∅ xósóó -hi -∅ \cl ó xah sóxii -hi -∅ \cl ó 
-\gloss thus dog {\Erg} {\Cl}:anim male.cousin stranger {\Abs} bite {\Rpastt} {\St} {\Seq} {\Fourth}  scream {\Rpastt} {\St} {\Seq}
+\gloss thus dog ERG CL:anim male.cousin stranger ABS bite RPASTT ST SEQ FOURTH scream RPASTT ST SEQ
 \tr (And) thus the dog of my (male) cousinᵢ bit the strangerⱼ, and heᵢ screamed, [and ...]
 \ex \label{ex:clsyndistr2}
 \words pasío hosi kàaha
 \bits pasío hosi kàaha 
-\gloss blow.gun {\Cl}:thin.pole.like man's.name
+\gloss blow.gun CL:thin.pole.like man's.name
 \tr Kàaha's blow gun
 \ex \label{ex:clsyndistr3}
 \words papáxi xào póhsa
 \bits papáxi xào póhsa
-\gloss mouth {\Cl}:facial.body.parts jug
+\gloss mouth CL:facial.body.parts jug
 \tr jug's mouth
 \end{examples}
 \paragraph{Predicate Nominals}
@@ -1554,17 +1561,17 @@ Predicate nominals also agree with their copular subject by means of being suffi
 \ex \label{ex:clsyndistr4}
 \words tài kohi xàa toohóósaxá\MC2
 \bits tài kohi xàa toohóó -saxá
-\gloss {\Dem}:{\Prox} trunk {\Cop} type.of.palm {\Cl}:trunks
+\gloss DEM:PROX trunk COP type.of.palm CL:trunks
 \tr This trunk is of a peach palm
 \ex \label{ex:clsyndistr5}
 \words xóah xàa hòkaapaò\MC2
 \bits xóah xàa hòkaapa -ò
-\gloss man's.name {\Cop} hunter {\Cl}:anim:sg
+\gloss man's.name COP hunter CL:anim:sg
 \tr Juan is a hunter
 \ex \label{ex:clsyndistr6}
 \words hao táhiáki xàa páihikahía\MC2
 \bits hao táhiáki xàa páihi -kahía
-\gloss {\Dem} hammock {\Cop} {\Sshposs} {\Cl}:hanging
+\gloss DEM hammock COP SSHPOSS CL:hanging
 \tr This hammock is yours\textsubscript{HON}
 \end{examples}
 \subsection{Demonstrative Adjectives}\label{sdemonstrative}
@@ -1585,12 +1592,12 @@ Some examples for the usage of these are given in (\ref{ex:demdet1}) and (\ref{e
 \ex \label{ex:demdet1}
 \words hao hahópìi xàa tàiha
 \bits hao hahópìi xàa tàiha
-\gloss {\Dem}:{\Dist} sloth {\Cop} there
+\gloss DEM:DIST sloth COP there
 \tr There is that sloth [which we saw earlier]
 \ex \label{ex:demdet2}
 \words híi tukáh háhihahíaka\MC3
 \bits híi tukáh háhihahí -a =ka 
-\gloss {\Det}:{\Nvis} toucan sing {\St} {\Decl}
+\gloss DEM:NVIS toucan sing ST DECL
 \tr That toucan is singing
 \end{examples}
 \subsection{Quantifiers and Numerals}\label{squantifier}
@@ -1610,17 +1617,17 @@ Numeral quantifiers also precede the modified noun, together with the adequate c
 \ex \label{ex:numeral1} 
 \words hao akahííopa ahóikahàòkóa\MC5 hikoíípahahì\MC2 \\ {apíhaiha koha}\MC2 hakó
 \bits hao akahííopa a- hóika -hàò -∅ =kóa  hikoíípaha -hì {apíhaiha koh} -a hakó
-\gloss {\Dem} bridge {\Pass} build {\Dpasto} {\St} {\Decl} ten {\Cl}:time year {\Pl} ago
+\gloss DEM bridge PASS build DPASTO ST DECL ten CL:time year PL ago
 \tr That bridge was built ten years ago
 \ex \label{ex:numeral2}
 \words tóhò\MC2 óxíísoa\MC2
 \bits tóh -ò óxíí -soa
-\gloss three {\Cl}:anim:sg child {\Pl}
+\gloss three CL:anim:sg child PL
 \tr three children
 \ex \label{ex:numeral3}
 \words posá\MC2 aíxia\MC2 xàa tàh
 \bits po -sá aíxi -a xàa tàh
-\gloss nine {\Cl}:banana.trunks banana.plant {\Pl} {\Cop} {\Fs}:{\Dat}
+\gloss nine CL:banana.trunks banana.plant PL COP FS:DAT
 \tr I have nine banana tree plants
 \end{examples}
 \subsection{Attributes}\label{sattributes}
@@ -1638,12 +1645,12 @@ The main strategy for possessives in the Hapi language is depicted in the exampl
 \ex \label{ex:nposs1}
 \words óíhtià\MC2 sóasih
 \bits óíhti =à sóasih
-\gloss monkey {\Link} person
+\gloss monkey LINK person
 \tr the person's monkey
 \ex \label{ex:nposs2}
 \words kókókóà\MC2 haxápií
 \bits kókókó =à haxápií
-\gloss gun {\Link} stranger
+\gloss gun LINK stranger
 \tr the stranger's gun
 \end{examples}
 Another strategy to mark possession on nouns is the so-called copular strategy. There, the possessor is put in the dative case and is connected to the possessee by the copula \emh{xàa}. This process can be seen in the examples (\ref{ex:nposs3}) and (\ref{ex:nposs4}).
@@ -1976,24 +1983,111 @@ However, there's a second side to the Hapi antipassive. When applied to intransi
     \tr It jumps (speaking of a species of titi monkeys)
 \end{examples}
 \subsubsection{Passive}\label{s:pass}
-Just like the antipassive, Hapi's passive derives an intransitive clause from a transitive one, however instead of omitting the underlying O, it demotes it to the S of the surface clause. The former A argument hereby goes into a peripheral function and is marked by the perlative case.\footnote{Cf. section \ref{s:perlative}} In Hapi, the passive is marked by the prefix \emh{a-}. In (\ref{ex:passive1}) we have a straightforward transitive sentence, whose passive variant is showcased in example (\ref{ex:passive2})
+Just like the antipassive, Hapi's passive derives an intransitive clause from a transitive one, however instead of omitting the underlying O, it demotes it to the S of the surface clause. The former A argument hereby goes into a peripheral function and may be marked by the perlative case.\footnote{Cf. section \ref{s:perlative}} In Hapi, the passive is marked by the prefix \emh{a-}. In (\ref{ex:passive1}) we have a straightforward transitive sentence, whose passive variant is showcased in example (\ref{ex:passive2}). Note that the underlying A needn't be mentioned at all, and can be omitted, as shown in example (\ref{ex:passive3})
 \begin{examples}
     \ex \label{ex:passive1}
     \words soátáh\MC2 kíípáatóhikóa\MC3 kaókáoxii\MC2
     \bits soáta -h kíípáa -tóhi =kóa kaókáo -xii
-    \gloss type.of.opossum ERG kill DPASTO DECL duck DIM
-    \tr An opossum killed a duckling.
+    \gloss type.of.possum ERG kill DPASTO DECL duck DIM
+    \tr A possum killed a duckling
     \ex \label{ex:passive2}
     \words kaókáoxii\MC2 akíípáatóhikóa\MC4 soátatah\MC2
     \bits kaókáo -xii a- kíípáa -tóhi =kóa soáta -tah
-    \gloss duck DIM PASS kill DPASTO DECL type.of.opossum PRL
-    \tr The duckling was killed by an opossum.
+    \gloss duck DIM PASS kill DPASTO DECL type.of.possum PRL
+    \tr The duckling was killed by a possum
+    \ex \label{ex:passive3}
+    \words kaókáoxii\MC2 akíípáatóhikóa\MC4
+    \bits kaókáo -xii a- kíípáa -tóhi =kóa
+    \gloss duck DIM PASS kill DPASTO DECL
+    \tr The duckling was killed
 \end{examples}
+However \emh{a-} has other usages than the prototypical passive as well. In (\ref{ex:passive4}) the reflexive meaning is showcased. 
+\begin{examples}
+    \ex \label{ex:passive4}
+    \words asaxíká\MC4 sáha sóh
+    \bits a- sa -xí =ká sáha sóh 
+    \gloss REFL cut RPASTO DECL knife with
+    \tr (I) cut myself with a knife
+\end{examples}
+Another function of this morpheme is, similar to the reflexive, reciprocal semantics. If the subject is plural, it is likely to mark a reciprocal, as can be seen in (\ref{ex:passive5}).
+\begin{examples}
+    \ex \label{ex:passive5}
+    \words xah asaxíká\MC4 sáha sóh
+    \bits xah a- sa -xí =ká sáha sóh 
+    \gloss TP:SUBJECT RECIP cut RPASTO DECL knife with
+    \tr They cut each other with a knife
+\end{examples}
+Nevertheless, it isn't always clear whether a reflexive or reciprocal meaning is implied; in that case, the context and pragmatics give further clues. In example (\ref{ex:passive6}), the speaker tells us about some children, playing a game in which they need to group in pairs and the children need to choose each other. The reflexive meaning is not appropriate: the children did nothing to themselves.
+\begin{examples}
+    \ex \label{ex:passive6}
+    \words haí xah asihoaka\MC4
+    \bits haí xah a- siho -a =ka 
+    \gloss so TP:SUBJECT RECIP choose ST DECL
+    \tr So they are choosing each other
+    \tr:* So they are choosing themselves
+\end{examples} 
 \subsubsection{Causative}\label{s:caus}
-\begin{comment}
+There are two types of causative constructions in the Hapi language; one using the suffix \emh{-áh} to derive transitives from intransitives and another one, \emh{-kó}, which forms ditransitives from transitives. I will firstly discuss the former. Here, the argument in underlying S function (`the causee') goes into O function in the causative, and a new argument (`the causer') is introduced in A function. In (\ref{ex:caus1}), a simple intransitive clause is shown, and in example (\ref{ex:caus2}) the correspondent transitive clause is presented.
+\begin{examples}
+    \ex \label{ex:caus1}
+    \words sóíhakaxa\MC4
+    \bits sóí -a =ka =xa
+    \gloss sleep ST DECL CONT
+    \tr (He) is sleeping
+    \ex \label{ex:caus2}
+    \words óxííₒ sóíhaáhkaxa\MC5
+    \bits óxííₒ sóí -a =áh =ka =xa
+    \gloss child sleep ST CAUS:ITR DECL CONT 
+    \tr (He) is putting the child to sleep.
+\end{examples}
+When deriving a ditransitive clause from a transitive one, the suffix \emh{-kó} is used. (\ref{ex:caus3}) and (\ref{ex:caus4}) exemplify this.
+\begin{examples}
+    \ex \label{ex:caus3}
+    \words pápo hóhixíkóa\MC3 kó
+    \bits pápo hóhi -xí =kóa kó
+    \gloss paper take RPASTO DECL TSM:AGENT
+    \tr He took the paper
+    \ex \label{ex:caus4}
+    \words sóso pápo kòà hóhixíkókóatì\MC5 kó
+    \bits sóso pápoₒ kòàₒ hóhi -xí -kó =kóa =tì kóₐ 
+    \gloss then paper TSM:PATIENT take RPASTO CAUS:TRANS DECL \textsc{\textup{again}} TSM:AGENT
+    \tr Then he sent the paper back to him again
+    \tr Then he caused him to take the paper back again
+\end{examples}
+A 'sociative' causative, marked by the causative and the comitative coordinator \emh{sóh} in combination with a personal pronoun, may have overtones of the causer's involvement; compare the straightforward example (\ref{ex:caus5}) with the sociative construction in (\ref{ex:caus6}).
+\begin{examples}
+    \ex \label{ex:caus5}
+    \words [kìhaóxí]ₒ\MC2 haíhíkihikókóa\MC5 [pàahtah]ₒ\MC2
+    \bits kì- haóxí haí- híki -hi -kó =kóa pàah -tah
+    \gloss TSPOSS son CL:anim.sg across RPASTT CAUS:TRANS DECL river PRL 
+    \tr He caused his son to cross the river (ordered him without being involved)
+    \ex \label{ex:caus6}
+    \words kó sóh [kìhaóxí]ₒ\MC2 haíhíki-\MC2 \\ hikókóa\MC3 [pàahtah]ₒ\MC2
+    \bits kó sóh kì- haóxí haí- híki hi -kó =kóa pàah -tah 
+    \gloss TSM with TSPOSS son CL:anim.sg across RPASTT CAUS:TRANS DECL river PRL
+    \tr He caused his son to cross the river (helped him across the river)
+\end{examples}
 \subsection{Past tenses}\label{svpast}
-\subsubsection{Recent Past}
-\subsubsection{Distant Past}
+In the following section I will consider Hapi's elaborate system of past tenses. First, I will present the recent past ({\Rpasto}), then I will move on and discuss the three other past tenses, namely, the intermediate past ({\Rpastt}), the distant past ({\Dpasto}) and finally the remote past ({\Dpastt}). An overview of the past tenses and there deictic scopes can be found in table \ref{t:pasttenses}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+    Section  & Form  & Gloss    & \begin{tabular}[c]{@{}l@{}}Minimum\\ distance\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Maximum\\ distance\end{tabular} \\ \midrule
+    \ref{s:recpast} & -xí   & {\Rpasto}  & \begin{tabular}[c]{@{}p{5cm}@{}}\makecell[lt]{day of speech \\ before speech time}\end{tabular} & unspecified                                                \\
+    \ref{s:intpast} & -hi   & {\Rpastt}  & yesterday                                                                   & last week                                                  \\
+    \ref{s:distpast} & -tóhi & {\Dpasto} & last week                                                                   & years ago                                                  \\
+    \ref{s:rempast} & -hàò  & {\Dpastt}  & \multicolumn{2}{l}{historical events and narratives}                                                                                     \\ \bottomrule
+    \end{tabular}
+    \caption{Past Tenses Overview}
+    \label{t:pasttenses}
+    \end{table}
+\subsubsection{Recent Past}\label{s:recpast}
+The recent past is used for events that have occurred on the same day on which the clause containing it is uttered. 
+\subsubsection{Intermediate Past}\label{s:intpast}
+\subsubsection{Distant Past}\label{s:distpast}
+\subsubsection{Remote Past}\label{s:rempast}
+\begin{comment}
 \subsection{Person agreement}\label{svperson}
 \subsection{Future tense}\label{svfut}
 \section{Verb phrase structure}
