@@ -31,6 +31,14 @@
 \usepackage{makecell}
 \usepackage[hidelinks]{hyperref}
 \usepackage{comment}
+\usepackage[citestyle=authoryear-comp, backend=biber]{biblatex}
+\addbibresource{refs.bib} 
+
+\DeclareDelimFormat[textcite]{postnotedelim}{\addsemicolon\space}
+\DeclareDelimFormat[parencite]{postnotedelim}{\addcolon\space}
+
+\DeclareFieldFormat{postnote}{\mknormrange{#1}}
+\DeclareFieldFormat{multipostnote}{\mknormrange{#1}}
 
 %\DoubleSpacing
 \linespread{1.75}
@@ -51,10 +59,11 @@
   tr.markup=\trstyle
 }
 \end{comment}
+\baaruset{source.markup=}
 \newbaarulinetype{rightcomment}{manner}{\baaruparens}
 
 
-\setmainfont{Charis SIL}
+\setmainfont{Charis SIL} 
 \newcommand{\conlang}[1]{\textit{#1}}
 \newcommand{\family}{Hapi-Guilené }
 \newcommand{\peoplef}{Hapi }
@@ -230,8 +239,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.4-alpha
-        Date: 15 March, 2021
+        Version: 0.1.5-alpha
+        Date: 16 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -748,7 +757,8 @@ The main process that plays a significant role in this is the so-called ʔ-Inser
     \ipa tʰa.ˈo.poi̯ ˈtʰo.ti χaː hao̯ kxai̯.ˈa.toː pʰoː.i ʔ hao̯ pʰai̯ koi̯ ʔ kxoh.sa {∅} ʔi taː ha ka çi.o.çi ˈso.to
     \bits tàhopoí tóti xàa =haó kaihatoo póói -h =haó pái- kòi -h kóhsa -∅ í- tàa -a =ká hìhohi= hákoo
     \gloss FAS:AGENT ready COP \textsc{\textup{s/a>a(se)}} now arrive FF \textsc{\textup{s/a>a(se)}} SSHPOSS house DAT matter ABS INTRG AUX FF DECL delay OBLIGATIVE
-    \tr Being ready, arriving at your house, should we (still) delay the affair?\footnote{In this example []ₚ indicates a phonological word, while []ₛ denotes the disjunct-word unit.}
+    \tr Being ready, arriving at your house, should we (still) delay the affair?\footnote{In this example []ₚ indicates a phonological word, while []ₛ denotes the disjunct-word unit.} 
+    %\source \parencite[75]{smoyd1309}
 \end{examples}
 Processes like k→kx, t→tʰ and p→pʰ, which are widely spread throughout the phonological realm, appear only near word-boundaries (namely, on the beginning of a word), and not on disjunct boundaries. An example is given in (\ref{ex:morphodistinc1}) and (\ref{ex:morphodistinc2}).
 \begin{examples}
@@ -1619,6 +1629,7 @@ Numeral quantifiers also precede the modified noun, together with the adequate c
 \bits hao akahííopa a- hóika -hàò -∅ =kóa  hikoíípaha -hì {apíhaiha koh} -a hakó
 \gloss DEM bridge PASS build DPASTO ST DECL ten CL:time year PL ago
 \tr That bridge was built ten years ago
+%\source \parencite[36]{smoyd1308}
 \ex \label{ex:numeral2}
 \words tóhò\MC2 óxíísoa\MC2
 \bits tóh -ò óxíí -soa
@@ -1763,11 +1774,13 @@ Transitive verbs are verbs which take two arguments, an A and an P argument. If 
     \bits hòotah -a -h kíxoh -xí =kóa hása 
     \gloss mouse PL ERG chew RPASTO DECL loincloth
     \tr The mice chewed the loincloth
+    %\source \parencite[240]{changingvalency}
     \ex \label{ex:tr2}
     \words xah kíxohxíkóa\MC3 kòà
     \bits xah kíxoh -xí =kóa kòà
     \gloss TP:AGENT chew RPASTO DECL TSN:PATIENT
     \tr They chewed it
+    %\source \parencite[240]{changingvalency}
 \end{examples} 
 However there are exceptions to this rule; some transitive verbs' objects do not take the absolutive case but a non-core or relational case instead. An example for such a verb is \emh{títo} 'to listen, to smell', which takes an additional argument in the 'next to' relational case,marked by the morpheme \emh{-(h)aí}. An example for the usage of those non-core transitive verbs is given in (\ref{ex:tr3}).
 \begin{examples}
@@ -1806,6 +1819,7 @@ Auxiliary verbs are verbs which mark aspect, negation and modality. there are tw
     \bits hó -h kì- kahoó hóika -i tóó -xí -∅ =kóa h- ákiih -a -hóo
     \gloss man's.name ERG TSPOSS boat build DEP AUX:PROG RPASTO ST DECL FSPOSS see NMZ LOC
     \tr Joe was constructing his boat, when I had seen him.
+    %\source \parencite[18]{smoyd1308}
 \end{examples}
 Affixing auxiliary verbs use an affixing process, in which the lexical head is attached to the auxiliary. The inflection of the verb is absorbed by the general auxiliary \emh{tàa}. There are \textit{1} affixing auxiliaries in the analyzed corpus of \textit{5} auxiliaries. An example of their usage can be seen in example (\ref{ex:aux2}).
 \begin{examples}
@@ -1858,7 +1872,7 @@ Positional compound verbs are verbs with a bipartite stem. The first part (calle
 
 \subsection{Mode}\label{svmode}
 In the following section I will present the mode slot within the verbal stem. Mode is one of many verbal grammatical categories, and it marks some modal expression, most importantly, imperatives, optatives and hortatives. Interrogative semantics are also covered by the mode prefixes. 
-\subsubsection{Interrogative}
+\subsubsection{Interrogative \emh{í-}}
 The interrogative mode is used to mark questions, whether it be polar or content questions. It is marked by the prefix \emh{í-}. If the verb is in the interrogative mode, a special set of person markers are used (see section \ref{svperson}). Some examples of the interrogative mode's employment can be seen in (\ref{ex:intrg1}) and (\ref{ex:intrg2}). More information about interrogative clauses, especially in a syntactic context, is given in chapter \ref{c:interrogative}.
 \begin{examples}
     \ex \label{ex:intrg1}
@@ -1872,42 +1886,44 @@ The interrogative mode is used to mark questions, whether it be polar or content
     \gloss what QU CNGR INTRG search.for ST
     \tr What are you searching for?
 \end{examples}
-\subsubsection{Imperative}
+\subsubsection{Imperatives}
 There are three imperative prefixes in the Hapi language, all of which occupy the mode slot. There are two positive markers, distal and proximal, and one deictic neutral negative marker. The distal and proximal prefixes are \emh{tà-} and \emh{hi-}. The distal morphemes are used when the command has a special distance in space — 'do there' —, while the proximal morphemes are used for contexts where the command's execution is imminent. This does not only apply for spatial, but also for temporal deixis; the distinction is exemplified in (\ref{ex:impv1}) and (\ref{ex:impv2}). 
 \begin{examples}
     \ex \label{ex:impv1}
-    \words tàhopìh hikakía\MC3
-    \bits tàhopìh  hi- kakí -a 
-    \gloss FAS:DAT DIST.POSIT.IMPV wait ST
+    \words tàhokó hikakía\MC3
+    \bits tàhokó  hi- kakí -a 
+    \gloss FAT:DAT DIST.POSIT.IMPV wait ST
     \tr You, wait for us (in some distant time or place)
+    %\source \parencite[186a]{aikhenamazon}
     \ex \label{ex:impv2}
-    \words tàhopìh tàkakía\MC3
-    \bits tàhopìh  tà- kakí -a 
-    \gloss FAS:DAT PROX.POSIT.IMPV wait ST
+    \words tàhokó tàkakía\MC3
+    \bits tàhokó  tà- kakí -a 
+    \gloss FAT:DAT PROX.POSIT.IMPV wait ST
     \tr You, wait for us (here and now)
+    %\source \parencite[186b]{aikhenamazon}
 \end{examples}
 To exclude either the spatial or temporal sense from the distal imperative, spatial or temporal adverbs can be employed, as showcased in (\ref{ex:impv3}) and (\ref{ex:impv4}).
 \begin{examples}
     \ex \label{ex:impv3}
-    \words tàhopìh hih hikakía\MC3
-    \bits tàhopìh hih hi- kakí -a
-    \gloss FAS:DAT there.NVIS DIST.POSIT.IMPV wait ST
+    \words tàhokó hih hikakía\MC3
+    \bits tàhokó hih hi- kakí -a
+    \gloss FAT:DAT there.NVIS DIST.POSIT.IMPV wait ST
     \tr You, wait for us (in some distant place, but right now)
     \ex \label{ex:impv4}
-    \words tàhopìh sóso hikakía\MC3
-    \bits tàhopìh sóso hi- kakí -a
-    \gloss FAS:DAT then DIST.POSIT.IMPV wait ST
+    \words tàhokó sóso hikakía\MC3
+    \bits tàhokó sóso hi- kakí -a
+    \gloss FAT:DAT then DIST.POSIT.IMPV wait ST
     \tr You, wait for us (in some distant time, but here)
 \end{examples}
 The negative imperative \emh{xi-} is used for negated commands. Examples (\ref{ex:impv5}) present this process.
 \begin{examples}
     \ex \label{ex:impv5}
-    \words tàhopìh xikakía\MC3
-    \bits tàhopìh xi- kakí -a
-    \gloss FAS:DAT NEGAT.IMPV wait ST
+    \words tàhokó xikakía\MC3
+    \bits tàhokó xi- kakí -a
+    \gloss FAT:DAT NEGAT.IMPV wait ST
     \tr Do not wait for us!
 \end{examples}
-\subsubsection{Jussive}
+\subsubsection{Jussive \emh{háá-}}
 The jussive mode, marked by the prefix \emh{háá-} marks a variety of semantics on the verb. Verbs that are in the jussive mode do not take any other markers besides the jussive, neither person nor tense morphemes. Firstly, it may be used as a third-person imperative, having the speaker convey appeal to the adressee to enable an event to occur; this is exemplified in (\ref{ex:juss1}) and (\ref{ex:juss2}). The speaker expresses a desire that the event will take place, but unlike with the imperative, the speaker has limited control over the event's outcome. In this case, the affected third-person participant takes the semantic role of an agent or a subject, depending on the transitivity of the verb. (\ref{ex:juss2}) was uttered in the context of a woman who wanted her husband to come help in the garden, although he has been up all night drinking.
 \begin{examples}
     \ex \label{ex:juss1}
@@ -1915,11 +1931,13 @@ The jussive mode, marked by the prefix \emh{háá-} marks a variety of semantics
     \bits xi- pása -a xi- xíxí kòà kó háá- xíxí
     \gloss NEGAT.IMPV carry ST NEGAT.IMPV go.out TSM:PATIENT TSM:SUBJECT JUSS go.out
     \tr Don't carry him out (of the house), let him go out by himself
+    %\source \parencite[339a]{hupepps}
     \ex \label{ex:juss2}
     \words tá kó háásóí\MC2
     \bits tá kó háá- sóí
     \gloss later TSM:SUBJECT JUSS sleep 
     \tr Let him sleep later
+    %\source \parencite[339b]{hupepps}
 \end{examples}
 Another function of the jussive prefix is comparable to an optative in other languages. The speaker again expresses a desire for the event to happen, but in the optative case the speaker has little to no control over its outcome. An example is given in (\ref{ex:juss3}) and (\ref{ex:juss4})
 \begin{examples}
@@ -1949,15 +1967,17 @@ Lastly, the jussive mode may express a speaker'ss disengagement from a negativel
     \bits kó háá- katí
     \gloss TSM:SUBJECT JUSS dance
     \tr Let him dance! (uttered by a jealous wife) 
+    %\source \parencite[340a]{hupepps}
     \ex \label{ex:juss7}
     \words íí háákíío\MC2 tàhopí xàa koítaó\MC2
     \bits íí háá- kíío tàhopí xàa koí -taó 
     \gloss TSN:SUBJECT JUSS rain FAS COP hut BEL
     \tr Let it rain, we're in (lit.: below) a house
+    %\source \parencite[340b]{hupepps}
 \end{examples}
 \subsection{Valency}\label{svvalency}
 In the following chapters I will discuss the valency-modifying morphemes which are marked directly on the Hapi verb. This includes the antipassive (section \ref{s:antip}), the passive (section \ref{s:pass}) and the causative (section \ref{s:caus}) prefixes. 
-\subsubsection{Antipassive}\label{s:antip}
+\subsubsection{Antipassive \emh{h(V)-}}\label{s:antip}
 The Hapi antipassive, marked by the prefix \emh{h(V)-}, is used to turn a transitive verb into an intransitive one. This is achieved by demoting the former A of the transitive verb to S and omitting the O argument. A straightforward transitive clause can be seen in example (\ref{ex:antip1}).
 \begin{examples}
     \ex \label{ex:antip1}
@@ -1965,6 +1985,7 @@ The Hapi antipassive, marked by the prefix \emh{h(V)-}, is used to turn a transi
     \bits hápaáh xósóó -a =ká hapi
     \gloss dog:ERG bite ST DECL people
     \tr The dog bites people
+    %\source \parencite[232a]{aikhenamazon}
 \end{examples}
 If the prefix \emh{h(V)-} is added, the verb becomes intransitive, the underlying A turns into an S and the O is omitted. In (\ref{ex:antip2}), 'biting' is what the dog does, no matter whom it may bite.
 \begin{examples} 
@@ -1973,6 +1994,7 @@ If the prefix \emh{h(V)-} is added, the verb becomes intransitive, the underlyin
     \bits hápaáh hó- xósóó -a =ká 
     \gloss dog:ERG ANTIP bite ST DECL
     \tr The dog bites
+    %\source \parencite[232b]{aikhenamazon}
 \end{examples}
 However, there's a second side to the Hapi antipassive. When applied to intransitive verbs, it imparts a habitual, 'characteristic' meaning, as can be inferred from example (\ref{ex:antip3}).
 \begin{examples}
@@ -1982,7 +2004,7 @@ However, there's a second side to the Hapi antipassive. When applied to intransi
     \gloss TSN:SUBJECT ANTIP jump ST DECL
     \tr It jumps (speaking of a species of titi monkeys)
 \end{examples}
-\subsubsection{Passive}\label{s:pass}
+\subsubsection{Passive \emh{a-}}\label{s:pass}
 Just like the antipassive, Hapi's passive derives an intransitive clause from a transitive one, however instead of omitting the underlying O, it demotes it to the S of the surface clause. The former A argument hereby goes into a peripheral function and may be marked by the perlative case.\footnote{Cf. section \ref{s:perlative}} In Hapi, the passive is marked by the prefix \emh{a-}. In (\ref{ex:passive1}) we have a straightforward transitive sentence, whose passive variant is showcased in example (\ref{ex:passive2}). Note that the underlying A needn't be mentioned at all, and can be omitted, as shown in example (\ref{ex:passive3})
 \begin{examples}
     \ex \label{ex:passive1}
@@ -2008,6 +2030,7 @@ However \emh{a-} has other usages than the prototypical passive as well. In (\re
     \bits a- sa -xí =ká sáha sóh 
     \gloss REFL cut RPASTO DECL knife with
     \tr (I) cut myself with a knife
+    %\source \parencite[229a]{aikhenamazon}
 \end{examples}
 Another function of this morpheme is, similar to the reflexive, reciprocal semantics. If the subject is plural, it is likely to mark a reciprocal, as can be seen in (\ref{ex:passive5}).
 \begin{examples}
@@ -2016,6 +2039,7 @@ Another function of this morpheme is, similar to the reflexive, reciprocal seman
     \bits xah a- sa -xí =ká sáha sóh 
     \gloss TP:SUBJECT RECIP cut RPASTO DECL knife with
     \tr They cut each other with a knife
+    %\source \parencite[229b]{aikhenamazon}
 \end{examples}
 Nevertheless, it isn't always clear whether a reflexive or reciprocal meaning is implied; in that case, the context and pragmatics give further clues. In example (\ref{ex:passive6}), the speaker tells us about some children, playing a game in which they need to group in pairs and the children need to choose each other. The reflexive meaning is not appropriate: the children did nothing to themselves.
 \begin{examples}
@@ -2026,7 +2050,7 @@ Nevertheless, it isn't always clear whether a reflexive or reciprocal meaning is
     \tr So they are choosing each other
     \tr:* So they are choosing themselves
 \end{examples} 
-\subsubsection{Causative}\label{s:caus}
+\subsubsection{Causative \emh{-áh} and \emh{-kó}}\label{s:caus}
 There are two types of causative constructions in the Hapi language; one using the suffix \emh{-áh} to derive transitives from intransitives and another one, \emh{-kó}, which forms ditransitives from transitives. I will firstly discuss the former. Here, the argument in underlying S function (`the causee') goes into O function in the causative, and a new argument (`the causer') is introduced in A function. In (\ref{ex:caus1}), a simple intransitive clause is shown, and in example (\ref{ex:caus2}) the correspondent transitive clause is presented.
 \begin{examples}
     \ex \label{ex:caus1}
@@ -2034,11 +2058,13 @@ There are two types of causative constructions in the Hapi language; one using t
     \bits sóí -a =ka =xa
     \gloss sleep ST DECL CONT
     \tr (He) is sleeping
+    %\source \parencite[237a]{aikhenamazon}
     \ex \label{ex:caus2}
     \words óxííₒ sóíhaáhkaxa\MC5
     \bits óxííₒ sóí -a =áh =ka =xa
     \gloss child sleep ST CAUS:ITR DECL CONT 
     \tr (He) is putting the child to sleep.
+    %\source \parencite[237b]{aikhenamazon}
 \end{examples}
 When deriving a ditransitive clause from a transitive one, the suffix \emh{-kó} is used. (\ref{ex:caus3}) and (\ref{ex:caus4}) exemplify this.
 \begin{examples}
@@ -2047,25 +2073,29 @@ When deriving a ditransitive clause from a transitive one, the suffix \emh{-kó}
     \bits pápo hóhi -xí =kóa kó
     \gloss paper take RPASTO DECL TSM:AGENT
     \tr He took the paper
+    %\source \parencite[237c]{aikhenamazon}
     \ex \label{ex:caus4}
     \words sóso pápo kòà hóhixíkókóatì\MC5 kó
     \bits sóso pápoₒ kòàₒ hóhi -xí -kó =kóa =tì kóₐ 
     \gloss then paper TSM:PATIENT take RPASTO CAUS:TRANS DECL \textsc{\textup{again}} TSM:AGENT
     \tr Then he sent the paper back to him again
     \tr Then he caused him to take the paper back again
+    %\source \parencite[237d]{aikhenamazon}
 \end{examples}
 A 'sociative' causative, marked by the causative and the comitative coordinator \emh{sóh} in combination with a personal pronoun, may have overtones of the causer's involvement; compare the straightforward example (\ref{ex:caus5}) with the sociative construction in (\ref{ex:caus6}).
 \begin{examples}
     \ex \label{ex:caus5}
-    \words [kìhaóxí]ₒ\MC2 haíhíkihikókóa\MC5 [pàahtah]ₒ\MC2
+    \words kìhaóxí\MC2 haíhíkihikókóa\MC5 pàahtah\MC2
     \bits kì- haóxí haí- híki -hi -kó =kóa pàah -tah
     \gloss TSPOSS son CL:anim.sg across RPASTT CAUS:TRANS DECL river PRL 
-    \tr He caused his son to cross the river (ordered him without being involved)
+    \tr He caused his son to cross the river \\ (ordered him without being involved)
+    %\source \parencite[240a]{aikhenamazon}
     \ex \label{ex:caus6}
     \words kó sóh [kìhaóxí]ₒ\MC2 haíhíki-\MC2 \\ hikókóa\MC3 [pàahtah]ₒ\MC2
     \bits kó sóh kì- haóxí haí- híki hi -kó =kóa pàah -tah 
     \gloss TSM with TSPOSS son CL:anim.sg across RPASTT CAUS:TRANS DECL river PRL
     \tr He caused his son to cross the river (helped him across the river)
+    %\source \parencite[240b]{aikhenamazon}
 \end{examples}
 \subsection{Past tenses}\label{svpast}
 In the following section I will consider Hapi's elaborate system of past tenses. First, I will present the recent past ({\Rpasto}), then I will move on and discuss the three other past tenses, namely, the intermediate past ({\Rpastt}), the distant past ({\Dpasto}) and finally the remote past ({\Dpastt}). An overview of the past tenses and there deictic scopes can be found in table \ref{t:pasttenses}.
@@ -2074,19 +2104,41 @@ In the following section I will consider Hapi's elaborate system of past tenses.
     \begin{tabular}{@{}lllll@{}}
     \toprule
     Section  & Form  & Gloss    & \begin{tabular}[c]{@{}l@{}}Minimum\\ distance\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Maximum\\ distance\end{tabular} \\ \midrule
-    \ref{s:recpast} & -xí   & {\Rpasto}  & \begin{tabular}[c]{@{}p{5cm}@{}}\makecell[lt]{day of speech \\ before speech time}\end{tabular} & unspecified                                                \\
+    \ref{s:recpast} & -xí   & {\Rpasto}  & \makecell[lt]{immediately prior \\ to speech time} & three days ago                                                \\
     \ref{s:intpast} & -hi   & {\Rpastt}  & yesterday                                                                   & last week                                                  \\
     \ref{s:distpast} & -tóhi & {\Dpasto} & last week                                                                   & years ago                                                  \\
     \ref{s:rempast} & -hàò  & {\Dpastt}  & \multicolumn{2}{l}{historical events and narratives}                                                                                     \\ \bottomrule
     \end{tabular}
     \caption{Past Tenses Overview}
     \label{t:pasttenses}
-    \end{table}
-\subsubsection{Recent Past}\label{s:recpast}
-The recent past is used for events that have occurred on the same day on which the clause containing it is uttered. 
-\subsubsection{Intermediate Past}\label{s:intpast}
-\subsubsection{Distant Past}\label{s:distpast}
-\subsubsection{Remote Past}\label{s:rempast}
+  \end{table}
+\subsubsection{Recent Past \emh{-xí}}\label{s:recpast}
+The recent past, marked by the morpheme \emh{-xí}, encodes that an event took place immediately prior and up to three days prior to the speech time. An absolute reading yields the encoding of an event that took place two days prior to the speech act. In example (\ref{ex:recpast1}), the primary function of the recent past marker is showcased. In the following narrative, the speaker talks about going on a fishing trip with his friend Atah.
+\begin{examples}
+    \ex \label{ex:recpast1}
+    \words hitaóha tà atah sóh háaha\MC2 ahihxíkóa\MC3
+    \bits hitaóha tà atah sóh háa -ha ahih -xí =kóa
+    \gloss first FS:SUBJECT man's.name with go NMZ think.about RPASTO DECL
+    \tr First I thought about going out with Atah
+\end{examples}
+In discourse, the recent past marker is repeated throughout the narrative, as long as events occur within the temporal deictic range of the marker and are described in-sequence.\footnote{Then, the sequential marker \emh{=ó} may be used to link the predicates.} (\ref{ex:recpast2}) and (\ref{ex:recpast3}) are the continuation of (\ref{ex:recpast1}), and they show that \emh{-xí} maintains its position within the predicate and displays discourse perseverance.
+\begin{examples}
+    \ex \label{ex:recpast2}
+    \words sóso kaxáxíkoi\MC3 atah sóh tà xíxíxí\MC2 kókihíkixí\MC2 kàahxí\MC2 koíháaxíkóa\MC3
+    \bits sóso kaxá -xí =koi atah sóh tà xíxí -xí kókihíki -xí kàah -xí koíháa -xí =kóa  
+    \gloss then eat RPASTO \textsc{\textup{S/A>S(PE)}} man's.name with FS:SUBJECT go.away RPASTO fish RPASTO kill RPASTO go.home RPASTO DECL
+    \tr After eating, I went with Atah to go fishing
+    \ex \label{ex:recpast3}
+    \words hitaóha kaóhtiihóo\MC2 tàhokó kòhóohixíkóa\MC3
+    \bits hitaóha kaóhtii -hóo tàhokó kòhóohi -xí =kóa 
+    \gloss first uncle LOC FAT:SUBJECT arrive RPASTO DECL
+    \tr Firstly, we arrived at my uncle's
+\end{examples}
+
+
+\subsubsection{Intermediate Past \emh{-hi}}\label{s:intpast}
+\subsubsection{Distant Past \emh{-tóhi}}\label{s:distpast}
+\subsubsection{Remote Past \emh{-hàò}}\label{s:rempast}
 \begin{comment}
 \subsection{Person agreement}\label{svperson}
 \subsection{Future tense}\label{svfut}
@@ -2171,5 +2223,7 @@ The recent past is used for events that have occurred on the same day on which t
 \chapter{List of V1s and DTRs}
 \end{appendices}
 \end{comment}
+%\printbibliography[title=Example Sentences Sources] 
+% I commented out all the citations because I'm not sure yet whether I really want to have them in the document.
 \end{document}
 
