@@ -1,4 +1,5 @@
 \documentclass[a4paper, 12pt, oneside]{memoir}
+\usepackage{morewrites}
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
 %\usepackage[utf8]{inputenc}
@@ -192,6 +193,11 @@
 \newleipzig{cont}{cont}{continuative}
 \newleipzig{itr}{itr}{intransitive}
 \newleipzig{trans}{trans}{transitive}
+\newleipzig{topic}{topic}{topic}
+\newleipzig{noct}{noct}{nocturnal}
+\newleipzig{ds}{ds}{different subject switch-reference}
+\newleipzig{punct}{punct}{punctual}
+\newleipzig{frust}{frust}{frustrative}
 
 \glsfindwidesttoplevelname[\leipzigtype]
 
@@ -239,8 +245,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.5b-alpha
-        Date: 17 March, 2021
+        Version: 0.1.6-alpha
+        Date: 19 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -1976,7 +1982,7 @@ Lastly, the jussive mode may express a speaker'ss disengagement from a negativel
     %\source \parencite[340b]{hupepps}
 \end{examples}
 \subsection{Valency}\label{svvalency}
-In the following chapters I will discuss the valency-modifying morphemes which are marked directly on the Hapi verb. This includes the antipassive (section \ref{s:antip}), the passive (section \ref{s:pass}) and the causative (section \ref{s:caus}) prefixes. 
+In the following chapters I will discuss the valency-modifying morphemes which are marked directly on the Hapi verb. This includes the antipassive section (\ref{s:antip}), the passive section (\ref{s:pass}) and the causative section (\ref{s:caus}) prefixes. 
 \subsubsection{Antipassive \emh{h(V)-}}\label{s:antip}
 The Hapi antipassive, marked by the prefix \emh{h(V)-}, is used to turn a transitive verb into an intransitive one. This is achieved by demoting the former A of the transitive verb to S and omitting the O argument. A straightforward transitive clause can be seen in example (\ref{ex:antip1}).
 \begin{examples}
@@ -2061,7 +2067,7 @@ There are two types of causative constructions in the Hapi language; one using t
     %\source \parencite[237a]{aikhenamazon}
     \ex \label{ex:caus2}
     \words óxííₒ sóíhaáhkaxa\MC5
-    \bits óxííₒ sóí -a =áh =ka =xa
+    \bits óxííₒ sóí -a -áh =ka =xa
     \gloss child sleep ST CAUS:ITR DECL CONT 
     \tr (He) is putting the child to sleep.
     %\source \parencite[237b]{aikhenamazon}
@@ -2121,7 +2127,7 @@ The recent past, marked by the morpheme \emh{-xí}, encodes that an event took p
     \gloss first FS:SUBJECT man's.name with go NMZ think.about RPASTO DECL
     \tr First I thought about going out with Atah
 \end{examples}
-In discourse, the recent past marker is repeated throughout the narrative, as long as events occur within the temporal deictic range of the marker and are described in-sequence.\footnote{Then, the sequential marker \emh{=ó} may be used to link the predicates.} (\ref{ex:recpast2}) and (\ref{ex:recpast3}) are the continuation of (\ref{ex:recpast1}), and they show that \emh{-xí} maintains its position within the predicate and displays discourse perseverance.
+In discourse, the recent past marker is repeated throughout the narrative, as long as events occur within the temporal deictic range of the marker and are described in-sequence.\footnote{Then, the sequential marker \emh{==ó} may be used to link the predicates.} (\ref{ex:recpast2}) and (\ref{ex:recpast3}) are the continuation of (\ref{ex:recpast1}), and they show that \emh{-xí} maintains its position within the predicate and displays discourse perseverance.
 \begin{examples}
     \ex \label{ex:recpast2}
     \words haí kaxáxíkoi\MC3 atah sóh tà xíxíxí\MC2 kókihíkixí\MC2 kàahxí\MC2 koíháaxíkóa\MC3
@@ -2143,6 +2149,28 @@ The recent past marker may also be used in a relative temporal sense, i.e. relat
     \tr Her father and mother said: ``They (their children) have (already) become adolescents''
 \end{examples}
 \subsubsection{Intermediate Past \emh{-hi}}\label{s:intpast}
+The intermediate past disjunct suffix \emh{-hi} encodes that an event took place between yesterday (minimum) and one week (maximum) from the time of speech or some reference time. In (\ref{ex:intpast1}), the primary function of the intermediate past is exemplified. In the following, the speaker tells us about his pet armadillo, which escaped from the speaker's hut. 
+\begin{examples}
+    \ex \label{ex:intpast1}
+    \words hákiikíípoh\MC3 saahì\MC2 tóhì\MC2 kohsoa\MC2 hakó tatáakai xíxíhi\MC2 kohápahikoa\MC3
+    \bits há- kiikíí =poh saa -hì tóh -hì koh -soa hakó tataákai xíxí -hi kohápa -hi =kóa
+    \gloss FSPOSS armadillo TOPIC two CL:time three CL:time day PL ago do.suddenly.ITR go.away RPASTT leave RPASTT DECL
+    \tr As for my (pet) armadillo, two or three days ago, it suddenly disappeared (lit. went away and left)
+\end{examples}
+In narratives set in the intermediate past, \emh{-hi} exhibits discourse perseverance, if and only if the narrated events fall into the scope of the marker, i.e. occur between yesterday and one week prior to the speech act. This can be seen in the examples (\ref{ex:intpast2}) and (\ref{ex:intpast3}), which are a continuation of the narrative introduced in (\ref{ex:intpast1}).
+\begin{examples}
+    \ex \label{ex:intpast2}
+    \words kìsaháxìhahóo\MC5 tàah ákiihikóahikí\MC4
+    \bits kì- sahá -xì -ha -hóo tàah ákiih -hi =kóa =hikí 
+    \gloss TSPOSS fall out.of NMZ LOC FS:AGENT see RPASTT DECL NOCT
+    \tr (And) at night, when it (the armadillo) had already left (lit. fallen out), I didn't see (it anymore).
+    \ex \label{ex:intpast3}
+    \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
+    \words xóíi kipá sóh tàhokó \\ hóxóatihikóahó\MC5 tapíh\MC2 oháhiáhkóa\MC4 tohípisáahió\MC3 híó káhxìhikóakah\MC4
+    \bits xóíi kipá sóh tàhokó hó- xóati -hi =kóa \cl ó tapí -h ohá -hi -áh =kóa tohípi -sáahi \cl ó híó káhxì -hi =kóa =kah
+    \gloss FRUST:ITR woman's.name with FAT:SUBJECT ANTIP search RPASTT DECL SEQ man's.name ERG run RPASTT CAUS:ITR DECL willingness PVT SEQ but.DS catch RPASTT DECL PUNCT
+    \tr I went in vain to search (it) with Kipá and Tapí let (it) escape but I caught it
+\end{examples} 
 \subsubsection{Distant Past \emh{-tóhi}}\label{s:distpast}
 \subsubsection{Remote Past \emh{-hàò}}\label{s:rempast}
 \begin{comment}
