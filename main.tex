@@ -132,7 +132,7 @@
 \newleipzig{nmz}{nmz}{nominalizer}
 \newleipzig{c}{c}{complementizer}
 \newleipzig{intrg}{intrg}{interrogative mode}
-\newleipzig{cngr}{cngr}{congruent}
+\newleipzig{ego}{egoph}{egophoric}
 \newleipzig{dep}{dep}{dependent}
 \newleipzig{vis}{vis}{visual}
 \newleipzig{nvis}{nvis}{non-visual}
@@ -198,6 +198,8 @@
 \newleipzig{ds}{ds}{different subject switch-reference}
 \newleipzig{punct}{punct}{punctual}
 \newleipzig{frust}{frust}{frustrative}
+\newleipzig{rep}{rep}{reportative}
+\newleipzig{inch}{inch}{inchoative}
 
 \glsfindwidesttoplevelname[\leipzigtype]
 
@@ -245,8 +247,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.6-alpha
-        Date: 19 March, 2021
+        Version: 0.1.6b-alpha
+        Date: 20 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -1193,17 +1195,17 @@ The locative case marks a noun for a locational meaning, i.e. the position in, f
 \ex \label{ex:loc1}
 \words tàhokó hoihkóa\MC3 há pííháhóo\MC3
 \bits tàhokó hoi -h =kóa há píí -áh -hóo
-\gloss FAT:SUBJECT be.at FF DECL CNGR river AUG LOC
+\gloss FAT:SUBJECT be.at FF DECL EGO river AUG LOC
 \tr We are at the river
 \ex \label{ex:loc2}
 \words tàhokó háahkóa\MC3 há pííháhóo\MC3
 \bits tàhokó háa -h =kóa há píí -áh -hóo
-\gloss FAT:SUBJECT go FF DECL CNGR river AUG LOC
+\gloss FAT:SUBJECT go FF DECL EGO river AUG LOC
 \tr We go to the river
 \ex \label{ex:loc3}
 \words tàhokó póóihkóa\MC3 há pííháhóo\MC3
 \bits tàhokó póói -h =kóa há píí -áh -hóo
-\gloss FAT:SUBJECT come FF DECL CNGR river AUG LOC
+\gloss FAT:SUBJECT come FF DECL EGO river AUG LOC
 \tr We come from the river
 \end{examples}
 \paragraph{Perlative Case \emh{-tah} \textsc{prl}}\label{s:perlative}
@@ -1213,7 +1215,7 @@ The perlative case expresses that something is moved `through' or `along' the re
 \ex \label{ex:perl1}
 \words tàahopí há hááháah\MC3 ókoíhtah\MC4
 \bits tàahopí há háá- háa -h ó- koí -s -tah 
-\gloss FAS:SUBJECT CNGR JUSS go FF SSPOSS hut PL PRL
+\gloss FAS:SUBJECT EGO JUSS go FF SSPOSS hut PL PRL
 \tr We shall go via your huts
 \ex \label{ex:perl2}
 \words hoó asááhàòkóapò\MC5 xáohaóhtah\MC3
@@ -1371,7 +1373,7 @@ The ergative pronouns, as can be inferred from their name, have merged the forms
 \ex \label{ex:ergpron1}
 \words tà hóíkatah\MC2 háahoò\MC4 xóatiho\MC3 haíhosoahò\MC3 há
 \bits tà hóíka -tah háa -h -o \cl ò xóati -h -o haího -soa \cl ò há 
-\gloss FS:SUBJECT big.tree PRL go FF FUT SEQ search.for FF FUT berry PL SEQ CNGR
+\gloss FS:SUBJECT big.tree PRL go FF FUT SEQ search.for FF FUT berry PL SEQ EGO
 \tr I'll be going via the big tree, and then (I) will search for berries (there)
 \ex \label{ex:ergpron2}
 This section is work-in-progress
@@ -1415,7 +1417,7 @@ When using the first person singular, second person singular and second person h
 \ex \label{ex:instrpron3}
 \words áahíkóa\MC4 `tàah kohaíkoahi\MC2 kiihikóa\MC4 há tàsóo' ko
 \bits áa -hi -∅ =kóa tàah kohaíkoa -i kii -hi -∅ =kóa há tàsóo ko
-\gloss say RPASTT ST DECL FS:AGENT dig.a.hole  DEP AUX:PERF RPASTT ST DECL  CNGR FS:INSTR QUOTATIVE
+\gloss say RPASTT ST DECL FS:AGENT dig.a.hole  DEP AUX:PERF RPASTT ST DECL  EGO FS:INSTR QUOTATIVE
 \tr He said: ``I dug a hole all by myself''. 
 \ex This section is work-in-progress. \label{ex:instrpron4}
 \end{examples}
@@ -1439,7 +1441,7 @@ Some examples for the usage of these are presented in (\ref{ex:posspron1}) and (
 \ex \label{ex:posspron1}
 \words tài hati íxàa\MC2 há óóhò?\MC2
 \bits tài hati í- xàa há óó -ò
-\gloss DEM:PROX servant INTRG COP CNGR SSPOSS CL:anim:sg
+\gloss DEM:PROX servant INTRG COP EGO SSPOSS CL:anim:sg
 \tr Is that servant yours?
 \ex \label{ex:posspron2}
 \words ò kahaóó xàa kìhiò[...]\MC2
@@ -1467,7 +1469,7 @@ Some cases for the usage of these pronouns are exemplified in (\ref{ex:dempron1}
 \ex \label{ex:dempron1}
 \words tài xàa áaxíhao\MC4 há kóhii kó xàa kaai hóhò\MC2
 \bits tài xàa áa -xí -∅ -hao há kóhii kó xàa kaai hóh -ò  
-\gloss DEM:PROX COP say RPASTO ST DEM CNGR C TSM:SUBJECT COP sick man CL:anim:sg
+\gloss DEM:PROX COP say RPASTO ST DEM EGO C TSM:SUBJECT COP sick man CL:anim:sg
 \tr This (pointing at man) is the man who said [of himself] that he was sick
 \ex \label{ex:dempron2}
 \words hákapióó áahaokóa\MC4 ho
@@ -1884,12 +1886,12 @@ The interrogative mode is used to mark questions, whether it be polar or content
     \ex \label{ex:intrg1}
     \words {kóha haípi} há tááhi\MC2 ítóóhah\MC3
     \bits {kóha haípi} há tááh -i í- tóó -ah
-    \gloss tea CNGR drink DEP INTRG AUX ST 
+    \gloss tea EGO drink DEP INTRG AUX ST 
     \tr Are you drinking tea?
     \ex \label{ex:intrg2}
     \words páhisòì\MC2 há íxóatiah\MC3 
     \bits páhi -sòì há í- xóati -ah
-    \gloss what QU CNGR INTRG search.for ST
+    \gloss what QU EGO INTRG search.for ST
     \tr What are you searching for?
 \end{examples}
 \subsubsection{Imperatives}
@@ -2149,7 +2151,7 @@ The recent past marker may also be used in a relative temporal sense, i.e. relat
     \tr Her father and mother said: ``They (their children) have (already) become adolescents''
 \end{examples}
 \subsubsection{Intermediate Past \emh{-hi}}\label{s:intpast}
-The intermediate past disjunct suffix \emh{-hi} encodes that an event took place between yesterday (minimum) and one week (maximum) from the time of speech or some reference time. In (\ref{ex:intpast1}), the primary function of the intermediate past is exemplified. In the following, the speaker tells us about his pet armadillo, which escaped from the speaker's hut. 
+The intermediate past conjunct suffix \emh{-hi} encodes that an event took place between yesterday (minimum) and one week (maximum) from the time of speech or some reference time. In (\ref{ex:intpast1}), the primary function of the intermediate past is exemplified. In the following, the speaker tells us about his pet armadillo, which escaped from the speaker's hut. 
 \begin{examples}
     \ex \label{ex:intpast1}
     \words hákiikíípoh\MC3 saahì\MC2 tóhì\MC2 kohsoa\MC2 hakó tatáakai xíxíhi\MC2 kohápahikoa\MC3
@@ -2170,8 +2172,34 @@ In narratives set in the intermediate past, \emh{-hi} exhibits discourse perseve
     \bits xóíi kipá sóh tàhokó hó- xóati -hi =kóa \cl ó tapí -h ohá -hi -áh =kóa tohípi -sáahi \cl ó híó káhxì -hi =kóa =kah
     \gloss FRUST:ITR woman's.name with FAT:SUBJECT ANTIP search RPASTT DECL SEQ man's.name ERG run RPASTT CAUS:ITR DECL willingness PVT SEQ but.DS catch RPASTT DECL PUNCT
     \tr I went in vain to search (it) with Kipá and Tapí let (it) escape but I caught it
+\end{examples}
+The intermediate past may also be employed in a relative temporal sense, i.e. when used in a framing narrative. This most often appears in speech reports, whether it be direct or indirect. An example for the relative usage of the intermediate past can be found in (\ref{ex:intpast4}). In this case, the framing narrative is set in the remote past, while the event that is described in the narrative occurs a few days prior; this means, that even though in absolute terms, the event occurs several years ago, it is still marked by the intermediate past.
+\begin{examples}
+    \ex \label{ex:intpast4}
+    \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
+    \words áahàòkóa\MC3 kóó sóso tàiho \\ hahápia\MC3 sòihikóasah\MC4
+    \bits áa -hàò =kóa kóó sóso tàiho ha- hápi -a sòi -hi =kóa \cl sah 
+    \gloss say DPASTT DECL C then here ANTIP be.accustomed NMZ want RPASTT DECL INFER
+    \tr A long time ago they said that apparently (they) wanted to live (with us) here (a couple of days ago)
 \end{examples} 
 \subsubsection{Distant Past \emh{-tóhi}}\label{s:distpast}
+The distant past \emh{-tóhi} marks events that took place from last week up to years prior to the speech time. Contrary to the first set of past tense markers, i.e. the recent and intermediate past, the distant past (and additionally the remote past as well) cannot be used in a relative sense. An example concerning the primary usage of the distant past marker can be found in (\ref{ex:distpast1}).
+\begin{examples}
+    \ex \label{ex:distpast1}
+    \words ahítah kìtati\MC2 aháa ópoáhtóhikóa\MC3 
+    \bits ahítáh kì- tati aháa ópoáh -tóhi =kóa 
+    \gloss woman's.name:ERG TSPOSS child REP give.birth DPASTO DECL 
+    \tr Ahíta gave birth to her child, it is said
+\end{examples}
+Once again, in narratives set in the distant past, discourse perseverance can be observed. In the continuation of (\ref{ex:distpast1}), (\ref{ex:distpast2}) and (\ref{ex:distpast3}) respectfully, the distant past marker appears yet again. 
+\begin{examples}
+    \ex \label{ex:distpast2}
+    \words kìpóóihahóo\MC4 hoa \\ kaáxìtóhikóatíó\MC5 táakìxa\MC2
+    \bits kì- póói -ha -hóo hoa kaá -xì -tóhi =kóa =tíó táaki -̀xa
+    \gloss TSPOSS come NMZ LOC TSF:AGENT stand out.of DPASTO DECL INCH jar ONT
+    \tr When her child was coming (out), she put (lit. stood it out of) into a jar
+    \ex \label{ex:distpast3}
+\end{examples}
 \subsubsection{Remote Past \emh{-hàò}}\label{s:rempast}
 \begin{comment}
 \subsection{Person agreement}\label{svperson}
