@@ -51,10 +51,11 @@
 
 \renewcommand{\arraystretch}{1}
 
-\begin{comment}
+
 \def\trstyle#1{%
   `\textit{#1}'%
 }
+\begin{comment}
 \baaruset{%
   gloss.markup={},
   tr.markup=\trstyle
@@ -200,6 +201,7 @@
 \newleipzig{frust}{frust}{frustrative}
 \newleipzig{rep}{rep}{reportative}
 \newleipzig{inch}{inch}{inchoative}
+\newleipzig{crast}{crast}{crasternal}
 
 \glsfindwidesttoplevelname[\leipzigtype]
 
@@ -247,8 +249,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.6b-alpha
-        Date: 20 March, 2021
+        Version: 0.1.6c-alpha
+        Date: 21 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -1141,8 +1143,9 @@ Example (\ref{ex:poss9}), (\ref{ex:poss10}) and (\ref{ex:poss11}) showcase the u
 \gloss DEM:PROX COP SSPOSS son CL:anim:sg
 \tr This is your son
 \end{examples}
+An extensive list of all inherently possessed nouns and their suppletive counterparts may be found in appendix A.
 \subsection{Case}\label{scase}
-In this section I will consider the language's case system. The Hapi case system is relatively complex, featuring a total of 10 cases, which can be subdivided into 3 core cases, 4 non-core cases and 3 relational cases. In section \ref{scorecase} I will discuss the language's core cases, in section \ref{sncorecase} I will present its non-core cases and in section \ref{srelcase} I will consider its relational cases.
+In this section I will consider the language's case system. The Hapi case system is relatively complex, featuring a total of 10 cases, which can be subdivided into 3 core cases, 4 non-core cases and 3 relational cases. In section \ref{scorecase} I will discuss the language's core cases, in section \ref{sncorecase} I will present its non-core cases and in section \ref{srelcase} I will consider its relational cases. 
 \subsubsection{Core Cases}\label{scorecase}
 In the following section I will present the language's core cases. These cases are employed to mark core arguments such as S, A, P, D, T, and R for their appropriate role. In this context, the absolutive case marks the S of intransitive verbs, as well as the P of transitive and the T of ditransitive verbs. The ergative case marks the A of transitive verbs and the D of ditransitive verbs, while the dative case marks most commonly the R of a ditransitive verb, but also the second argument of a extended intransitive clause.\footnote{See section \ref{s:verbclass} for more information on extended intransitive clauses.} These cases are all marked in the first case slot.
 \paragraph{Absolutive Case \emh{-∅} \textsc{abs}}
@@ -1527,7 +1530,7 @@ PL & haí     &                     &                                     \\ \bo
 \end{centering}
 \end{table}
 
-The other features include SHAPE (long, flat and round\footnote{Also referred to as saliently one/two/three-dimensional.}), SIZE (big, small), QUANTA (singular, plural, bunch of, basketful), RIGIDITY (flexible, rigid, brittle, non-discrete) and LOCATION (extended vertically, ext. horizontally, parallel objects, objects in a row). Table \ref{tab:longclass} gives an overview of the some saliently one-dimensional classifiers in Hapi. A full list of classifiers can be found in Appendix A.
+The other features include SHAPE (long, flat and round\footnote{Also referred to as saliently one/two/three-dimensional.}), SIZE (big, small), QUANTA (singular, plural, bunch of, basketful), RIGIDITY (flexible, rigid, brittle, non-discrete) and LOCATION (extended vertically, ext. horizontally, parallel objects, objects in a row). Table \ref{tab:longclass} gives an overview of some saliently one-dimensional classifiers in Hapi. A full list of classifiers can be found in appendix B.
 
 \begin{table}[H]
     \begin{tabular}{lll>{\bfseries}l>{\itshape}p{5cm}}
@@ -1723,7 +1726,7 @@ An overview of the verbal stem structure of the Hapi language can be seen in tab
     \label{t:vstruc}
 \end{table}
 \subsubsection{Verb Classes}\label{s:verbclass}
-There are six classes of verbs in the Hapi language. Firstly, there are the basic intransitive, extended intransitive, transitive and ditransitive verbs, which are categorized by their valency. The remaining three verb classes are auxiliary verbs, complementizing verbs and compound verbs, the latter of which may be also subdivided into positional compound verbs and nominal compound verbs. Intransitive and transitive verbs constitute an open class, while the rest of the verb classes are closed.\footnote{N.b.: there needs to be more research conducted on the nature of the extended intransitive class, as I have not yet found out whether it is closed or open.} A list of all closed class verbs is presented in appendix B. An overview of verb classes is depicted in table \ref{t:verbclass}.
+There are six classes of verbs in the Hapi language. Firstly, there are the basic intransitive, extended intransitive, transitive and ditransitive verbs, which are categorized by their valency. The remaining three verb classes are auxiliary verbs, complementizing verbs and compound verbs, the latter of which may be also subdivided into positional compound verbs and nominal compound verbs. Intransitive and transitive verbs constitute an open class, while the rest of the verb classes are closed.\footnote{N.b.: there needs to be more research conducted on the nature of the extended intransitive class, as I have not yet found out whether it is closed or open.} A list of all closed class verbs is presented in appendix C. An overview of verb classes is depicted in table \ref{t:verbclass}.
 
 \begin{table}[H]
     \centering
@@ -1863,7 +1866,7 @@ While the complementizers mark indirect speech, there is a quotative marker \emh
     \tr [My] grandmother said: ``One shouldn't go into the forest alone''
 \end{examples}
 \paragraph{Positional Compound Verbs}
-Positional compound verbs are verbs with a bipartite stem. The first part (called V1) is from a relatively open class of ca. 100 members, while the second part (called DTR) is from a closed class of 10 members. They inflect like normal intransitive or transitive verbs. The DTRs depict explicit or implied motion in a certain \textbf{D}irection, into a \textbf{T}opological \textbf{R}elation. There are four subclasses of V1s, classificatory (type of figure or ground), dispositional (posture or position of the figure), means (manner or means of change), and trajectory (shape of path of change). While the first of these constitutes an open class, the rest of them are closed class. A full list of all V1s and DTRs can be found in appendix C. Examples (\ref{ex:vposit1}) and (\ref{ex:vposit2}) showcase the usage of transitive and intransitive positional compound verbs.
+Positional compound verbs are verbs with a bipartite stem. The first part (called V1) is from a relatively open class of ca. 100 members, while the second part (called DTR) is from a closed class of 10 members. They inflect like normal intransitive or transitive verbs. The DTRs depict explicit or implied motion in a certain \textbf{D}irection, into a \textbf{T}opological \textbf{R}elation. There are four subclasses of V1s, classificatory (type of figure or ground), dispositional (posture or position of the figure), means (manner or means of change), and trajectory (shape of path of change). While the first of these constitutes an open class, the rest of them are closed class. A full list of all V1s and DTRs can be found in appendix D. Examples (\ref{ex:vposit1}) and (\ref{ex:vposit2}) showcase the usage of transitive and intransitive positional compound verbs.
 \begin{examples}
 \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
     \ex \label{ex:vposit1}
@@ -2186,7 +2189,7 @@ The intermediate past may also be employed in a relative temporal sense, i.e. wh
 The distant past \emh{-tóhi} marks events that took place from last week up to years prior to the speech time. Contrary to the first set of past tense markers, i.e. the recent and intermediate past, the distant past (and additionally the remote past as well) cannot be used in a relative sense. An example concerning the primary usage of the distant past marker can be found in (\ref{ex:distpast1}).
 \begin{examples}
     \ex \label{ex:distpast1}
-    \words ahítah kìtati\MC2 aháa ópoáhtóhikóa\MC3 
+    \words ahítáh kìtati\MC2 aháa ópoáhtóhikóa\MC3 
     \bits ahítáh kì- tati aháa ópoáh -tóhi =kóa 
     \gloss woman's.name:ERG TSPOSS child REP give.birth DPASTO DECL 
     \tr Ahíta gave birth to her child, it is said
@@ -2197,10 +2200,35 @@ Once again, in narratives set in the distant past, discourse perseverance can be
     \words kìpóóihahóo\MC4 hoa \\ kaáxìtóhikóatíó\MC5 táakìxa\MC2
     \bits kì- póói -ha -hóo hoa kaá -xì -tóhi =kóa =tíó táaki -̀xa
     \gloss TSPOSS come NMZ LOC TSF:AGENT stand out.of DPASTO DECL INCH jar ONT
-    \tr When her child was coming (out), she put (lit. stood it out of) into a jar
+    \tr When her child was coming (out), she began putting into a jar
     \ex \label{ex:distpast3}
+    \words táakihóo\MC2 kìkaáxìaxapa\MC5 xoátia\MC2 hoa toihtóhikóa\MC3
+    \bits táaki -hóo kì- kaá -xì -a -xapa xoáti -a hoa toih -tóhi =kóa  
+    \gloss jar LOC TSPOSS stand out.of NMZ PURP leg PL TSF:AGENT open DPASTO DECL
+    \tr In order to put it in the jar, she spread (lit. opened) her legs (over the jar)
 \end{examples}
 \subsubsection{Remote Past \emh{-hàò}}\label{s:rempast}
+The remote past \emh{-hàò} marks events that took place in mythological narratives, historical events and tales. This primary usage of the remote past marker is showcase in (\ref{ex:rempast1}).
+\begin{examples}
+    \ex \label{ex:rempast1}
+    \words kìákiihahóo\MC4 kó sóasihò\MC2 kìotihàòkóa\MC3 ò hìhkòoh hoa íhaíhàòkóa\MC3
+    \bits kì- ákiih -a -hóo kó sóasih -ò kìoti -hàò =kóa ò hìhkòoh hoa íhaí -hàò =kóa 
+    \gloss TSPOSS see NMZ LOC TSM:SUBJECT spirit CL:anim.sg transform DPASTT DECL and spouse.DAT TSF talk.to DPASTT DECL  
+    \tr When (the sloth god) saw this, he transformed into a spirit and talked to the wife
+\end{examples}
+As with the other past tenses, discourse perseverance can be observed as long as the described events fit into the label of mythological narratives, historical happenings and tales. With (\ref{ex:rempast2}) and (\ref{ex:rempast3}) being the continuation of (\ref{ex:rempast1}), it can be seen that the marker \emh{-hàò} appears continuously.
+\begin{examples}
+    \ex \label{ex:rempast2}
+    \words haí kó paixà hóhaó\MC2 kìsapííha\MC3 apákahàòkóa\MC3
+    \bits haí kó paixà hóh -aó kì- sapíí -ha apáka -hàò =kóa
+    \gloss then TSM:AGENT dirt penis BEL TSPOSS put NMZ propose DPASTT DECL
+    \tr Then he (the sloth god) proposed (to her) to put dirt into (her husband's) penis
+    \ex \label{ex:rempast3}
+    \words hoa hih sóóhai\MC2 \\ hasapííhàòkóakohtóíh\MC5
+    \bits hoa hih sóóha -i ha- sapíí -hàò =kóa =kohtóíh
+    \gloss TSF:AGENT there:NVIS do.like.this ITR ANTIP put DPASTT DECL CRAST
+    \tr The next night, she put (the dirt) there like this
+\end{examples}
 \begin{comment}
 \subsection{Person agreement}\label{svperson}
 \subsection{Future tense}\label{svfut}
@@ -2280,9 +2308,10 @@ Once again, in narratives set in the distant past, discourse perseverance can be
 \subsubsection{Cause and Reason Clauses}
 \subsubsection{Purposive Clauses}
 \begin{appendices}
-\chapter{List of classifiers}
-\chapter{List of closed class verbs}
-\chapter{List of V1s and DTRs}
+\chapter{List of inherently possessed Nouns}
+\chapter{Classifiers}
+\chapter{Closed class verbs}
+\chapter{List of V1 and DTR components}
 \end{appendices}
 \end{comment}
 %\printbibliography[title=Example Sentences Sources] 
