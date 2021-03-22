@@ -196,12 +196,14 @@
 \newleipzig{trans}{trans}{transitive}
 \newleipzig{topic}{topic}{topic}
 \newleipzig{noct}{noct}{nocturnal}
+\newleipzig{diur}{diur}{diurnal}
 \newleipzig{ds}{ds}{different subject switch-reference}
 \newleipzig{punct}{punct}{punctual}
 \newleipzig{frust}{frust}{frustrative}
 \newleipzig{rep}{rep}{reportative}
 \newleipzig{inch}{inch}{inchoative}
 \newleipzig{crast}{crast}{crasternal}
+\newleipzig{mir}{mir}{mirative}
 
 \glsfindwidesttoplevelname[\leipzigtype]
 
@@ -249,8 +251,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.6c-alpha
-        Date: 21 March, 2021
+        Version: 0.1.7-alpha
+        Date: 22 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -270,7 +272,7 @@
 \newpage
 
 \chapter{Introduction}
-This preliminary reference grammar is the product of the attempt at documenting the Hapi language, a constructed language made by me, u/tryddle. In my just over 2 ½ years of conlanging, I've learned much, but not only because of my own ability to insert information into my brain, but also because of many people that have supported and helped me on the way. Without them, and most probably without you, the interested reader, this whole language would probably not exist. When I first discovered conlanging as an art form in late 2017, I was interested — immediately. Thanks to Artifexian\footnote{https://www.youtube.com/user/Artifexian} and his youtube channel, as well as Mark Rosenfelder and his amazing book `The Language Construction Kit', I was introduced into the rabbit hole of linguistics, more specifically the rabbit hole of language construction. 
+This preliminary reference grammar is the product of the attempt at documenting the Hapi language, a constructed language made by me, u/tryddle. In my just over 3 ½ years of conlanging, I've learned much, but not only because of my own ability to insert information into my brain, but also because of many people that have supported and helped me on the way. Without them, and most probably without you, the interested reader, this whole language would probably not exist. When I first discovered conlanging as an art form in late 2017, I was interested — immediately. Thanks to Artifexian\footnote{https://www.youtube.com/user/Artifexian} and his youtube channel, as well as Mark Rosenfelder and his amazing book `The Language Construction Kit', I was introduced into the rabbit hole of linguistics, more specifically the rabbit hole of language construction. 
 The goal of this document is not only to document the Hapi language in all of its complexity, but also to document a language only using the markdown language \LaTeX; a challenge which I've failed to achieve so many times before. 
 But now onto the most important part of this introduction. Obviously I want to thank many people who have helped me on this journey. Primarily, I especially thank Gordon Daws, Jacob Kronenberg, Paul Daly, Tobias Fernandez and Carl Leon, to whom this reference grammar is dedicated. They have supported me in so many ways, not all concerning conlanging, that it would have been heresy to not include them in these acknowledgements. Special thanks to Akam Chijir, who has helped me in many ways while I was battling the uncanny complexity of \LaTeX.
 \chapter{Background of the study}
@@ -1664,6 +1666,7 @@ This section is work-in-progress
 \subsubsection{Possessives}
 The main strategy for possessives in the Hapi language is depicted in the examples (\ref{ex:nposs1}) and (\ref{ex:nposs2}). There, the linking disjunct affix \emh{=à} is attached to the head, followed by the possessor in the absolutive case. 
 \begin{examples}
+\baarucols2
 \ex \label{ex:nposs1}
 \words óíhtià\MC2 sóasih
 \bits óíhti =à sóasih
@@ -1685,6 +1688,7 @@ This section is work-in-progress
 \subsubsection{Noun modifying}
 The final type of attribute in the Hapi language is noun juxtaposition. A noun may modify another noun in which case the modifying noun precedes the head noun. (\ref{ex:nounmod1}) and (\ref{ex:nounmod2}) show examples thereof.
 \begin{examples}
+\baarucols2
 \ex \label{ex:nounmod1}
 \bits tahai xohoá
 \gloss goat milk
@@ -1793,7 +1797,7 @@ Transitive verbs are verbs which take two arguments, an A and an P argument. If 
     \tr They chewed it
     %\source \parencite[240]{changingvalency}
 \end{examples} 
-However there are exceptions to this rule; some transitive verbs' objects do not take the absolutive case but a non-core or relational case instead. An example for such a verb is \emh{títo} 'to listen, to smell', which takes an additional argument in the 'next to' relational case, marked by the morpheme \emh{-(h)aí}. An example for the usage of those non-core transitive verbs is given in (\ref{ex:tr3}).
+However there are exceptions to this rule; some transitive verbs' objects do not take the absolutive case but a non-core or relational case instead. An example for such a verb is \emh{títo} `to listen, to smell', which takes an additional argument in the `next to' relational case, marked by the morpheme \emh{-(h)aí}. An example for the usage of those non-core transitive verbs is given in (\ref{ex:tr3}).
 \begin{examples}
     \ex \label{ex:tr3}
     \words háá tóópahaí\MC2 títoi\MC2 tóóhaká\MC3
@@ -2208,7 +2212,7 @@ Once again, in narratives set in the distant past, discourse perseverance can be
     \tr In order to put it in the jar, she spread (lit. opened) her legs (over the jar)
 \end{examples}
 \subsubsection{Remote Past \emh{-hàò}}\label{s:rempast}
-The remote past \emh{-hàò} marks events that took place in mythological narratives, historical events and tales. This primary usage of the remote past marker is showcase in (\ref{ex:rempast1}).
+The remote past \emh{-hàò} marks events that took place in mythological narratives, historical events and tales. As already mentioned, the remote past cannot me used as a relative tense. The primary usage of the remote past marker is showcased in (\ref{ex:rempast1}).
 \begin{examples}
     \ex \label{ex:rempast1}
     \words kìákiihahóo\MC4 kó sóasihò\MC2 kìotihàòkóa\MC3 ò hìhkòoh hoa íhaíhàòkóa\MC3
@@ -2229,8 +2233,61 @@ As with the other past tenses, discourse perseverance can be observed as long as
     \gloss TSF:AGENT there:NVIS do.like.this ITR ANTIP put DPASTT DECL CRAST
     \tr The next night, she put (the dirt) there like this
 \end{examples}
-\begin{comment}
 \subsection{Person agreement}\label{svperson}
+In the following section I will present the verbal person agreement in the Hapi verb complex. Table \ref{t:vperson} presents an overview of the verbal agreement system. With the nominal case marking being ergative-absolutive, the pronoun system being split, the nominative-accusative personal agreement only adds to the complexity of Hapi's morphosyntactic alignment. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+        & \multicolumn{2}{l}{Non-Past}      & \multicolumn{2}{l}{Past}          \\ \midrule
+        & Non-Interrogative & Interrogative & Non-Interrogative & Interrogative \\ \midrule
+    1   & -h                & -∅            & -∅                & -a            \\
+    2/3 & -a                & -ah           & -∅                & -a            \\ \bottomrule
+    \end{tabular}
+    \caption{Personal Agreement on Verbs}
+    \label{t:vperson}
+\end{table}
+
+There are two general sets for verbal person markers, the non-past and past groups. While the non-past markers are used in present and future tenses, the past markers are used with the past tenses. Both of these groups are subdivided into non-interrogative and interrogative paradigms, the former of which being used in the declarative and imperative modes; as can be inferred from the table above, the second and third person markers are merged. Similarly, in the non-interrogative and past interrogative paradigms, all markers exhibit syncretism.
+Examples (\ref{ex:vperson1}) - (\ref{ex:vperson3}) provide minimal examples for the non-interrogative paradigms.\footnote{I have excluded the plural pronouns in all of these examples for the sake of simplicity.}
+\begin{examples}
+    \ex \label{ex:vperson1}
+    \words tà àihkóahóh\MC4
+    \bits tà ài -h =kóa =óh
+    \gloss FS:SUBJECT do FF DECL DIUR
+    \tr During the day, I weave (lit. do)
+    \ex \label{ex:vperson2}
+    \words tà àihakóahóh\MC4
+    \bits pói ài -a =kóa =óh
+    \gloss FS:SUBJECT do FF DECL DIUR
+    \tr During the day, you weave (lit. do)
+    \ex \label{ex:vperson3}
+    \words tà/pói/kó/hoa àixíkóahóh\MC5
+    \bits tà/pói/kó/hoa ài -xí -∅ =kóa =óh
+    \gloss FS{/}SS{/}TSM{/}TSF:SUBJECT do RPASTO FF{/}ST DECL DIUR
+    \tr During the day, I/you/(s)he were/was weaving (lit. doing)
+\end{examples}
+Examples (\ref{ex:vperson4}) - (\ref{ex:vperson6}) provide similar examples for the interrogative paradigms.
+\begin{examples}
+    \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
+    \ex \label{ex:vperson4}
+    \words páhiháaka\MC2 tà àikóa\MC3
+    \bits páhi \cl áaka tà ài -∅ =kóa
+    \gloss what MIR FS:SUBJECT do FF DECL
+    \tr Of all things, what am I doing?
+    \ex \label{ex:vperson5}
+    \words páhiáaka\MC2 há pói àihahkóa\MC3
+    \bits páhi \cl áaka há pói ài -ah =kóa 
+    \gloss what MIR EGO SS:SUBJECT do ST DECL
+    \tr Of all things, what are you doing?
+    \ex \label{ex:vperson6}    
+    \words páhiáaka\MC2 (há) tà/pói/kó/hoa àixíahkóa\MC4
+    \bits páhi \cl áaka (há) tà/pói/kó/hoa ài -xí -ah =kóa 
+    \gloss what MIR (EGO) FS{/}SS{/}TSM{/}TSF:SUBJECT do RPASTO FF{/}ST DECL
+    \tr Of all things, what was/were I/you/(s)he doing?
+\end{examples}
+\begin{comment}
 \subsection{Future tense}\label{svfut}
 \section{Verb phrase structure}
 \subsection{Order of verb phrase elements}\label{svorder}
@@ -2294,8 +2351,7 @@ As with the other past tenses, discourse perseverance can be observed as long as
 \subsubsection{Question Words}
 \subsection{Imperative}
 \subsubsection{Imperative Clauses}
-\subsubsection{Optative Clauses}
-\subsubsection{Hortative Clauses}
+\subsubsection{Jussive Clauses}
 \section{Multiverb Constructions}
 \subsection{Serial Verb Constructions}
 \subsection{Syndetic Verb Coordination}
