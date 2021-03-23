@@ -141,7 +141,7 @@
 \newleipzig{evid}{evid}{evidential}
 \newleipzig{agent}{A}{agent}
 \newleipzig{subject}{S}{subject}
-\newleipzig{patient}{P}{patient}
+\newleipzig{object}{O}{object}
 \newleipzig{rpasto}{rec.past}{recent past}
 \newleipzig{rpastt}{int.past}{intermediate past}
 \newleipzig{dpasto}{dist.past}{distant past}
@@ -251,8 +251,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.7-alpha
-        Date: 22 March, 2021
+        Version: 0.1.7b-alpha
+        Date: 23 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -1149,7 +1149,7 @@ An extensive list of all inherently possessed nouns and their suppletive counter
 \subsection{Case}\label{scase}
 In this section I will consider the language's case system. The Hapi case system is relatively complex, featuring a total of 10 cases, which can be subdivided into 3 core cases, 4 non-core cases and 3 relational cases. In section \ref{scorecase} I will discuss the language's core cases, in section \ref{sncorecase} I will present its non-core cases and in section \ref{srelcase} I will consider its relational cases. 
 \subsubsection{Core Cases}\label{scorecase}
-In the following section I will present the language's core cases. These cases are employed to mark core arguments such as S, A, P, D, T, and R for their appropriate role. In this context, the absolutive case marks the S of intransitive verbs, as well as the P of transitive and the T of ditransitive verbs. The ergative case marks the A of transitive verbs and the D of ditransitive verbs, while the dative case marks most commonly the R of a ditransitive verb, but also the second argument of a extended intransitive clause.\footnote{See section \ref{s:verbclass} for more information on extended intransitive clauses.} These cases are all marked in the first case slot.
+In the following section I will present the language's core cases. These cases are employed to mark core arguments such as S, A, O, D, T, and R for their appropriate role. In this context, the absolutive case marks the S of intransitive verbs, as well as the O of transitive and the T of ditransitive verbs. The ergative case marks the A of transitive verbs and the D of ditransitive verbs, while the dative case marks most commonly the R of a ditransitive verb, but also the second argument of a extended intransitive clause.\footnote{See section \ref{s:verbclass} for more information on extended intransitive clauses.} These cases are all marked in the first case slot.
 \paragraph{Absolutive Case \emh{-∅} \textsc{abs}}
 Employed to encode the S of intransitive clauses, the primary function of the absolutive case is showcased in example (\ref{ex:abs1}); the speaker informs the listener about an extraordinary warrior, who, earlier on that day, showed mercy for an enemy warrior. This is seen as a very unusual and strange action to be done by a warrior, hence the explicit statement of the fact. 
 \begin{examples}
@@ -1159,7 +1159,7 @@ Employed to encode the S of intransitive clauses, the primary function of the ab
 \gloss warrior ABS show.mercy RPASTO ST  DECL 
 \tr Earlier today, the warrior showed mercy
 \end{examples}
-Besides that, the absolutive case also marks the P of transitive clauses as in (\ref{ex:abs2}) and the T of ditransitive verb, thus making the Hapi language a indirective language. Example (\ref{ex:abs3}) gives an example for this tertiary function of the absolutive case.
+Besides that, the absolutive case also marks the O of transitive clauses as in (\ref{ex:abs2}) and the T of ditransitive verb, thus making the Hapi language a indirective language. Example (\ref{ex:abs3}) gives an example for this tertiary function of the absolutive case.
 In (\ref{ex:abs2}), the speaker talks about a young girl who ate an underripe mangaba fruit, and got stomach aches from it the day after. In (\ref{ex:abs3}), the speaker reports of a benevolent teacher, who gifts a student of his a present.
 \begin{examples}
 \ex \label{ex:abs2}
@@ -1225,7 +1225,7 @@ The perlative case expresses that something is moved `through' or `along' the re
 \ex \label{ex:perl2}
 \words hoó asááhàòkóapò\MC5 xáohaóhtah\MC3
 \bits hoó a- sáá -hàò =kóa \cl pò xáoh -aóh -tah
-\gloss TSF:PATIENT PASS eat DPASTO DECL INFER crab AUGA PRL
+\gloss TSF:OBJECT PASS eat DPASTO DECL INFER crab AUGA PRL
 \tr She was eaten by a huge crab (they told me)
 \end{examples}
 \paragraph{Privative Case \emh{-sáahi} \textsc{pvt}}
@@ -1351,7 +1351,7 @@ An overview of independent non-possessive pronouns is schematized in table (\ref
 \begin{centering}
     \begin{tabular}{@{}llllll@{}}
     \toprule
-    \multicolumn{1}{c}{} & A                    & S                    & P                    & Dat              & Instr                  \\ \midrule
+    \multicolumn{1}{c}{} & A                    & S                    & O                    & Dat              & Instr                  \\ \midrule
     Ergative:            & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &                  & \multicolumn{1}{c}{}   \\
     1S                   & \textit{tàah}        & \textit{tà}          & \textit{tà}          & \textit{tàh}     & \textit{tàsóo}         \\
     1+2                  & \textit{tàahopí}     & \textit{tàhopí}      & \textit{tàhopí}      & \textit{tàhopìh} & \textit{-}             \\
@@ -1372,7 +1372,7 @@ An overview of independent non-possessive pronouns is schematized in table (\ref
 \end{centering}
 \end{table}
 \paragraph{Ergative pronouns}
-The ergative pronouns, as can be inferred from their name, have merged the forms for S and P, while the A form remained distinct. They include the first and second person singular, first person plural inclusive and third person plural pronouns. Some usages of ergative pronouns are found in examples (\ref{ex:ergpron1}) - (\ref{ex:ergpron3}).
+The ergative pronouns, as can be inferred from their name, have merged the forms for S and O, while the A form remained distinct. They include the first and second person singular, first person plural inclusive and third person plural pronouns. Some usages of ergative pronouns are found in examples (\ref{ex:ergpron1}) - (\ref{ex:ergpron3}).
 \begin{examples}
 \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
 \ex \label{ex:ergpron1}
@@ -1394,7 +1394,7 @@ This section is work-in-progress
 This section is work-in-progress
 \end{examples}
 \paragraph{Accusative Pronouns}
-The set of accusative pronouns that are employed in the Hapi language possess a form for A and S, and another, distinct form for P. They feature the third person singular pronouns, as well as the second person honorific pronoun. Some example sentences using these pronouns are given in (\ref{ex:accpron1}), (\ref{ex:accpron2}) and (\ref{ex:accpron3}).
+The set of accusative pronouns that are employed in the Hapi language possess a form for A and S, and another, distinct form for O. They feature the third person singular pronouns, as well as the second person honorific pronoun. Some example sentences using these pronouns are given in (\ref{ex:accpron1}), (\ref{ex:accpron2}) and (\ref{ex:accpron3}).
 \begin{examples}
 \ex \label{ex:accpron1}
 This section is work-in-progress
@@ -1740,9 +1740,9 @@ There are six classes of verbs in the Hapi language. Firstly, there are the basi
     Intransitive              & 1                                                                                  & S-∅ V                                \\
     Ext. Intransitive         & 2                                                                                  & S-∅ V E-{\Dat} / {\Loc}                      \\
     Transitive                &                                                                                    &                                      \\
-    \null\quad a) Core Transitives       & 2                                                                                  & A-{\Erg} V P-∅                          \\
-    \null\quad b) Non-Core Transitives   & 2                                                                                  & A-{\Erg} V P-\textsc{ncore}                      \\
-    Pos. Compound Verbs       & 1-2                                                                                & S-∅ V or A-{\Erg} V P-∅                 \\
+    \null\quad a) Core Transitives       & 2                                                                                  & A-{\Erg} V O-∅                          \\
+    \null\quad b) Non-Core Transitives   & 2                                                                                  & A-{\Erg} V O-\textsc{ncore}                      \\
+    Pos. Compound Verbs       & 1-2                                                                                & S-∅ V or A-{\Erg} V O-∅                 \\
     Ditransitive              & 3                                                                                  & D-{\Erg} T-∅ V R-{\Dat}                    \\ \bottomrule
     \end{tabular}
     \caption{Verb Classes Overview}
@@ -1782,7 +1782,7 @@ Extended intransitive verbs are verbs which take two arguments, an S argument an
     \tr This one is following a macaw
 \end{examples}
 \paragraph{Transitive and Ditransitive Verbs}\label{s:trans}
-Transitive verbs are verbs which take two arguments, an A and an P argument. If the arguments of a transitive verb are pronominal, they take their respective A and P form. A noun in the A function takes the ergative case, marked by the morpheme \emh{-(V́)h}, while a noun in the P function takes the unmarked absolutive case. Examples of the usage of transitive verbs and their arguments' marking can be seen in (\ref{ex:tr1}) and (\ref{ex:tr2}). In (\ref{ex:tr1}) the speaker recounts a story in which a negligent boy mislaid his ritual loincloth, only to be found by the speaker; the speaker is surprised as she sees mice chewing on the cloth.
+Transitive verbs are verbs which take two arguments, an A and an O argument. If the arguments of a transitive verb are pronominal, they take their respective A and O form. A noun in the A function takes the ergative case, marked by the morpheme \emh{-(V́)h}, while a noun in the O function takes the unmarked absolutive case. Examples of the usage of transitive verbs and their arguments' marking can be seen in (\ref{ex:tr1}) and (\ref{ex:tr2}). In (\ref{ex:tr1}) the speaker recounts a story in which a negligent boy mislaid his ritual loincloth, only to be found by the speaker; the speaker is surprised as she sees mice chewing on the cloth.
 \begin{examples}
     \ex \label{ex:tr1}
     \words hòotaháh\MC3 kíxohxíkóa\MC3 hása
@@ -1793,7 +1793,7 @@ Transitive verbs are verbs which take two arguments, an A and an P argument. If 
     \ex \label{ex:tr2}
     \words xah kíxohxíkóa\MC3 kòà
     \bits xah kíxoh -xí =kóa kòà
-    \gloss TP:AGENT chew RPASTO DECL TSN:PATIENT
+    \gloss TP:AGENT chew RPASTO DECL TSN:OBJECT
     \tr They chewed it
     %\source \parencite[240]{changingvalency}
 \end{examples} 
@@ -1805,7 +1805,7 @@ However there are exceptions to this rule; some transitive verbs' objects do not
     \gloss EPIST song NEXT listen DEP PROG ST DECL
     \tr Maybe she's listening to the song!
 \end{examples}
-Ditransitive verbs are verbs which take three arguments; those arguments are called D, T and R, and refer to the donor, theme and recipient of the verb. For nouns, the D function is marked by the ergative case, the T function is marked by the absolutive case and the R function is marked by the dative case. For pronouns, D and T correspond to the A and P forms, while the dative forms are used for the R function. There are \textit{2} ditransitive verbs in the analyzed corpus. Examples (\ref{ex:ditr1}) and (\ref{ex:ditr2}) showcase the usage of ditransitive verbs. 
+Ditransitive verbs are verbs which take three arguments; those arguments are called D, T and R, and refer to the donor, theme and recipient of the verb. For nouns, the D function is marked by the ergative case, the T function is marked by the absolutive case and the R function is marked by the dative case. For pronouns, D and T correspond to the A and O forms, while the dative forms are used for the R function. There are \textit{2} ditransitive verbs in the analyzed corpus. Examples (\ref{ex:ditr1}) and (\ref{ex:ditr2}) showcase the usage of ditransitive verbs. 
 \begin{examples}
     \ex \label{ex:ditr1}
     \words tííkóh\MC2 kóóh hóíhikóa\MC3 tatìih\MC2
@@ -1815,7 +1815,7 @@ Ditransitive verbs are verbs which take three arguments; those arguments are cal
     \ex \label{ex:ditr2}
     \words kó kòà hóíhikóa\MC3 hòah
     \bits kó kòà hóí -hi =kóa hòah
-    \gloss TSM:AGENT TSN:PATIENT give RPASTT DECL TSF:DAT
+    \gloss TSM:AGENT TSN:OBJECT give RPASTT DECL TSF:DAT
     \tr He gives it to her
 \end{examples}
 The R of a ditansitive verb might also be marked by the `on top of' relational case; in that case, the action is temporary, while with the dative case, the action is permanent.\footnote{This obviously only applies if the verb can bear such a type of aspect; for example  with the verb \emh{taih}, `to thank sb. for sth.' this distinction wouldn't make sense.} This  usage is exemplfied in (\ref{ex:ditr3}). 
@@ -1944,7 +1944,7 @@ The jussive mode, marked by the prefix \emh{háá-} marks a variety of semantics
     \ex \label{ex:juss1}
     \words xipásaa\MC3 xixíxí\MC2 kòà kó hááxíxí\MC2
     \bits xi- pása -a xi- xíxí kòà kó háá- xíxí
-    \gloss NEGAT.IMPV carry ST NEGAT.IMPV go.out TSM:PATIENT TSM:SUBJECT JUSS go.out
+    \gloss NEGAT.IMPV carry ST NEGAT.IMPV go.out TSM:OBJECT TSM:SUBJECT JUSS go.out
     \tr Don't carry him out (of the house), let him go out by himself
     %\source \parencite[339a]{hupepps}
     \ex \label{ex:juss2}
@@ -2092,7 +2092,7 @@ When deriving a ditransitive clause from a transitive one, the suffix \emh{-kó}
     \ex \label{ex:caus4}
     \words sóso pápo kòà hóhixíkókóatì\MC5 kó
     \bits sóso pápoₒ kòàₒ hóhi -xí -kó =kóa =tì kóₐ 
-    \gloss then paper TSM:PATIENT take RPASTO CAUS:TRANS DECL \textsc{\textup{again}} TSM:AGENT
+    \gloss then paper TSM:OBJECT take RPASTO CAUS:TRANS DECL \textsc{\textup{again}} TSM:AGENT
     \tr Then he sent the paper back to him again
     \tr Then he caused him to take the paper back again
     %\source \parencite[237d]{aikhenamazon}
@@ -2141,7 +2141,7 @@ In discourse, the recent past marker is repeated throughout the narrative, as lo
     \ex \label{ex:recpast2}
     \words haí kaxáxíkoi\MC3 atah sóh tà xíxíxí\MC2 kókihíkixí\MC2 kàahxí\MC2 koíháaxíkóa\MC3
     \bits haí kaxá -xí =koi atah sóh tà xíxí -xí kókihíki -xí kàah -xí koíháa -xí =kóa  
-    \gloss then eat RPASTO \textsc{\textup{S/A>S(PE)}} man's.name with FS:SUBJECT go.away RPASTO fish RPASTO kill RPASTO go.home RPASTO DECL
+    \gloss then eat RPASTO \textsc{\textup{s/a>s(pe)}} man's.name with FS:SUBJECT go.away RPASTO fish RPASTO kill RPASTO go.home RPASTO DECL
     \tr After eating, I went with Atah to go fishing
     \ex \label{ex:recpast3}
     \words hitaóha kaóhtiihóo\MC2 tàhokó kòhóohixíkóa\MC3
@@ -2287,8 +2287,17 @@ Examples (\ref{ex:vperson4}) - (\ref{ex:vperson6}) provide similar examples for 
     \gloss what MIR (EGO) FS{/}SS{/}TSM{/}TSF:SUBJECT do RPASTO FF{/}ST DECL
     \tr Of all things, what was/were I/you/(s)he doing?
 \end{examples}
-\begin{comment}
 \subsection{Future tense}\label{svfut}
+In the following section I will consider the role of the future tense within the verb stratum. The future marker \emh{-o} encodes that an event will take place in the future, which either refers to to events that take place immediately after the speech act or events that take place at some unknown time in the future. This primary usage of the future marker is exemplified in (\ref{ex:future1}).
+\begin{examples}
+    \ex \label{ex:future1}
+    \words sóíha kaai àihipa\MC2 páhisòì\MC2 \\ íhahihokóa\MC6 póxihoo sóóhai\MC2 sóíhi\MC2 ípítóhikóa\MC4
+    \bits sóíha kaai ài =ipa páhi -sòì í- h- ahih -h -o =kóa póxihoo sóóha -i sóí -i í- pí -tóhi =kóa   
+    \gloss dream foul do \textsc{\textup{s/a>s(pe)}} what QU INTRG ANTIP think.about FF FUT DECL SSAP do.like.this ITR dream DEP INTRG NEG DPASTO DECL
+    \tr After dreaming of this bad thing, what will I think? Haven't you ever dreamt like this?
+\end{examples}
+It may also be used in a relative sense, encoding events that took place in the future from a past tense reference time. 
+\begin{comment}
 \section{Verb phrase structure}
 \subsection{Order of verb phrase elements}\label{svorder}
 \subsection{Second-position particles}\label{svparticles}
