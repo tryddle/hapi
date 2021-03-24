@@ -55,6 +55,10 @@
 \def\trstyle#1{%
   `\textit{#1}'%
 }
+\baaruset{%
+    tr.markup=\trstyle
+}
+
 \begin{comment}
 \baaruset{%
   gloss.markup={},
@@ -128,7 +132,7 @@
 \newleipzig{instr}{instr}{instrument}
 \newleipzig{quotative}{quot}{quotative}
 \newleipzig{redup}{r}{reduplication}  
-\newleipzig{seq}{seq}{sequential }
+\newleipzig{seq}{seq}{sequential}
 \newleipzig{fourth}{4}{fourth person}
 \newleipzig{nmz}{nmz}{nominalizer}
 \newleipzig{c}{c}{complementizer}
@@ -151,9 +155,9 @@
 \newleipzig{prl}{perl}{perlative}
 \newleipzig{pvt}{priv}{privative}
 \newleipzig{smb}{sembl}{semblative}
-\newleipzig{ont}{on.top}{'on top' case}
-\newleipzig{bel}{below}{'below' case}
-\newleipzig{next}{next.to}{'next to' case}
+\newleipzig{ont}{on.top}{`on top' case}
+\newleipzig{bel}{below}{`below' case}
+\newleipzig{next}{next.to}{`next to' case}
 \newleipzig{tsf}{3sf}{third person singular female}
 \newleipzig{tsm}{3sm}{third person singular male}
 \newleipzig{tsn}{3sinan}{third person singular inanimate}
@@ -205,6 +209,7 @@
 \newleipzig{crast}{crast}{crasternal}
 \newleipzig{mir}{mir}{mirative}
 
+
 \glsfindwidesttoplevelname[\leipzigtype]
 
 \title{A Grammar of lang5}
@@ -251,8 +256,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.7b-alpha
-        Date: 23 March, 2021
+        Version: 0.1.7c-alpha
+        Date: 24 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -303,8 +308,8 @@ In this section, I will present the language's consonant phonemes. There are 6 c
 \begin{tabular}{@{}llll@{}}
 \toprule
  & Peripheral & Alveolar & Non-Alveolar \\ \midrule
-Stop & p$\sim$b & t$\sim$r & k$\sim$g \\
-Fricative & h & s$\sim$ts & ʃ$\sim$ʂ$\sim$χ \\ \bottomrule
+Stop & p\textasciitilde b & t\textasciitilde r & k\textasciitilde g \\
+Fricative & h & s\textasciitilde ts & ʃ\textasciitilde ʂ\textasciitilde χ \\ \bottomrule
 \end{tabular}
 \caption{Consonant phonemes}
 \label{cphon}
@@ -348,7 +353,7 @@ Low & a &  \\ \bottomrule
 \subsubsection{Consonants}
 In this section I will consider the phonetic description of consonants in Hapi. Allophonic variations are discussed in section \ref{sall}. All consonants may appear in word-intial and in word-medial position. Since all syllables in the language are open\footnote{Note that the onset may be filled by /h/, in which case either the subsequent segment is preaspirated, or it is debuccalized to /ʔ/. Thus, most if not all syllables can be analyzed as being open.}, there is no restriction on where a consonant segment may be placed. In the following section, examples for each position and each consonant will be given.
 \newline
-/p$\sim$b/ is a voiceless or voiced bilabial stop. It is pronounced as /b/ by most children and women, while it is pronounced /p/ by most men and the elderly. It appears in both word-initial and word-medial position. Henceforth it will be standardized to /p/.
+/p\textasciitilde b/ is a voiceless or voiced bilabial stop. It is pronounced as /b/ by most children and women, while it is pronounced /p/ by most men and the elderly. It appears in both word-initial and word-medial position. Henceforth it will be standardized to /p/.
 
 \begin{columns}
 \cols /pàah/ & [pʰaːʔ˩˧] & \emh{pàah} & `small river'
@@ -357,7 +362,7 @@ In this section I will consider the phonetic description of consonants in Hapi. 
 
 
 
-/t$\sim$r/ is a voiceless alveolar stop or a voiced alveolar trill. It is pronounced as /r/ by most children and women, while it is pronounced /t/ by most men and the elderly. It appears in both word-initial and word-medial position. Henceforth it will be standardized to /t/.
+/t\textasciitilde r/ is a voiceless alveolar stop or a voiced alveolar trill. It is pronounced as /r/ by most children and women, while it is pronounced /t/ by most men and the elderly. It appears in both word-initial and word-medial position. Henceforth it will be standardized to /t/.
 
 \begin{columns}
     \cols /táosiiʂó/ & [tʰao̯˥˧ʃiː˧ho˥] & \emh{táosiihó} & `male cousin'
@@ -365,7 +370,7 @@ In this section I will consider the phonetic description of consonants in Hapi. 
 \end{columns}
 
 
-/k$\sim$g/ is a voiceless or voiced velar stop. It is pronounced as /g/ by most children and women, while it is pronounced /k/ by most men and the elderly. It appears in both word-initial and word-medial position.  Henceforth it will be standardized to /k/.
+/k\textasciitilde g/ is a voiceless or voiced velar stop. It is pronounced as /g/ by most children and women, while it is pronounced /k/ by most men and the elderly. It appears in both word-initial and word-medial position.  Henceforth it will be standardized to /k/.
 
 \begin{columns}
     \cols // & [] & \emh{} & `'
@@ -380,7 +385,7 @@ In this section I will consider the phonetic description of consonants in Hapi. 
     \cols // & [] & \emh{} & `'
 \end{columns}
 
-/s$\sim$ts/ is a voiceless alveolar fricative or affricate. It is pronounced as /s/ by most children and women, while it is pronounced /ts/ by most men and the elderly, especially in emphasized speech. 
+/s\textasciitilde ts/ is a voiceless alveolar fricative or affricate. It is pronounced as /s/ by most children and women, while it is pronounced /ts/ by most men and the elderly, especially in emphasized speech. 
 It appears in both word-intial and word-medial position. Henceforth it will be standardized to /s/.
 
 \begin{columns}
@@ -388,7 +393,7 @@ It appears in both word-intial and word-medial position. Henceforth it will be s
     \cols // & [] & \emh{} & `'
 \end{columns}
 
-/ʃ$\sim$ʂ$\sim$χ/ is a voiceless alveolar or retroflex or uvular fricative. It is pronounced as /ʃ/ by most children, as /ʂ/ by most women and the elderly, and as /χ/ by men and in emphasized speech. It is sometimes debuccalized to /h/ in rapid speech. It appears in world-initial and word-medial position. Henceforth, it will be standardized to /ʂ/
+/ʃ\textasciitilde ʂ\textasciitilde χ/ is a voiceless alveolar or retroflex or uvular fricative. It is pronounced as /ʃ/ by most children, as /ʂ/ by most women and the elderly, and as /χ/ by men and in emphasized speech. It is sometimes debuccalized to /h/ in rapid speech. It appears in world-initial and word-medial position. Henceforth, it will be standardized to /ʂ/
 
 \begin{columns}
     \cols // & [] & \emh{} & `'
@@ -526,7 +531,7 @@ The following section discusses all phonological processes that alter the phonet
 \ex \phonc{ʂ}{h}{
     \oneof{
     V₁ \phold V₂ \\
-    \textit{[ʃ$\sim$ʂ$\sim$χ] elsewhere}}
+    \textit{[ʃ\textasciitilde ʂ\textasciitilde χ] elsewhere}}
     }
 \end{examples}
 \subsection{Conclusion}
@@ -635,7 +640,7 @@ We can now add another vowel to the nucleus, yielding a syllable of the type CVV
                 [.V
                 \node[style={align=center}]{i};
                 ]
-               \edge[dashed]; [\node[style={align=center}]{$\tau=_1$H, $\tau_2=$M};]
+               \edge[dashed]; [\node[style={align=center}]{$\tau_1=$H, $\tau_2=$M};]
                 ]
     \end{tikzpicture}
     \caption{Syllable Structure: Example 3}
@@ -715,7 +720,7 @@ Examples (\ref{tone1} - \ref{tone3}) present instances of each tone.
     \cols /tàhòhì/ & [tʰa˩ho˩çi˩] & \emh{tàhòhì} & `poison (for a dart)'
 \end{columns}
 
-Tones may also be realized as floating tones on certain morphemes, e.g. the 'on top' suffix \emh{-(V̀)xa}. In these cases, the preceding vowel may take the floating tone, or the preceding tone is overwritten, as can be seen in example (\ref{tone4})
+Tones may also be realized as floating tones on certain morphemes, e.g. the `on top' suffix \emh{-(V̀)xa}. In these cases, the preceding vowel may take the floating tone, or the preceding tone is overwritten, as can be seen in example (\ref{tone4})
 
 
 \begin{columns}\label{tone4}
@@ -1033,7 +1038,7 @@ There are personal marker which may be employed to encode possession on possessa
 \caption{Possessive personal markers: Overview}
 \label{tpossmarker}
 \end{table}
-Some examples for the usage of these personal markers can be found below. Example (\ref{ex:poss1}) and (\ref{ex:poss2}) showcase the employment of the '\#V floating tone' markers \emh{h́-} and \emh{t̀-}, while (\ref{ex:poss3}) exemplifies the usage of the honorific marker \emh{pái-}. As can be seen in example (\ref{ex:poss2}), the third person plural morpheme may also be used as an inter-clausal forth person pronoun. This is true for most employments of this pronoun, not only in its possessive form.
+Some examples for the usage of these personal markers can be found below. Example (\ref{ex:poss1}) and (\ref{ex:poss2}) showcase the employment of the `\#V floating tone' markers \emh{h́-} and \emh{t̀-}, while (\ref{ex:poss3}) exemplifies the usage of the honorific marker \emh{pái-}. As can be seen in example (\ref{ex:poss2}), the third person plural morpheme may also be used as an inter-clausal forth person pronoun. This is true for most employments of this pronoun, not only in its possessive form.
 \begin{examples}
 \ex
 \label{ex:poss1}
@@ -1066,8 +1071,8 @@ The classifier may also be moved to the front within a clause to focus the aspec
 \ex
 \label{ex:poss5}
 \words hóhóikaííxi\MC2 kói\MC2 hò\MC2 póóihi\MC2 xósóóxíkóa\MC4 hápaáh\MC2
-\bits {hó$\sim$ hóika} =ííxi koí -∅ h- ò póói -i xósóó -xí -∅ =kóa hápaáh -h 
-\gloss REDUP:build \textsc{\textup{s/a/o>o(se)}} hut ABS FSPOSS CL:anim:sg come DEP bite RPASTO ST DECL dog ERG 
+\bits {hó\textasciitilde hóika} =ííxi koí -∅ h- ò póói -i xósóó -xí -∅ =kóa hápaáh -h 
+\gloss REDUP:build \textsc{\textup{s/a/o>o(se)}} hut ABS FSPOSS CL:anim.sg come DEP bite RPASTO ST DECL dog ERG 
 \tr As he was once again building another hut, my dog came and bit (him)
 \end{examples}
 \subsubsection{Unpossessable Nouns}\label{sinalien}
@@ -1132,17 +1137,17 @@ Example (\ref{ex:poss9}), (\ref{ex:poss10}) and (\ref{ex:poss11}) showcase the u
 \ex
 \label{ex:poss9}
 \bits tài xàa haóxí -ò
-\gloss DEM:PROX COP son CL:anim:sg
+\gloss DEM:PROX COP son CL:anim.sg
 \tr This is my son
 \ex
 \label{ex:poss10}
 \bits:* tài xàa ó- haóxí -ò
-\gloss DEM:PROX COP SSPOSS son CL:anim:sg
+\gloss DEM:PROX COP SSPOSS son CL:anim.sg
 \intended This is your son
 \ex
 \label{ex:poss11}
 \bits tài xàa ó- hósii -ò
-\gloss DEM:PROX COP SSPOSS son CL:anim:sg
+\gloss DEM:PROX COP SSPOSS son CL:anim.sg
 \tr This is your son
 \end{examples}
 An extensive list of all inherently possessed nouns and their suppletive counterparts may be found in appendix A.
@@ -1293,17 +1298,18 @@ In the Hapi language, second slot cases may be stacked with first slot cases to 
 \toprule
 \multirow{2}{*}{} & \multicolumn{3}{c}{Locative}                        & \multirow{2}{*}{Perlative} \\ \cmidrule(lr){2-4}
                   & Locational        & Lative         & Ablative       &                            \\ \midrule
-'on top of'       & focal 'on top of' & 'to above'     & 'from above'   & 'via above'                \\
-'below'           & foc. 'below'      & 'to below'     & 'from below'   & 'via below'                \\
-'next to'         & foc. 'next to'    & 'to (next to)' & 'from next to' & 'via next to'              \\ \bottomrule
+`on top of'       & focal `on top of' & `to above'     & `from above'   & `via above'                \\
+
+`below'           & foc. `below'      & `to below'     & `from below'   & `via below'                \\
+`next to'         & foc. `next to'    & `to (next to)' & `from next to' & `via next to'              \\ \bottomrule
 \end{tabular}
 \caption{Case Stacking Combinations}
 \label{t:casestacking}
 \end{table}
-The relational-locational combinations that are shown in the table are 'focal' variants of the normal, uncombined relational cases and contrast with them in a such a way that the focal versions are more particular. An example for this is given in (\ref{ex:casestacking1}), where, after a child is told to put a smaller stone onto a bigger one, the child asks whether it has done so correctly. The reply is (\ref{ex:casestacking1}).
+The relational-locational combinations that are shown in the table are `focal' variants of the normal, uncombined relational cases and contrast with them in a such a way that the focal versions are more particular. An example for this is given in (\ref{ex:casestacking1}), where, after a child is told to put a smaller stone onto a bigger one, the child asks whether it has done so correctly. The reply is (\ref{ex:casestacking1}).
 \begin{examples}
 \ex \label{ex:casestacking1}
-\words kií, haò kaíi hàohóoxa\MC3
+\words kií haò kaíi hàohóoxa\MC3
 \bits kií haò kaíi haò -hóo -xa
 \gloss no rock COP rock LOC ONT
 \tr No, the rock must be (exactly) on top of the (other) rock
@@ -1344,7 +1350,7 @@ Thus, quantifiers with the respective classifiers (\ref{ex:orderquant}), demonst
 \end{examples}
 \subsection{Pronouns}\label{spronouns}
 The Hapi pronominal system distinguishes on a first level between so-called independent and possessive pronouns. The independent pronouns take the role of S, A and O, as well as an instrumental usage. They ca be subdivided into ergative, neutral and accusative pronouns depending on their morphosyntactic alignment. The system also makes the distinction between person and number, as well as clusivity in first person pronoun. There is also a dedicated honorific pronoun \emh{hií} and a third person plural pronoun which can be used as fourth person pronoun.
-The set of possessive pronouns are used in an independent or strong manner, i.e. not with a determinative sense, but rather as a true pronominal, cf. 'my' (determinative) and 'mine' (independent).
+The set of possessive pronouns are used in an independent or strong manner, i.e. not with a determinative sense, but rather as a true pronominal, cf. `my' (determinative) and 'mine' (independent).
 \subsubsection{Independent pronouns}
 An overview of independent non-possessive pronouns is schematized in table (\ref{t:indeppron}).
 \begin{table}[H]
@@ -1446,12 +1452,12 @@ Some examples for the usage of these are presented in (\ref{ex:posspron1}) and (
 \ex \label{ex:posspron1}
 \words tài hati íxàa\MC2 há óóhò?\MC2
 \bits tài hati í- xàa há óó -ò
-\gloss DEM:PROX servant INTRG COP EGO SSPOSS CL:anim:sg
+\gloss DEM:PROX servant INTRG COP EGO SSPOSS CL:anim.sg
 \tr Is that servant yours?
 \ex \label{ex:posspron2}
 \words ò kahaóó xàa kìhiò[...]\MC2
 \bits ò kahaóó xàa kìhi -ò
-\gloss and uncle COP TSPOSS CL:anim:sg
+\gloss and uncle COP TSPOSS CL:anim.sg
 \tr And it was his uncle [...]
 \end{examples}
 \subsubsection{Demonstrative Pronouns}
@@ -1462,8 +1468,8 @@ The set of demonstrative pronouns consists of N forms, which are shown in table 
 \begin{tabular}{@{}llll@{}}
 \toprule
      & VIS        & NVIS                     & INANIM                                      \\ \midrule
-PROX & tài 'this' & -                        & \multirow{2}{*}{ho 'this/that' (inanimate)} \\
-DIST & hao 'that' & hih 'that' (not visible) &                                           \\ \bottomrule
+PROX & tài `this' & -                        & \multirow{2}{*}{ho `this/that' (inanimate)} \\
+DIST & hao `that' & hih `that' (not visible) &                                           \\ \bottomrule
 \end{tabular}
 \caption{Demonstrative Pronominal System}
 \label{t:dempron}
@@ -1472,10 +1478,11 @@ DIST & hao 'that' & hih 'that' (not visible) &                                  
 Some cases for the usage of these pronouns are exemplified in (\ref{ex:dempron1}), (\ref{ex:dempron2}) and (\ref{ex:dempron3}).
 \begin{examples}
 \ex \label{ex:dempron1}
-\words tài xàa áaxíhao\MC4 há kóhii kó xàa kaai hóhò\MC2
-\bits tài xàa áa -xí -∅ -hao há kóhii kó xàa kaai hóh -ò  
-\gloss DEM:PROX COP say RPASTO ST DEM EGO C TSM:SUBJECT COP sick man CL:anim:sg
-\tr This (pointing at man) is the man who said [of himself] that he was sick
+\words tài xàa hóh há kóóha\MC2 xàa kaaihò\MC2 áahikóa\MC3
+\bits tài xàa hóh há kóó -a xàa kaai -ò áa -hi =kóa 
+\gloss DEM:PROX COP man EGO C ST COP sick CL:anim.sg say RPASTT DECL
+\tr This (pointing at man) is the man who said (of himself) that he was sick
+% lit.: This is the man, he said he was sick.
 \ex \label{ex:dempron2}
 \words hákapióó áahaokóa\MC4 ho
 \bits hákapióó áa -a -o =kóa ho
@@ -1484,8 +1491,8 @@ Some cases for the usage of these pronouns are exemplified in (\ref{ex:dempron1}
 \ex \label{ex:dempron3}
 \words hih xàa óxííhò\MC2
 \bits hih xàa óxíí -ò 
-\gloss  DEM:NVIS COP child CL:anim:sg
-\tr That (pointing at approximate direction) was a child [not a rock]
+\gloss  DEM:NVIS COP child CL:anim.sg
+\tr That (pointing at approximate direction) was a child (not a rock)
 \end{examples}
 \subsubsection{Emphatic pronouns}
 Besides the set of independent, possessive and demonstrative pronouns, there is also a system of emphatic pronouns which are used in certain contexts. The set of those pronouns is depicted in table \ref{t:emphpron}. Note how there is neither a clusivity nor a number nor a honorific distinction within the pronouns of this set.
@@ -1559,14 +1566,14 @@ The other features include SHAPE (long, flat and round\footnote{Also referred to
 \subsubsection{Syntactic Distribution}
 In the following sub-section I will discuss the syntactic distribution of the classifiers presented above. I will not mention the quantifier-head concordance that is present in the Hapi language, as it already has been considered in this same section.
 \paragraph{Classifier possession}
-A prominent usage of classifiers in the Hapi language is classifier possession. This construction was already shown in example (\ref{ex:poss4}), but shall be reiterated here. The examples (\ref{ex:clsyndistr1}) - (\ref{ex:clsyndistr3}) show the general structure of such constructions. Right after the possessee, the classifier follows its head, before the possessor is introduced to the phrase. 
+A prominent usage of classifiers in the Hapi language is classifier possession. This construction is only one of several possessive constructions.\footnote{cf. section \ref{snposs}} The examples (\ref{ex:clsyndistr1}) - (\ref{ex:clsyndistr3}) show the general structure of such constructions. Right after the possessee, the classifier follows its head, before the possessor is introduced to the phrase. 
 \begin{examples}
 \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
 \ex \label{ex:clsyndistr1}
-\words haí hápaáh\MC2 ó táosiihó haxápií\MC2 xósóóhió\MC4 xah sóxiihió[...]\MC4 
-\bits haí hápaáh -h ó táosiihó haxápií -∅ xósóó -hi -∅ \cl ó xah sóxii -hi -∅ \cl ó 
-\gloss thus dog ERG CL:anim male.cousin stranger ABS bite RPASTT ST SEQ FOURTH scream RPASTT ST SEQ
-\tr (And) thus the dog of my (male) cousinᵢ bit the strangerⱼ, and heᵢ screamed, [and ...]
+\words haí hápaáh\MC2 ò táosiihó haxápií\MC2 xósóóhió\MC4 xah sóxiihió[...]\MC4 
+\bits haí hápaáh -h ò táosiihó haxápií -∅ xósóó -hi -∅ \cl ó xah sóxii -hi -∅ \cl ó 
+\gloss thus dog ERG CL:anim.sg male.cousin stranger ABS bite RPASTT ST SEQ FOURTH scream RPASTT ST SEQ
+\tr (And) thus the dog of my (male) cousinᵢ bit the strangerⱼ, and heᵢ screamed, (and ...)
 \ex \label{ex:clsyndistr2}
 \words pasío hosi kàaha
 \bits pasío hosi kàaha 
@@ -1589,7 +1596,7 @@ Predicate nominals also agree with their copular subject by means of being suffi
 \ex \label{ex:clsyndistr5}
 \words xóah xàa hòkaapaò\MC2
 \bits xóah xàa hòkaapa -ò
-\gloss man's.name COP hunter CL:anim:sg
+\gloss man's.name COP hunter CL:anim.sg
 \tr Juan is a hunter
 \ex \label{ex:clsyndistr6}
 \words hao táhiáki xàa páihikahía\MC2
@@ -1604,8 +1611,8 @@ The demonstrative adjectives of the Hapi language are very similar, if not ident
 \begin{tabular}{@{}llll@{}}
 \toprule
      & VIS        & NVIS                     & INANIM                                       \\ \midrule
-PROX & tài 'this' & -                        & \multirow{2}{*}{hao 'this/that' (inanimate)} \\
-DIST & hao 'that' & híi 'that' (not visible) &                                              \\ \bottomrule
+PROX & tài `this' & -                        & \multirow{2}{*}{hao `this/that' (inanimate)} \\
+DIST & hao `that' & híi `that' (not visible) &                                              \\ \bottomrule
 \end{tabular}
 \caption{Demonstrative Adjectives Overview}
 \label{t:demdet}
@@ -1616,7 +1623,7 @@ Some examples for the usage of these are given in (\ref{ex:demdet1}) and (\ref{e
 \words hao hahópìi xàa tàiha
 \bits hao hahópìi xàa tàiha
 \gloss DEM:DIST sloth COP there
-\tr There is that sloth [which we saw earlier]
+\tr There is that sloth (which we saw earlier)
 \ex \label{ex:demdet2}
 \words híi tukáh háhihahíaka\MC3
 \bits híi tukáh háhihahí -a =ka 
@@ -1646,7 +1653,7 @@ Numeral quantifiers also precede the modified noun, together with the adequate c
 \ex \label{ex:numeral2}
 \words tóhò\MC2 óxíísoa\MC2
 \bits tóh -ò óxíí -soa
-\gloss three CL:anim:sg child PL
+\gloss three CL:anim.sg child PL
 \tr three children
 \ex \label{ex:numeral3}
 \words posá\MC2 aíxia\MC2 xàa tàh
@@ -1663,8 +1670,8 @@ This section is work-in-progress
 \ex \label{ex:adj2}
 This section is work-in-progress
 \end{examples}
-\subsubsection{Possessives}
-The main strategy for possessives in the Hapi language is depicted in the examples (\ref{ex:nposs1}) and (\ref{ex:nposs2}). There, the linking disjunct affix \emh{=à} is attached to the head, followed by the possessor in the absolutive case. 
+\subsubsection{Possessives}\label{snposs}
+The main strategy for possessives in the Hapi language is depicted in the examples (\ref{ex:nposs1}) and (\ref{ex:nposs2}). In this construction, the linking disjunct affix \emh{=à} is attached to the head, followed by the possessor in the absolutive case. 
 \begin{examples}
 \baarucols2
 \ex \label{ex:nposs1}
@@ -1774,7 +1781,7 @@ Extended intransitive verbs are verbs which take two arguments, an S argument an
     \words xapisóoha\MC2 hóaxáko sahóóhaká\MC3 kòh
     \bits xapisóo =à hóaxáko sahóó -a =ká kòh
     \gloss mother LINK TT apply.color ST DECL TSM:DAT
-    \tr His mother was painting his [face]
+    \tr His mother was painting his (face)
     \ex \label{ex:exitr3}
     \words tài háahaka\MC3 paátihóo\MC2
     \bits  tài háa -a =ka paáti -hóo 
@@ -1811,7 +1818,7 @@ Ditransitive verbs are verbs which take three arguments; those arguments are cal
     \words tííkóh\MC2 kóóh hóíhikóa\MC3 tatìih\MC2
     \bits tííko -h kóóh hóí -hi =kóa tati -h
     \gloss man's.name ERG fruit give RPASTT DECL child DAT
-    \tr Diego gives a fruit to [his] child (for good)
+    \tr Diego gives a fruit to (his) child (for good)
     \ex \label{ex:ditr2}
     \words kó kòà hóíhikóa\MC3 hòah
     \bits kó kòà hóí -hi =kóa hòah
@@ -1824,7 +1831,7 @@ The R of a ditansitive verb might also be marked by the `on top of' relational c
     \words tííkoh\MC2 kaxií hóíhikóa\MC3 tatìxa\MC2
     \bits tííko -h kaxií hóí -hi =kóa tati -xa
     \gloss man's.name ERG idol give RPASTT DECL child ONT
-    \tr Diego gives the idol to [his] child (as a loan)
+    \tr Diego gives the idol to (his) child (as a loan)
 \end{examples}
 \paragraph{Auxiliary Verbs}
 Auxiliary verbs are verbs which mark aspect, negation and modality. there are two types of auxiliaries, non-affixing auxiliary verbs and affixing auxiliary verbs. I will first discuss the former, and subsequently move onto the latter. Non-affixing auxiliaries, despite their name, absorb all inflection from the lexical head. They encode negation and aspect. The lexical head then takes the dependent form, marked by the suffix \emh{-i}. There are \textit{3} non-affixing auxiliaries in the analyzed corpus of \textit{5} auxiliaries. (\ref{ex:aux1}) exemplifies the usage of non-affixing auxiliaries.
@@ -1856,18 +1863,18 @@ To negate an auxiliary verb, instead of using the negation auxiliary, the disjun
 Complementizer verbs are verbs which take an entire clause as their object, such as e.g. \emh{áa} `to say (that)' or \emh{óa} `to think'. They may take all normal inflectional affixes. To mark the end of a complement clause, the complementizers \emh{kóó-} or \emh{kóhii} are used.\footnote{More on the usage of complementizers  in section \ref{s:complclaus}}. The usage of complementizer verbs is exemplified in (\ref{ex:complv1}).
 \begin{examples}
     \ex \label{ex:complv1}
-    \words kóíhihóo\MC2 ahá háakaíhákoo\MC3 atàa\MC2 kóhii káixoáh\MC2 áatóhikóa\MC3
-    \bits kóíhi -hóo ahá háa= kaí= hákoo a- tàa kóhii káixo -áh áa -tóhi =kóa
-    \gloss forest LOC alone go NEG OBLIGATIVE PASS AUX C mother AUG say DPASTO DECL
-    \tr [My] grandmother said that one shouldn't go into the forest alone
+    \words kóíhihóo\MC2 ahá háakaíhákoo\MC3 atàa\MC2 kóhii káixoáháh\MC3 áatóhikóa\MC3
+    \bits kóíhi -hóo ahá háa= kaí= hákoo a- tàa kóhii káixo -áh -áh áa -tóhi =kóa
+    \gloss forest LOC alone go NEG OBLIGATIVE PASS AUX C mother AUG ERG say DPASTO DECL
+    \tr (My) grandmother said that one shouldn't go into the forest alone
 \end{examples}
 While the complementizers mark indirect speech, there is a quotative marker \emh{ko} to mark direct speech. An example of this technique can be found in (\ref{ex:complv2}).
 \begin{examples}
     \ex \label{ex:complv2}
-    \words `kóíhihóo\MC2 ahá háakaíhákoo\MC3 atàa'\MC2 ko káixoáh\MC2 áatóhikóa\MC3
-    \bits kóíhi -hóo ahá háa= kaí= hákoo a- tàa ko  káixo -áh áa -tóhi =kóa
-    \gloss forest LOC alone go NEG OBLIGATIVE PASS AUX QUOTATIVE mother AUG say DPASTO DECL
-    \tr [My] grandmother said: ``One shouldn't go into the forest alone''
+    \words `kóíhihóo\MC2 ahá háakaíhákoo\MC3 atàa'\MC2 ko káixoáháh\MC3 áatóhikóa\MC3
+    \bits kóíhi -hóo ahá háa= kaí= hákoo a- tàa ko  káixo -áh -áh áa -tóhi =kóa
+    \gloss forest LOC alone go NEG OBLIGATIVE PASS AUX QUOTATIVE mother AUG ERG say DPASTO DECL
+    \tr (My) grandmother said: ``One shouldn't go into the forest alone''
 \end{examples}
 \paragraph{Positional Compound Verbs}
 Positional compound verbs are verbs with a bipartite stem. The first part (called V1) is from a relatively open class of ca. 100 members, while the second part (called DTR) is from a closed class of 10 members. They inflect like normal intransitive or transitive verbs. The DTRs depict explicit or implied motion in a certain \textbf{D}irection, into a \textbf{T}opological \textbf{R}elation. There are four subclasses of V1s, classificatory (type of figure or ground), dispositional (posture or position of the figure), means (manner or means of change), and trajectory (shape of path of change). While the first of these constitutes an open class, the rest of them are closed class. A full list of all V1s and DTRs can be found in appendix D. Examples (\ref{ex:vposit1}) and (\ref{ex:vposit2}) showcase the usage of transitive and intransitive positional compound verbs.
@@ -2002,7 +2009,7 @@ The Hapi antipassive, marked by the prefix \emh{h(V)-}, is used to turn a transi
     \tr The dog bites people
     %\source \parencite[232a]{aikhenamazon}
 \end{examples}
-If the prefix \emh{h(V)-} is added, the verb becomes intransitive, the underlying A turns into an S and the O is omitted. In (\ref{ex:antip2}), 'biting' is what the dog does, no matter whom it may bite.
+If the prefix \emh{h(V)-} is added, the verb becomes intransitive, the underlying A turns into an S and the O is omitted. In (\ref{ex:antip2}), `biting' is what the dog does, no matter whom it may bite.
 \begin{examples} 
     \ex \label{ex:antip2}
     \words hápaáh hóxósóóhaká\MC4
@@ -2011,7 +2018,7 @@ If the prefix \emh{h(V)-} is added, the verb becomes intransitive, the underlyin
     \tr The dog bites
     %\source \parencite[232b]{aikhenamazon}
 \end{examples}
-However, there's a second side to the Hapi antipassive. When applied to intransitive verbs, it imparts a habitual, 'characteristic' meaning, as can be inferred from example (\ref{ex:antip3}).
+However, there's a second side to the Hapi antipassive. When applied to intransitive verbs, it imparts a habitual, `characteristic' meaning, as can be inferred from example (\ref{ex:antip3}).
 \begin{examples}
     \ex \label{ex:antip3}
     \words (íí) hípíhaahaká\MC4
@@ -2097,7 +2104,7 @@ When deriving a ditransitive clause from a transitive one, the suffix \emh{-kó}
     \tr Then he caused him to take the paper back again
     %\source \parencite[237d]{aikhenamazon}
 \end{examples}
-A 'sociative' causative, marked by the causative and the comitative coordinator \emh{sóh} in combination with a personal pronoun, may have overtones of the causer's involvement; compare the straightforward example (\ref{ex:caus5}) with the sociative construction in (\ref{ex:caus6}).
+A `sociative' causative, marked by the causative and the comitative coordinator \emh{sóh} in combination with a personal pronoun, may have overtones of the causer's involvement; compare the straightforward example (\ref{ex:caus5}) with the sociative construction in (\ref{ex:caus6}).
 \begin{examples}
     \ex \label{ex:caus5}
     \words kìhaóxí\MC2 haíhíkihikókóa\MC5 pàahtah\MC2
@@ -2296,7 +2303,14 @@ In the following section I will consider the role of the future tense within the
     \gloss dream foul do \textsc{\textup{s/a>s(pe)}} what QU INTRG ANTIP think.about FF FUT DECL SSAP do.like.this ITR dream DEP INTRG NEG DPASTO DECL
     \tr After dreaming of this bad thing, what will I think? Haven't you ever dreamt like this?
 \end{examples}
-It may also be used in a relative sense, encoding events that took place in the future from a past tense reference time. 
+It may also be used in a relative sense, encoding events that took place in the future from a past tense reference time. This usage is depicted in (\ref{ex:future2}).
+\begin{examples}
+    \ex \label{ex:future2}
+    \words páhpi pàh xòih tópóihí\MC2 óatóhikóa\MC3 `sóasihá\MC2 kííkíípaáho\MC3 \\ akíípaáhokóa'\MC5 ko 
+    \bits páhpi pàh xòih tópói =í óa -tóhi =kóa sóasih =á {kíí\textasciitilde kíípaá} -h -o a- kíípaá -h -o =kóa ko
+    \gloss bread CL:flat brother chew \textsc{\textup{s/a>s(se)}} think DPASTO DECL spirit VOC REDUP:kill 1 FUT RECIP kill 1 FUT DECL QUOTATIVE
+    \tr While chewing on my brother's flatbread, he thought: ``Oh spirits, I will avenge (those who have fallen)!''
+\end{examples}
 \begin{comment}
 \section{Verb phrase structure}
 \subsection{Order of verb phrase elements}\label{svorder}
