@@ -208,6 +208,8 @@
 \newleipzig{inch}{inch}{inchoative}
 \newleipzig{crast}{crast}{crasternal}
 \newleipzig{mir}{mir}{mirative}
+\newleipzig{cntrf}{cntrf}{counterfactual}
+\newleipzig{perm}{perm}{permissive}
 
 
 \glsfindwidesttoplevelname[\leipzigtype]
@@ -256,8 +258,8 @@
 
 \begin{center}
     \begin{verbatim}
-        Version: 0.1.7c-alpha
-        Date: 24 March, 2021
+        Version: 0.1.7d-alpha
+        Date: 26 March, 2021
     \end{verbatim}
     ©opyright April 2020 tryddle
 \end{center}
@@ -1708,7 +1710,7 @@ The final type of attribute in the Hapi language is noun juxtaposition. A noun m
 \subsection{Conclusions}
 In the preceding chapter I have considered the structure of the nominal word and the nominal phrase. I have presented the internal structure of the nominal root, demonstrated the morphological categories that are marked on the noun, namely, number, diminutive and augmentative, possession and case, and have discussed the formation of gender-specified nouns by juxtaposition. After a brief consideration of the order of noun phrase elements, I then moved on to the pronominal system, schematized the extensive set of classifiers of the language, and presented further any other noun modifiers such as demonstratives, quantifiers and numerals, adjectives, possessives and noun modifying nominals, all in the context of the noun phrase.
 \chapter{The Verb and the Verb Phrase}
-This chapter discusses the verb and the verb phrase in the Hapi language. In the first part of this chapter, I will discuss verbal morphology, considering the structure of the verbal stem and its conjuncts, disjuncts and clitics. In section \ref{sverbalroot} I will consider the structure of the verbal root; then I will move through the verb slot by slot, starting with the mode affix in section \ref{svmode}. Subsequently I will discuss valency in section \ref{svvalency}, past tenses in \ref{svpast}, person agreement in section \ref{svperson} and the future tense in section \ref{svfut}. In the second part of this chapter, I will explain the verb phrase structure, beginning with the order of verb phrase elements in section \ref{svorder}. Then, I will consider the relationship of second-position particles within the verb phrase in section \ref{svparticles}. Finally, I will present the role of adverbs in section \ref{svadverbs}.
+This chapter discusses the verb and the verb phrase in the Hapi language. In the first part of this chapter, I will discuss verbal morphology, considering the structure of the verbal stem and its conjuncts, disjuncts and clitics. In section \ref{sverbalroot} I will consider the structure of the verbal root; then I will move through the verb slot by slot, starting with the mode affix in section \ref{svmode}. Subsequently I will discuss valency in section \ref{svvalency}, past tenses in \ref{svpast}, person agreement in section \ref{svperson} and the future tense in section \ref{svfut}. In the second part of this chapter, I will explain the verb phrase structure, beginning with the role of second-position clitics within the verb complex. Then, I will consider the  function of particles in section \ref{svparticles}. Finally, I will present the role of adverbs in section \ref{svadverbs}.
 \section{Verbal Morphology}
 In this section, the structure of Hapi verbs is examined, focussing on the grammatical categories encoded by morphology, i.e. mode, valency, tense and person.
 \subsection{Verbal Root}\label{sverbalroot}
@@ -2311,19 +2313,39 @@ It may also be used in a relative sense, encoding events that took place in the 
     \gloss bread CL:flat brother chew \textsc{\textup{s/a>s(se)}} think DPASTO DECL spirit VOC REDUP:kill 1 FUT RECIP kill 1 FUT DECL QUOTATIVE
     \tr While chewing on my brother's flatbread, he thought: ``Oh spirits, I will avenge (those who have fallen)!''
 \end{examples}
-\begin{comment}
+The future tense also appears in the apodosis part of certain conditional sentences, namely those in which a realizable condition is expressed. An example for this usage of the future tense marker is shown in \ref{ex:future3}.
+\begin{examples}
+    \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
+    \ex \label{ex:future3}
+    \words páótaíta\MC2 xah ákiihkóa\MC3 xahataxa\MC2 kòxihokóa\MC4
+    \bits páó \cl taíta xah ákiih -h =kóa xah \cl ataxa kòxí -h -o =kóa 
+    \gloss SS:AGENT COND TP:OBJECT see ST DECL TP:OBJECT CNTRF shoot FF FUT DECL
+    \tr If you see them, I will shoot them
+\end{examples}
 \section{Verb phrase structure}
-\subsection{Order of verb phrase elements}\label{svorder}
-\subsection{Second-position particles}\label{svparticles}
+In the following section I will consider the structure of the verb phrase. I will begin by showcasing the roles of second-position clitics in the sections \ref{svspclitic}. Subsequently, I will schematize the function of particles in section \ref{svparticles}. At last, I will give a brief overview over adverbs and their syntactic role within the verb phrase complex.
+\subsection{Second-position clitics}\label{svspclitic}
+Second-position clitics are used to encode further verbal grammatical categories which are not marked on the verb stem directly. As their name suggests, they attach to the first element of the clause; an example for this behaviour can be seen in (\ref{ex:svspclitic1}).
+\begin{examples}
+    \newbaarucmd{\cl}{\baarujuncture{\texttt{==}}}
+    \ex \label{ex:svspclitic1}
+    \words tàahopíáki\MC2 pàah póhi táahi\MC2 kaihaokóa\MC2
+    \bits tàahopí \cl áki pàah póhi tááh -i kaíhao =kóa 
+    \gloss FAS:AGENT PERM water sacred drink DEP NEG DECL 
+    \tr We weren't allowed to drink the holy water
+\end{examples}
+\subsection{Particles}\label{svparticles}
 \subsection{Adverbs}\label{svadverbs}
 \subsubsection{Lexical Adverbs}
 \subsubsection{Verbal Adverbs}
+\section{Conclusions}
+\begin{comment}
 \chapter{Adjectives and Adverbs}\label{c:adjectivesadverbs}
 \section{Adjectives}
 \subsection{Color Terms}
 \subsection{Adnominal Adjectives}
 \subsection{Adverbal Adjectives}
-\section{Adverbs}
+\section{Adverbs}\label{s:adverbs}
 \subsection{Lexical Adverbs}
 \subsubsection{Spatial Adverbs}
 \subsubsection{Temporal Adverbs}
@@ -2342,13 +2364,16 @@ It may also be used in a relative sense, encoding events that took place in the 
 \section{Distributive Numerals}
 \section{Other Quantifiers}
 \subsection{PLACEHOLDER}
-\chapter{Other Verbal Categories}
+\chapter{Other Verbal Categories}\label{c:otherverb}
 \section{Particles}
 \subsection{PLACEHOLDER}
 \section{Disjunct Affixes}
 \subsection{PLACEHOLDER}
 \section{Clitics}
 \subsection{PLACEHOLDER}
+\section{Auxiliary Verbs}
+\subsection{PLACEHOLDER}
+\subsection{Affixing Auxiliary Verbs}
 \chapter{Derivation}
 \section{Nominal}
 \subsection{Noun-Noun Derivation}
